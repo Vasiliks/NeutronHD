@@ -12,10 +12,10 @@
     <color name="black" value="#00000000" />
     <color name="blue" value="#000035ff" />
     <color name="bluish" value="#00015f9f" />
-    <color name="color1" value="#00ffcc33" />
-    <color name="color2" value="#00f4f4f4" />
-    <color name="color3" value="#008f8f8f" />
-    <color name="color4" value="#000099ff" />
+    <color name="color1" value="#10ffcc33" />
+    <color name="color2" value="#10f4f4f4" />
+    <color name="color3" value="#108f8f8f" />
+    <color name="color4" value="#100099ff" />
     <color name="color5" value="#30000000" />
     <color name="green" value="#00009a00" />
     <color name="grey" value="#00808080" />
@@ -26,7 +26,7 @@
   </colors>
   <!-- ########## Fonts ########## -->
   <fonts>
-    <font filename="Neutron_hd/fonts/Roboto-MediumItalic.ttf" name="Regular" scale="105" />
+    <font filename="Neutron_hd/fonts/Roboto-Regular.ttf" name="Regular" scale="105" />
     <font filename="Neutron_hd/fonts/LucidaConsole.ttf" name="Console" scale="100" />
     <font filename="nmsbd.ttf" name="Display" scale="100" />
   </fonts>
@@ -47,9 +47,9 @@
     <color name="WindowTitleBackground" color="black" />
     <!-- ########## Main screen border png's ########## -->
     <borderset name="bsWindow">
-      <pixmap pos="bpTopLeft" filename="Neutron_hd/style/aquabg_left.png" />
-      <pixmap pos="bpTop" filename="Neutron_hd/style/aquabg_centre.png" />
-      <pixmap pos="bpTopRight" filename="Neutron_hd/style/aquabg_right.png" />
+      <pixmap pos="bpTopLeft" filename="Neutron_hd/style/greybg_left.png" />
+      <pixmap pos="bpTop" filename="Neutron_hd/style/greybg_centre.png" />
+      <pixmap pos="bpTopRight" filename="Neutron_hd/style/greybg_right.png" />
     </borderset>
     <borderset name="bsListboxEntry">
       <pixmap pos="bpTop" filename="Neutron_hd/h-white.png" />
@@ -74,7 +74,7 @@
   <!--  ########## Templates ########## -->
   <screen name="TemplatesInfoBarTv">
     <eLabel position="0,606" size="1280,114" backgroundColor="background" zPosition="-1" />
-    <ePixmap position="0,571" size="1280,35" pixmap="Neutron_hd/style/aquamenubar.png" zPosition="-1" alphatest="off" />
+    <ePixmap position="0,571" size="1280,35" pixmap="Neutron_hd/style/greymenubar.png" zPosition="-1" alphatest="off" />
   </screen>
   <screen name="TemplatesInfoBarName">
     <!-- Templates InfoBarName-->
@@ -234,7 +234,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="1120,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="1120,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="1120,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -267,7 +267,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="990,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="990,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="990,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -300,7 +300,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="990,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="990,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="990,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -337,7 +337,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="860,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="860,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="860,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -367,7 +367,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="840,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="840,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="840,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -401,7 +401,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="720,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="720,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="720,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -435,7 +435,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="720,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="720,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="720,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -473,7 +473,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="590,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="590,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="590,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -503,7 +503,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="840,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="840,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="840,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -537,7 +537,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="720,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="720,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="720,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -571,7 +571,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="720,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="720,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="720,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -609,7 +609,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="145,645" size="590,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="145,645" size="590,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="145,645" size="590,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
@@ -627,7 +627,7 @@
   <screen name="TemplatesInfoBarNumber1">
     <!-- Templates InfoBarNumber-->
   </screen>
-  <screen name="TemplatesInfoBarNumber">
+  <screen name="TemplatesInfoBarNumber2">
     <!-- Templates InfoBarNumber-->
     <widget source="session.CurrentService" render="Label" position="145,573" size="80,32" font="Regular; 28" foregroundColor="color1" backgroundColor="background" halign="left" transparent="1" borderWidth="2">
       <convert type="ServiceName2">%n</convert>
@@ -828,7 +828,7 @@
   <screen name="TemplatesInfoBarECMCentre">
     <!-- Templates InfoBarECM-->
     <eLabel position="0,0" size="1280,38" backgroundColor="background" zPosition="-1" />
-    <ePixmap position="0,38" size="1280,35" pixmap="Neutron_hd/style/aquamenubar.png" zPosition="-1" alphatest="off" />
+    <ePixmap position="0,38" size="1280,35" pixmap="Neutron_hd/style/greymenubar.png" zPosition="-1" alphatest="off" />
     <!-- Crypted -->
     <!-- ECM -->
     <widget source="session.CurrentService" render="Label" position="860,10" size="400,24" font="Display; 18" foregroundColor="color1" backgroundColor="background" halign="right" transparent="1">
@@ -951,7 +951,7 @@
   <screen name="TemplatesInfoBarECMRight">
     <!-- Templates InfoBarECM-->
     <eLabel position="950,185" size="300,325" backgroundColor="background" zPosition="-1" />
-    <ePixmap position="950,150" size="300,35" pixmap="Neutron_hd/style/aquamenubar.png" zPosition="-1" alphatest="off" />
+    <ePixmap position="950,150" size="300,35" pixmap="Neutron_hd/style/greymenubar.png" zPosition="-1" alphatest="off" />
     <!-- Crypted -->
     <eLabel text="Source:" position="960,195" zPosition="1" size="120,22" font="Display; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
     <widget source="session.CurrentService" render="Label" position="1090,195" size="150,22" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1">
@@ -1052,7 +1052,7 @@
   <screen name="TemplatesInfoBarECMLeft">
     <!-- Templates InfoBarECM-->
     <eLabel position="30,185" size="300,325" backgroundColor="background" zPosition="-1" />
-    <ePixmap position="30,150" size="300,35" pixmap="Neutron_hd/style/aquamenubar.png" zPosition="-1" alphatest="off" />
+    <ePixmap position="30,150" size="300,35" pixmap="Neutron_hd/style/greymenubar.png" zPosition="-1" alphatest="off" />
     <!-- Crypted -->
     <eLabel text="Source:" position="40,195" zPosition="1" size="120,22" font="Display; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
     <widget source="session.CurrentService" render="Label" position="170,195" size="150,22" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1">
@@ -1154,8 +1154,8 @@
     <!-- Templates InfoBarEPG-->
     <eLabel position="30,185" size="600,325" backgroundColor="background" zPosition="-1" />
     <eLabel position="650,185" size="600,325" backgroundColor="background" zPosition="-1" />
-    <ePixmap position="30,150" size="600,35" pixmap="Neutron_hd/style/aquamenubar.png" zPosition="-1" alphatest="off" />
-    <ePixmap position="650,150" size="600,35" pixmap="Neutron_hd/style/aquamenubar.png" zPosition="-1" alphatest="off" />
+    <ePixmap position="30,150" size="600,35" pixmap="Neutron_hd/style/greymenubar.png" zPosition="-1" alphatest="off" />
+    <ePixmap position="650,150" size="600,35" pixmap="Neutron_hd/style/greymenubar.png" zPosition="-1" alphatest="off" />
     <eLabel text="&gt;" position="40,152" size="30,30" font="Display; 30" foregroundColor="green" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
     <eLabel text="&gt;" position="655,152" size="30,30" font="Display; 30" foregroundColor="red" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
     <widget source="session.Event_Now" render="Label" position="40,155" size="585,30" font="Regular; 22" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" noWrap="1" borderWidth="2">
@@ -1180,7 +1180,7 @@
   <screen name="TemplatesInfoBarEPGRight">
     <!-- Templates InfoBarEPG-->
     <eLabel position="650,185" size="600,325" backgroundColor="background" zPosition="-1" />
-    <ePixmap position="650,150" size="600,35" pixmap="Neutron_hd/style/aquamenubar.png" zPosition="-1" alphatest="off" />
+    <ePixmap position="650,150" size="600,35" pixmap="Neutron_hd/style/greymenubar.png" zPosition="-1" alphatest="off" />
     <eLabel text="&gt;" position="655,152" size="30,30" font="Display; 30" foregroundColor="green" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
     <widget source="session.Event_Now" render="Label" position="655,155" size="585,30" font="Regular; 22" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" noWrap="1" borderWidth="2">
       <convert type="EventName">Name</convert>
@@ -1195,7 +1195,7 @@
   <screen name="TemplatesInfoBarEPGLeft">
     <!-- Templates InfoBarEPG-->
     <eLabel position="30,185" size="600,325" backgroundColor="background" zPosition="-1" />
-    <ePixmap position="30,150" size="600,35" pixmap="Neutron_hd/style/aquamenubar.png" zPosition="-1" alphatest="off" />
+    <ePixmap position="30,150" size="600,35" pixmap="Neutron_hd/style/greymenubar.png" zPosition="-1" alphatest="off" />
     <eLabel text="&gt;" position="40,152" size="30,30" font="Display; 30" foregroundColor="green" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
     <widget source="session.Event_Now" render="Label" position="40,155" size="585,30" font="Regular; 22" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" noWrap="1" borderWidth="2">
       <convert type="EventName">Name</convert>
@@ -1209,7 +1209,7 @@
   </screen>
   <screen name="TemplatesInfoBarEcmEpg1">
     <!-- Templates ECM-EPG-->
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <screen name="TemplatesInfoBarEcmEpg2">
@@ -1219,31 +1219,31 @@
   <screen name="TemplatesInfoBarEcmEpg3">
     <!-- Templates ECM-EPG-->
     <panel name="TemplatesInfoBarECMRight" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <screen name="TemplatesInfoBarEcmEpg4">
     <!-- Templates ECM-EPG-->
     <panel name="TemplatesInfoBarECMLeft" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <screen name="TemplatesInfoBarECM-EPG">
     <!-- Templates ECM-EPG-->
     <panel name="TemplatesInfoBarEPGCentre" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <screen name="TemplatesInfoBarEcmEpg6">
     <!-- Templates ECM-EPG-->
     <panel name="TemplatesInfoBarEPGRight" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <screen name="TemplatesInfoBarEcmEpg7">
     <!-- Templates ECM-EPG-->
     <panel name="TemplatesInfoBarEPGLeft" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <screen name="TemplatesInfoBarEcmEpg8">
@@ -1255,20 +1255,20 @@
     <!-- Templates ECM-EPG-->
     <panel name="TemplatesInfoBarECMRight" />
     <panel name="TemplatesInfoBarEPGLeft" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <screen name="TemplatesInfoBarEcmEpg10">
     <!-- Templates ECM-EPG-->
     <panel name="TemplatesInfoBarECMLeft" />
     <panel name="TemplatesInfoBarEPGRight" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <screen name="TemplatesInfoBarMedia">
     <!-- Templates InfoBarMedia-->
     <eLabel position="0,652" size="1280,68" backgroundColor="background" zPosition="-1" />
-    <ePixmap position="0,617" size="1280,35" pixmap="Neutron_hd/style/aquamenubar.png" zPosition="-1" alphatest="off" />
+    <ePixmap position="0,617" size="1280,35" pixmap="Neutron_hd/style/greymenubar.png" zPosition="-1" alphatest="off" />
   </screen>
   <screen name="TemplatesInfoBarMediaIndication">
     <!-- Templates InfoBarMediaIndication-->
@@ -1276,7 +1276,7 @@
       <convert type="ServicePosition">Position</convert>
     </widget>
     <ePixmap position="250,658" size="1010,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="250,658" size="1010,12" zPosition="2" transparent="1">
+    <widget source="session.CurrentService" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="250,658" size="1010,12" zPosition="2" transparent="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1170,675" size="90,30" font="Regular; 22" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1">
@@ -1321,7 +1321,7 @@
   <screen name="TemplatesInfoBarInfoMovie">
     <!-- Templates Movie Info-->
     <eLabel position="650,185" size="600,325" backgroundColor="background" zPosition="-1" />
-    <ePixmap position="650,150" size="600,35" pixmap="Neutron_hd/style/aquamenubar.png" zPosition="-1" alphatest="off" />
+    <ePixmap position="650,150" size="600,35" pixmap="Neutron_hd/style/greymenubar.png" zPosition="-1" alphatest="off" />
     <widget source="session.CurrentService" render="Label" position="655,155" size="585,30" zPosition="2" font="Regular; 22" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" noWrap="1" borderWidth="2">
       <convert type="ServiceName">Name</convert>
     </widget>
@@ -1387,7 +1387,7 @@
       <convert type="ClockToText">Format:%A, %d %B</convert>
     </widget>
   </screen>
-  <screen name="TemplatesClock">
+  <screen name="TemplatesClock4">
     <!-- Templates Clock-->
     <widget source="global.CurrentTime" render="Label" position="1122,20" size="52,36" font="Display; 35" foregroundColor="color1" backgroundColor="background" halign="right" transparent="1" borderWidth="2">
       <convert type="ClockToText">Format:%H</convert>
@@ -1410,7 +1410,7 @@
   </screen>
   <screen name="TemplatesChannelSelectionInfoEPG2">
     <!-- Templates ChannelSelectionInfoEPG-->
-    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/aquamenu_6.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
     <eLabel text="&gt;" position="765,403" size="20,20" font="Display; 18" foregroundColor="green" backgroundColor="background" halign="center" transparent="1" />
     <widget source="ServiceEvent" render="Label" position="785,403" size="450,20" font="Regular; 18" foregroundColor="color4" backgroundColor="background" halign="left" transparent="1">
       <convert type="EventName">Name</convert>
@@ -1427,13 +1427,13 @@
       <convert type="ClockToText">Format:- %H:%M</convert>
     </widget>
     <ePixmap position="845,375" size="310,12" pixmap="Neutron_hd/progress_bg.png" alphatest="blend" />
-    <widget source="ServiceEvent" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="845,375" size="310,12" backgroundColor="background" transparent="1" zPosition="3">
+    <widget source="ServiceEvent" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="845,375" size="310,12" backgroundColor="background" transparent="1" zPosition="3">
       <convert type="EventTime">Progress</convert>
     </widget>
   </screen>
-  <screen name="TemplatesChannelSelectionInfoEPG">
+  <screen name="TemplatesChannelSelectionInfoEPG3">
     <!-- Templates ChannelSelectionInfoEPG-->
-    <ePixmap position="750,260" size="500,350" pixmap="Neutron_hd/style/aquamenu_5.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,260" size="500,350" pixmap="Neutron_hd/style/greymenu_5.png" alphatest="on" zPosition="-1" />
     <eLabel text="&gt;" position="765,303" size="20,20" font="Display; 18" foregroundColor="green" backgroundColor="background" halign="center" transparent="1" />
     <eLabel text="&gt;" position="765,451" size="20,20" font="Display; 18" foregroundColor="red" backgroundColor="background" halign="center" transparent="1" />
     <widget source="ServiceEvent" render="Label" position="785,303" size="450,20" font="Regular; 18" foregroundColor="color4" backgroundColor="background" halign="left" transparent="1">
@@ -1457,13 +1457,13 @@
       <convert type="ClockToText">Format:- %H:%M</convert>
     </widget>
     <ePixmap position="845,275" size="310,12" pixmap="Neutron_hd/progress_bg.png" alphatest="blend" />
-    <widget source="ServiceEvent" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="845,275" size="310,12" backgroundColor="background" transparent="1" zPosition="3">
+    <widget source="ServiceEvent" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="845,275" size="310,12" backgroundColor="background" transparent="1" zPosition="3">
       <convert type="EventTime">Progress</convert>
     </widget>
   </screen>
   <screen name="TemplatesChannelSelectionInfoEPG4">
     <!-- Templates ChannelSelectionInfoEPG-->
-    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/aquamenu_6.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
     <eLabel text="&gt;" position="765,403" size="20,20" font="Display; 18" foregroundColor="green" backgroundColor="background" halign="center" transparent="1" />
     <widget source="ServiceEvent" render="Label" position="785,403" size="60,20" font="Regular; 18" foregroundColor="white" backgroundColor="background" halign="left" transparent="1">
       <convert type="EventTime">StartTime</convert>
@@ -1484,7 +1484,7 @@
       <convert type="ClockToText">Format:- %H:%M</convert>
     </widget>
     <ePixmap position="845,375" size="310,12" pixmap="Neutron_hd/progress_bg.png" alphatest="blend" />
-    <widget source="ServiceEvent" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="845,375" size="310,12" backgroundColor="background" transparent="1" zPosition="3">
+    <widget source="ServiceEvent" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="845,375" size="310,12" backgroundColor="background" transparent="1" zPosition="3">
       <convert type="EventTime">Progress</convert>
     </widget>
   </screen>
@@ -1521,7 +1521,7 @@
       <convert type="ServiceName2">%A</convert>
     </widget>
   </screen>
-  <screen name="TemplatesChannelSelectionInfoChannel">
+  <screen name="TemplatesChannelSelectionInfoChannel4">
     <!-- Templates ChannelSelectionInfoChannel-->
     <ePixmap position="105,635" size="120,80" pixmap="Neutron_hd/picon_bg.png" zPosition="1" alphatest="blend" />
     <widget source="ServiceEvent" render="Picon" position="115,645" size="100,60" zPosition="2" alphatest="blend">
@@ -1593,23 +1593,23 @@
   <screen name="TemplatesMovieSelectionInfoMovie1">
     <!-- Templates MovieSelectionInfoMovie-->
   </screen>
-  <screen name="TemplatesMovieSelectionInfoMovie">
+  <screen name="TemplatesMovieSelectionInfoMovie2">
     <!-- Templates MovieSelectionInfoMovie-->
-    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/aquamenu_6.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
     <widget source="Service" render="Label" position="765,405" size="470,190" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="top" transparent="1" zPosition="2">
       <convert type="MovieInfo">ShortDescription</convert>
     </widget>
   </screen>
   <screen name="TemplatesMovieSelectionInfoMovie3">
     <!-- Templates MovieSelectionInfoMovie-->
-    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/aquamenu_6.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
     <widget source="Service" render="Label" position="765,405" size="470,190" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="top" transparent="1" zPosition="2">
       <convert type="MovieInfo">FullDescription</convert>
     </widget>
   </screen>
   <screen name="TemplatesMovieSelectionInfoMovie4">
     <!-- Templates MovieSelectionInfoMovie-->
-    <ePixmap position="750,60" size="500,550" pixmap="Neutron_hd/style/aquamenu_4.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,60" size="500,550" pixmap="Neutron_hd/style/greymenu_4.png" alphatest="on" zPosition="-1" />
     <widget source="Service" render="CoverTmbd" position="770,105" size="195,285" zPosition="2" alphatest="on">
       <convert type="MovieInfo">MovieName</convert>
     </widget>
@@ -1638,11 +1638,11 @@
   <screen name="TemplatesMenu">
     <!-- Templates Menu-->
     <eLabel position="0,610" size="1280,110" backgroundColor="background" zPosition="-2" />
-    <ePixmap position="0,575" size="1280,35" pixmap="Neutron_hd/style/aquamenubar.png" alphatest="off" zPosition="-2" />
+    <ePixmap position="0,575" size="1280,35" pixmap="Neutron_hd/style/greymenubar.png" alphatest="off" zPosition="-2" />
   </screen>
   <screen name="TemplatesMenu500">
     <!-- Templates Menu-->
-    <ePixmap position="30,25" size="500,600" pixmap="Neutron_hd/style/aquamenu_2.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="30,25" size="500,600" pixmap="Neutron_hd/style/greymenu_2.png" alphatest="on" zPosition="-1" />
   </screen>
   <screen name="TemplatesTitle1">
     <!-- Templates Title-->
@@ -1654,7 +1654,7 @@
   </screen>
   <screen name="TemplatesMenu700">
     <!-- Templates Menu-->
-    <ePixmap position="30,25" size="700,600" pixmap="Neutron_hd/style/aquamenu_1.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="30,25" size="700,600" pixmap="Neutron_hd/style/greymenu_1.png" alphatest="on" zPosition="-1" />
   </screen>
   <screen name="TemplatesTitle3">
     <!-- Templates Title-->
@@ -1666,7 +1666,7 @@
   </screen>
   <screen name="TemplatesMenu1200">
     <!-- Templates Menu-->
-    <ePixmap position="30,25" size="1220,600" pixmap="Neutron_hd/style/aquamenu_3.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="30,25" size="1220,600" pixmap="Neutron_hd/style/greymenu_3.png" alphatest="on" zPosition="-1" />
   </screen>
   <screen name="TemplatesTitle5">
     <!-- Templates Title-->
@@ -1696,9 +1696,9 @@
     <panel name="TemplatesInfoBarName" />
     <panel name="TemplatesInfoBarIndication" />
     <panel name="TemplatesInfoBarNumber" />
-    <panel name="TemplatesInfoBarTechnical1" />
-    <panel name="TemplatesInfoBarOther1" />
-    <panel name="TemplatesInfoBarTvPiconProvAnalogTuner" />
+    <panel name="TemplatesInfoBarTvTechnical" />
+    <panel name="TemplatesInfoBarTvOther" />
+    <panel name="TemplatesInfoBarTvBar" />
     <panel name="TemplatesClock" />
   </screen>
   <!-- SecondInfoBar -->
@@ -1708,9 +1708,9 @@
     <panel name="TemplatesInfoBarName" />
     <panel name="TemplatesInfoBarIndication" />
     <panel name="TemplatesInfoBarNumber" />
-    <panel name="TemplatesInfoBarTechnical1" />
+    <panel name="TemplatesInfoBarTvSecondTechnical" />
     <panel name="TemplatesInfoBarECM-EPG" />
-    <panel name="TemplatesInfoBarTvPiconTuner" />
+    <panel name="TemplatesInfoBarTvSecondBar" />
   </screen>
   <!-- ########## Radio InfoBar ########## -->
   <screen name="RadioInfoBar" position="0,0" size="700,720" title="InfoBar" flags="wfNoBorder" zPosition="-1" backgroundColor="transparent">
@@ -1736,7 +1736,7 @@
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
     <ePixmap position="185,625" size="400,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="185,625" size="400,12" zPosition="2" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="185,625" size="400,12" zPosition="2" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <widget source="session.Event_Next" render="Label" position="140,680" size="550,30" halign="left" font="Regular; 22" foregroundColor="color3" backgroundColor="background" transparent="1">
@@ -1786,7 +1786,7 @@
     <panel name="TemplatesInfoBarMedia" />
     <panel name="TemplatesInfoBarMediaIndication" />
     <panel name="TemplatesInfoBarInfoMovie-Cover" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <!-- DVD player  -->
@@ -1808,7 +1808,7 @@
     <panel name="TemplatesInfoBarMedia" />
     <panel name="TemplatesInfoBarMediaIndication" />
     <panel name="TemplatesInfoBarInfoMovie-Cover" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <!-- MyTube player -->
@@ -1825,7 +1825,7 @@
     <panel name="TemplatesInfoBarMedia" />
     <panel name="TemplatesInfoBarMediaIndication" />
     <panel name="TemplatesInfoBarInfoMovie-Cover" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <!-- IPTV player -->
@@ -1846,7 +1846,7 @@
     <widget name="picon" position="30,645" size="100,60" zPosition="2" alphatest="blend" />
     <panel name="TemplatesInfoBarMedia" />
     <panel name="TemplatesInfoBarMediaIndication" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <!-- VOD player -->
@@ -1868,13 +1868,13 @@
     <widget name="cover" position="30,560" size="200,150" alphatest="blend" transparent="1" zPosition="1" />
     <panel name="TemplatesInfoBarMedia" />
     <panel name="TemplatesInfoBarMediaIndication" />
-    <panel name="TemplatesInfoBarOther1" />
+    <panel name="TemplatesInfoBarTvOther" />
     <panel name="TemplatesClock" />
   </screen>
   <!-- ########## Volume ########## -->
   <screen name="Volume" position="center,35" size="1280,60" zPosition="11" title="Volume" flags="wfNoBorder">
     <ePixmap pixmap="Neutron_hd/progress_bg.png" position="200,17" size="880,24" alphatest="blend" />
-    <widget name="Volume" pixmap="Neutron_hd/style/skyblueprogress.png" position="200,17" zPosition="1" size="880,24" transparent="1" />
+    <widget name="Volume" pixmap="Neutron_hd/style/goldprogress.png" position="200,17" zPosition="1" size="880,24" transparent="1" />
     <widget source="global.CurrentTime" render="RendVolumeText" position="50,10" size="120,40" font="Display;35" backgroundColor="background" foregroundColor="color1" transparent="1" zPosition="1" borderWidth="2" />
   </screen>
   <!-- ########## Mute ########## -->
@@ -1891,7 +1891,7 @@
     <widget name="posGoto" position="75,175" size="75,26" zPosition="1" font="Regular; 22" halign="left" foregroundColor="color4" borderWidth="2" transparent="1" />
   </screen>
   <!-- Dish 2 -->
-  <screen name="Dish" flags="wfNoBorder" position="1060,150" size="150,200" title="Dish" zPosition="11" backgroundColor="transparent">
+  <screen name="Dish-2" flags="wfNoBorder" position="1060,150" size="150,200" title="Dish" zPosition="11" backgroundColor="transparent">
     <widget name="Dishpixmap" pixmap="Neutron_hd/dish.png" position="0,0" size="150,150" zPosition="12" alphatest="blend" />
     <eLabel name="From" position="0,145" size="75,26" zPosition="1" font="Display; 22" halign="left" transparent="1" borderWidth="2" text="From:" />
     <widget name="posFrom" position="75,145" size="75,26" zPosition="1" font="Regular; 22" halign="left" foregroundColor="color4" borderWidth="2" transparent="1" />
@@ -1929,7 +1929,7 @@
   </screen>
   <!-- ########## Channel selection - Radio  ##########-->
   <screen name="ChannelSelectionRadio" position="700,center" size="640,720" title="Channel Selection" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap position="30,25" size="500,550" pixmap="Neutron_hd/style/aquamenu_4.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="30,25" size="500,550" pixmap="Neutron_hd/style/greymenu_4.png" alphatest="on" zPosition="-1" />
     <panel name="TemplatesMenu" />
     <eLabel text="Channel Selection" position="30,25" size="500,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
     <widget name="list" position="45,70" size="470,480" zPosition="3" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;24" serviceInfoFont="Regular;24" colorServiceDescription="grey" picServiceEventProgressbar="Neutron_hd/pl.png" transparent="1" />
@@ -1979,8 +1979,8 @@
   </screen>
   <!-- MediaPlayer -->
   <screen name="MediaPlayer" position="fill" title="MediaPlayer" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap position="30,25" size="600,400" pixmap="Neutron_hd/style/aquamenu_8.png" alphatest="on" zPosition="-1" />
-    <ePixmap position="650,25" size="600,500" pixmap="Neutron_hd/style/aquamenu_7.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="30,25" size="600,400" pixmap="Neutron_hd/style/greymenu_8.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="650,25" size="600,500" pixmap="Neutron_hd/style/greymenu_7.png" alphatest="on" zPosition="-1" />
     <panel name="TemplatesMenu" />
     <eLabel text="MediaPlayer" position="260,535" size="340,36" backgroundColor="background" transparent="1" zPosition="1" font="Regular; 30" valign="center" halign="left" foregroundColor="color1" borderWidth="2" />
     <eLabel text="F i l e l i s t" position="40,30" size="350,30" backgroundColor="black" zPosition="5" foregroundColor="color4" font="Regular; 26" halign="left" transparent="1" borderWidth="2" />
@@ -2000,7 +2000,7 @@
     <ePixmap position="20,515" size="225,200" pixmap="Neutron_hd/case_jewel_2.png" alphatest="blend" zPosition="3" />
     <widget name="coverArt" pixmap="Neutron_hd/no_cover.png" position="46,515" size="200,200" alphatest="on" zPosition="2" />
     <ePixmap position="260,615" size="1000,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="260,615" size="1000,12" zPosition="2" transparent="1">
+    <widget source="session.CurrentService" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="260,615" size="1000,12" zPosition="2" transparent="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="260,630" size="100,22" font="Display; 18" halign="left" valign="center" foregroundColor="color2" backgroundColor="background" transparent="1">
@@ -2059,7 +2059,7 @@
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/copy.png" alphatest="blend" />
     <ePixmap position="20,615" size="800,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
     <widget source="job_task" render="Label" position="110,646" size="700,22" font="Display; 18" halign="left" foregroundColor="color3" backgroundColor="background" transparent="1" />
-    <widget source="job_progress" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="20,615" size="800,12" zPosition="2" transparent="1" />
+    <widget source="job_progress" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="20,615" size="800,12" zPosition="2" transparent="1" />
     <widget source="job_progress" render="Label" position="110,668" size="490,22" font="Display; 18" halign="left" foregroundColor="color3" backgroundColor="background" transparent="1">
       <convert type="ProgressToText" />
     </widget>
@@ -2450,7 +2450,7 @@
   <!--  EPG Selection -->
   <screen name="EPGSelection" position="fill" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
-    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/aquamenu_6.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
     <eLabel text="EPG Selection" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
@@ -2514,7 +2514,7 @@
   <!-- Graph MultiEPG -->
   <screen name="GraphMultiEPG" position="fill" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
-    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/aquamenu_6.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
     <eLabel text="Electronic Program Guide" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
@@ -3198,18 +3198,18 @@
   <!-- UpdatePlugin -->
   <screen name="UpdatePlugin" position="0,640" size="1280,80" title="Software update" zPosition="1" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel position="0,35" size="1280,45" backgroundColor="background" zPosition="-1" />
-    <ePixmap pixmap="Neutron_hd/style/aquamenubar.png" position="0,0" size="1280,35" zPosition="-1" />
+    <ePixmap pixmap="Neutron_hd/style/greymenubar.png" position="0,0" size="1280,35" zPosition="-1" />
     <ePixmap position="center,40" size="1280,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget name="activityslider" position="center,40" size="1280,12" pixmap="Neutron_hd/style/skyblueprogress.png" zPosition="2" transparent="1" />
+    <widget name="activityslider" position="center,40" size="1280,12" pixmap="Neutron_hd/style/goldprogress.png" zPosition="2" transparent="1" />
     <widget source="package" render="Label" position="25,5" size="800,30" font="Regular; 26" foregroundColor="color1" backgroundColor="background" halign="right" transparent="1" borderWidth="2" />
     <widget source="status" render="Label" position="830,5" size="400,30" font="Regular; 26" foregroundColor="color1" backgroundColor="background" halign="left" transparent="1" borderWidth="2" />
   </screen>
   <!-- IPKG -->
   <screen name="Ipkg" position="0,640" size="1280,80" title="Installing Software..." zPosition="1" flags="wfNoBorder" backgroundColor="transparent">
     <eLabel position="0,35" size="1280,45" backgroundColor="background" zPosition="-1" />
-    <ePixmap pixmap="Neutron_hd/style/aquamenubar.png" position="0,0" size="1280,35" zPosition="-1" />
+    <ePixmap pixmap="Neutron_hd/style/greymenubar.png" position="0,0" size="1280,35" zPosition="-1" />
     <ePixmap position="center,40" size="1280,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget name="activityslider" position="center,40" size="1280,12" pixmap="Neutron_hd/style/skyblueprogress.png" zPosition="2" transparent="1" />
+    <widget name="activityslider" position="center,40" size="1280,12" pixmap="Neutron_hd/style/goldprogress.png" zPosition="2" transparent="1" />
     <widget name="package" position="20,2" size="1240,30" font="Regular; 26" foregroundColor="color1" backgroundColor="background" halign="right" transparent="1" borderWidth="2" />
     <widget name="status" position="20,2" size="1240,30" font="Regular; 26" foregroundColor="color1" backgroundColor="background" halign="left" transparent="1" borderWidth="2" />
   </screen>
@@ -3499,7 +3499,7 @@
   <!-- DVD Burn-DVDMovieSelection -->
   <screen name="DVDMovieSelection" position="fill" title="Select a movie" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
-    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/aquamenu_5.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_5.png" alphatest="on" zPosition="-1" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/dvd.png" alphatest="blend" />
     <eLabel text="Select a movie" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
@@ -3645,7 +3645,7 @@
   </screen>
   <!-- Positioner setup -->
   <screen name="PositionerSetup" position="fill" title="Positioner setup" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap position="30,25" size="1200,600" pixmap="Neutron_hd/style/aquamenu_1.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="30,25" size="1200,600" pixmap="Neutron_hd/style/greymenu_1.png" alphatest="on" zPosition="-1" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/positioner.png" alphatest="blend" />
     <eLabel text="Positioner setup..." position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
@@ -3680,7 +3680,7 @@
   </screen>
   <!-- Positioner setup 2-->
   <screen name="PositionerSetupMod" position="fill" title="Positioner setup" flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap position="30,25" size="1200,600" pixmap="Neutron_hd/style/aquamenu_1.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="30,25" size="1200,600" pixmap="Neutron_hd/style/greymenu_1.png" alphatest="on" zPosition="-1" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/positioner.png" alphatest="blend" />
     <eLabel text="Positioner setup..." position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
@@ -3875,7 +3875,7 @@
     <widget name="scan_state" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <widget name="pass" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <ePixmap pixmap="Neutron_hd/progress_bg.png" position="110,675" size="1150,12" alphatest="blend" />
-    <widget name="scan_progress" position="110,675" size="1150,12" pixmap="Neutron_hd/style/skyblueprogress.png" zPosition="2" transparent="1" />
+    <widget name="scan_progress" position="110,675" size="1150,12" pixmap="Neutron_hd/style/goldprogress.png" zPosition="2" transparent="1" />
     <widget name="servicelist" position="45,70" size="470,530" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="TemplatesClock" />
   </screen>
@@ -3905,7 +3905,7 @@
     <widget name="scan_state" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <widget name="pass" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <ePixmap pixmap="Neutron_hd/progress_bg.png" position="110,675" size="1150,12" alphatest="blend" />
-    <widget name="scan_progress" position="110,675" size="1150,12" pixmap="Neutron_hd/style/skyblueprogress.png" zPosition="2" transparent="1" />
+    <widget name="scan_progress" position="110,675" size="1150,12" pixmap="Neutron_hd/style/goldprogress.png" zPosition="2" transparent="1" />
     <widget name="servicelist" position="45,70" size="470,530" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="TemplatesClock" />
   </screen>
@@ -4140,7 +4140,7 @@
     <widget source="session.Event_Now" render="Label" position="800,390" size="446,48" zPosition="2" halign="center" font="Regular; 20" foregroundColor="color4" backgroundColor="background" transparent="1">
       <convert type="EventName2">Name</convert>
     </widget>
-    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/yellowskyblueprogress.png" position="866,368" size="310,8" zPosition="2" backgroundColor="background" transparent="1">
+    <widget source="session.Event_Now" render="Progress" pixmap="Neutron_hd/style/yellowgoldprogress.png" position="866,368" size="310,8" zPosition="2" backgroundColor="background" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
     <panel name="TemplatesClock" />
@@ -5946,8 +5946,8 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <!-- ########## YAMP Music Player ########## -->
   <!-- Yamp -->
   <screen name="YampScreen" position="fill" flags="wfNoBorder" title="YAMP Music Player" backgroundColor="transparent">
-    <ePixmap position="30,25" size="600,400" pixmap="Neutron_hd/style/aquamenu_8.png" alphatest="on" zPosition="-1" />
-    <ePixmap position="650,25" size="600,500" pixmap="Neutron_hd/style/aquamenu_7.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="30,25" size="600,400" pixmap="Neutron_hd/style/greymenu_8.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="650,25" size="600,500" pixmap="Neutron_hd/style/greymenu_7.png" alphatest="on" zPosition="-1" />
     <panel name="TemplatesMenu" />
     <eLabel text="YAMP Music Player" position="260,535" size="340,36" backgroundColor="background" transparent="1" zPosition="1" font="Regular; 30" valign="center" halign="left" foregroundColor="color1" borderWidth="2" />
     <widget name="leftContentTitle" position="40,30" size="350,30" backgroundColor="black" zPosition="5" foregroundColor="color4" font="Regular; 26" halign="left" transparent="1" borderWidth="2" />
@@ -5966,7 +5966,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="20,515" size="225,200" pixmap="Neutron_hd/case_jewel_2.png" alphatest="blend" zPosition="3" />
     <widget name="coverArt" pixmap="Neutron_hd/no_cover.png" position="46,515" size="200,200" alphatest="on" zPosition="2" />
     <ePixmap position="260,615" size="600,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="260,615" size="600,12" zPosition="2" transparent="1">
+    <widget source="session.CurrentService" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="260,615" size="600,12" zPosition="2" transparent="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="260,630" size="100,22" font="Display; 18" halign="left" valign="center" foregroundColor="color2" backgroundColor="background" transparent="1">
@@ -6053,7 +6053,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="repeat" pixmaps="/usr/share/enigma2/Neutron_hd/icons/repeat_off.png,/usr/share/enigma2/Neutron_hd/icons/repeat_on.png" position="1155,577" size="50,30" zPosition="2" alphatest="blend" />
     <widget name="shuffle" pixmaps="/usr/share/enigma2/Neutron_hd/icons/shuffle_off.png,/usr/share/enigma2/Neutron_hd/icons/shuffle_on.png" position="1210,577" size="50,30" zPosition="2" alphatest="blend" />
     <ePixmap position="260,615" size="1000,12" pixmap="Neutron_hd/progress_bg.png" zPosition="1" alphatest="blend" />
-    <widget source="session.CurrentService" render="Progress" pixmap="Neutron_hd/style/skyblueprogress.png" position="260,615" size="1000,12" zPosition="2" transparent="1">
+    <widget source="session.CurrentService" render="Progress" pixmap="Neutron_hd/style/goldprogress.png" position="260,615" size="1000,12" zPosition="2" transparent="1">
       <convert type="ServicePosition">Position</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="260,630" size="100,22" font="Display; 18" halign="left" valign="center" foregroundColor="color2" backgroundColor="background" transparent="1">
@@ -6072,7 +6072,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <!-- Merlin Music Player Screen Saver -->
   <screen name="MerlinMusicPlayerTV" position="fill" title="MerlinMusicPlayerScreenSaver" flags="wfNoBorder" backgroundColor="background">
     <eLabel position="0,660" size="1280,60" backgroundColor="background" zPosition="-2" />
-    <ePixmap position="0,625" size="1280,35" pixmap="Neutron_hd/style/aquamenubar.png" alphatest="off" zPosition="-2" />
+    <ePixmap position="0,625" size="1280,35" pixmap="Neutron_hd/style/greymenubar.png" alphatest="off" zPosition="-2" />
     <ePixmap position="20,515" size="225,200" pixmap="Neutron_hd/case_jewel_1.png" alphatest="on" zPosition="1" />
     <ePixmap position="20,515" size="225,200" pixmap="Neutron_hd/case_jewel_2.png" alphatest="blend" zPosition="3" />
     <widget name="coverArt" pixmap="Neutron_hd/no_cover.png" position="46,515" size="200,200" alphatest="on" zPosition="2" />
@@ -6513,7 +6513,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <screen name="WeatherMSN" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
-    <ePixmap position="750,60" size="500,550" pixmap="Neutron_hd/style/aquamenu_4.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,60" size="500,550" pixmap="Neutron_hd/style/greymenu_4.png" alphatest="on" zPosition="-1" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/weather.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
     <eLabel position="45,200" size="670,3" backgroundColor="grey" zPosition="1" />
@@ -6613,7 +6613,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <screen name="Calendar" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
-    <ePixmap position="750,60" size="500,550" pixmap="Neutron_hd/style/aquamenu_4.png" alphatest="on" zPosition="-1" />
+    <ePixmap position="750,60" size="500,550" pixmap="Neutron_hd/style/greymenu_4.png" alphatest="on" zPosition="-1" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/calendar.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
     <widget name="w0" position="805,110" size="45,40" font="Regular;24" halign="center" valign="center" backgroundColor="background" />
@@ -7041,7 +7041,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <screen name="QuickMenu" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu500" />
     <panel name="TemplatesMenu" /> 
-    <ePixmap position="750,60" size="500,550" pixmap="Neutron_hd/style/aquamenu_4.png" alphatest="on" zPosition="-1" /> 
+    <ePixmap position="750,60" size="500,550" pixmap="Neutron_hd/style/greymenu_4.png" alphatest="on" zPosition="-1" /> 
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/info.png" alphatest="blend" />
     <panel name="TemplatesTitle1" />
     <widget name="list" position="45,70" size="470,540" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
@@ -7134,7 +7134,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!-- Restart Network -->
   <screen name="RestartNetwork" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
-    <ePixmap position="center,center" size="500,250" pixmap="Neutron_hd/style/aquamenu_6.png" alphatest="on" zPosition="-1" /> 
+    <ePixmap position="center,center" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" /> 
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/info.png" alphatest="blend" />
     <widget source="Title" render="Label" position="390,235" size="500,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
     <widget name="label" position="center,center" size="500,250" font="Display; 24" foregroundColor="color3" backgroundColor="background" halign="center" valign="center" transparent="1" />
