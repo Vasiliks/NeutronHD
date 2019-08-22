@@ -4547,7 +4547,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="key_green" render="Label" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
     <panel name="TemplatesButtonsRedGreen" />
-  </screen>  
+  </screen>
      <!-- ButtonSetupSelect -->
   <screen name="ButtonSetupSelect" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Input">
     <panel name="TemplatesMenu700" />
@@ -6884,14 +6884,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <eLabel text="Active video downloads" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
   <widget source="list" render="Listbox" position="45,70" size="670,540" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1">
   <convert type="TemplatedMultiContent">
-	    {"template": [
-		MultiContentEntryText(pos=(10,1), size=(230,22), font=0, flags=RT_HALIGN_LEFT, text=1), # Title
-		MultiContentEntryText(pos=(240,1), size=(150,22), font=0, flags=RT_HALIGN_RIGHT, text=2), # State
-		MultiContentEntryProgress(pos=(400,4), size=(190,22), percent=-3), # Progress
-		MultiContentEntryText(pos=(600,1), size=(80,22), font=0, flags=RT_HALIGN_LEFT, text=4), # Percentage
-		],
-		"fonts": [gFont("Regular",20)],
-		"itemHeight": 30}
+        {"template": [
+        MultiContentEntryText(pos=(10,1), size=(230,22), font=0, flags=RT_HALIGN_LEFT, text=1), # Title
+        MultiContentEntryText(pos=(240,1), size=(150,22), font=0, flags=RT_HALIGN_RIGHT, text=2), # State
+        MultiContentEntryProgress(pos=(400,4), size=(190,22), percent=-3), # Progress
+        MultiContentEntryText(pos=(600,1), size=(80,22), font=0, flags=RT_HALIGN_LEFT, text=4), # Percentage
+        ],
+        "fonts": [gFont("Regular",20)],
+        "itemHeight": 30}
   </convert>
   </widget>
   <widget source="key_red" render="Label" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
@@ -6904,7 +6904,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
-    <widget position="45,70" size="670,400" name="config" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />  
+    <widget position="45,70" size="670,400" name="config" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <widget source="lastupdate" render="Label" position="110,690" size="750,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <widget source="key_red" render="Label" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget source="key_green" render="Label" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
@@ -6913,6 +6913,100 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesClock" />
     <panel name="TemplatesButtons" />
   </screen>
-
-
+  <!-- ########## EPG Import ########## -->
+  <!-- EPG Import Configuration -->
+  <screen name="EPGImportConfig" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
+    <panel name="TemplatesTitle3" />
+    <widget name="status"  position="110,646" size="650,44" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget name="statusbar" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget name="config" position="45,70" size="670,540" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
+    <widget name="key_red" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_green" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_yellow" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_blue" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <ePixmap pixmap="Neutron_hd/buttons/key_info.png" position="1210,668" size="40,20" alphatest="on" />
+    <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
+    <panel name="TemplatesClock" />
+    <panel name="TemplatesButtons" />
+  </screen>
+    <!-- EPG Import Sources -->
+  <screen name="EPGImportSources" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
+    <panel name="TemplatesTitle3" />
+    <widget name="list" position="45,70" size="670,540" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
+    <widget name="key_red" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_green" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_yellow" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_blue" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <panel name="TemplatesClock" />
+    <panel name="TemplatesButtons" />
+  </screen>
+    <!-- EPG Import Log -->
+  <screen name="EPGImportLog" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
+    <panel name="TemplatesTitle3" />
+    <widget name="list" position="45,70" size="670,540" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
+    <widget name="key_red" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_blue" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <panel name="TemplatesClock" />
+    <panel name="TemplatesButtons" />
+  </screen>
+    <!-- EPG Import Profile -->
+  <screen name="EPGImportProfile" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
+    <panel name="TemplatesTitle3" />
+    <widget name="config" position="45,70" size="670,540" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
+    <widget name="key_red" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_green" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <panel name="TemplatesClock" />
+    <panel name="TemplatesButtons" />
+  </screen>
+    <!-- Filters Services Selection -->
+    <screen name="filtersServicesSelection" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
+    <panel name="TemplatesTitle3" />
+    <widget name="list" position="45,70" size="670,540" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
+    <widget name="key_red" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_green" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_yellow" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_blue" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <panel name="TemplatesClock" />
+    <panel name="TemplatesButtons" />
+  </screen>
+    <!-- Filters Services Setup -->
+  <screen name="filtersServicesSetup" position="fill" title="Plugin manager activity" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
+    <panel name="TemplatesTitle3" />
+    <widget source="list" render="Listbox" position="45,70" size="670,498" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" selectionDisabled="1" transparent="1">
+      <convert type="TemplatedMultiContent">
+        {"template": [
+            MultiContentEntryText(pos = (10, 5), size = (420, 23), font = 0, flags = RT_HALIGN_LEFT, text = 0),
+            MultiContentEntryText(pos = (50, 25), size = (380, 20), font = 1, flags = RT_HALIGN_LEFT, text = 1),
+            MultiContentEntryText(pos = (100, 47), size = (400, 17), font = 2, flags = RT_HALIGN_LEFT, text = 2),
+            ],
+            "fonts": [gFont("Regular", 21), gFont("Regular", 19), gFont("Regular", 16)],
+            "itemHeight": 65
+        }
+        </convert>
+    </widget>
+    <widget name="key_red" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_green" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_yellow" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_blue" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <panel name="TemplatesClock" />
+    <panel name="TemplatesButtons" />
+  </screen>
 </skin>
