@@ -16,14 +16,20 @@
 # Version: 1.4 (30.06.2014) fix iptv reference - 2boom
 # Version: 1.5 (04.07.2014) fix iptv reference cosmetic - 2boom
 # Version: 1.6 (14.10.2014) add Tricolor Sibir prov - 2boom
-# Support: http://dream.altmaster.net/ & http://gisclub.tv & http://2boom-2boom.blogspot.com
-#
+# Version: 1.7 (10.03.2015) remove Tricolor Sibir prov - 2boom
+# Version: 1.8 (15.03.2015) add custom provname - 2boom
+# Version: 1.9 (31.07.2015) add custom provname for custom name channel- 2boom
+# Version: 2.0 (29.08.2015) custom provname fix - 2boom
+# Version: 2.1 (07.01.2019) add DVB-T2 DVB-C2 system - Sirius
+# Version: 2.2 (07.01.2019) remove iptv provname add iptv list /etc/enigma2/iptvprov.list - Vasiliks
+# Version: 2.3 (15.01.2019) add terrestrial description - ikrom
 
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService, iPlayableServicePtr, eServiceReference, eServiceCenter, eTimer, getBestPlayableServiceReference
 from Components.Element import cached
 from Components.config import config
 import NavigationInstance
+import os
 try:
 	from Components.Renderer.ChannelNumber import ChannelNumberClasses
 	correctChannelNumber = True
@@ -41,7 +47,6 @@ class ServiceName2(Converter, object):
 	SATELLITE = 7
 	ALLREF = 8
 	FORMAT = 9
-	
 
 	def __init__(self, type):
 		Converter.__init__(self, type)
@@ -91,7 +96,7 @@ class ServiceName2(Converter, object):
 								istype = True
 								return istype
 						else:
-							if "%3a//" in s.toString().lower(): 
+							if '%3a//' in s.toString().lower(): 
 								istype = True
 								return istype
 			return istype
@@ -233,18 +238,24 @@ class ServiceName2(Converter, object):
 				elif type == 'DVB-T':
 					result += _("Terrestrial")
 				elif type == 'IP-TV':
-					result += _('Stream-tv')
+					result += _("Stream-tv")
 				else:
 					result += 'N/A'
 			elif f == 's':	# %s - system (dvb-s/s2/c/t)
 				if type == 'DVB-S':
 					x = self.tpdata.get('system', 0)
 					result += x in range(2) and {0:'DVB-S',1:'DVB-S2'}[x] or ''
+				elif type == 'DVB-C':
+					x = self.tpdata.get('system', 0)
+					result += x in range(2) and {0:'DVB-C',1:'DVB-C2'}[x] or ''
+				elif type == 'DVB-T':
+					x = self.tpdata.get('system', 0)
+					result += x in range(2) and {0:'DVB-T',1:'DVB-T2'}[x] or ''
 				else:
 					result += type
 			elif f == 'F':	# %F - frequency (dvb-s/s2/c/t) in KHz
 				if type in ('DVB-S','DVB-C','DVB-T'):
-					result += '%d'%(self.tpdata.get('frequency', 0) / 1000) 
+					result += '%d'% round(self.tpdata.get('frequency', 0) / 1000.0)
 			elif f == 'f':	# %f - fec_inner (dvb-s/s2/c/t)
 				if type in ('DVB-S','DVB-C'):
 					x = self.tpdata.get('fec_inner', 15)
@@ -261,7 +272,8 @@ class ServiceName2(Converter, object):
 					x = self.tpdata.get('orbital_position', 0)
 					result += x > 1800 and "%d.%d°W"%((3600-x)/10, (3600-x)%10) or "%d.%d°E"%(x/10, x%10)
 				elif type == 'DVB-T':
-					result += 'DVB-T'
+					x = self.tpdata.get('system', 0)
+					result += x in range(2) and {0:'DVB-T',1:'DVB-T2'}[x] or ''
 				elif type == 'DVB-C':
 					result += 'DVB-C'
 				elif type == 'Iptv':
@@ -326,7 +338,24 @@ class ServiceName2(Converter, object):
 			if orbpos == 0xFFFF: #Cable
 				return _("Cable")
 			elif orbpos == 0xEEEE: #Terrestrial
-				return _("Terrestrial")
+#				return _("Terrestrial")
+				try:
+					nimfile = open('/proc/bus/nim_sockets')
+				except IOError:
+					return
+				current_slot = None
+				for line in nimfile:
+					if not line:
+						break
+					line = line.strip()
+					if line.startswith('NIM Socket'):
+						parts = line.split(' ')
+						current_slot = int(parts[2][:-1])
+				try:
+					from Components.NimManager import nimmanager
+					return str(nimmanager.getTerrestrialDescription(current_slot))
+				except:
+					return _("Terrestrial")
 			else: #Satellite
 				orbpos = ref.getData(4) >> 16
 				if orbpos < 0: orbpos += 3600
@@ -337,75 +366,25 @@ class ServiceName2(Converter, object):
 					dir = ref.flags & (eServiceReference.isDirectory|eServiceReference.isMarker)
 					if not dir:
 						refString = ref.toString().lower()
-						if refString.startswith("-1"):
+						if refString.startswith('-1'):
 							return ''
-						elif refString.startswith("1:134:"):
+						elif refString.startswith('1:134:'):
 							return _("Alternative")
-						elif refString.startswith("4097:"):
+						elif refString.startswith('4097:'):
 							return _("Internet")
 						else:
 							return orbpos > 1800 and "%d.%d°W"%((3600-orbpos)/10, (3600-orbpos)%10) or "%d.%d°E"%(orbpos/10, orbpos%10)
 		return ""
 
 	def getIPTVProvider(self, refstr):
-		if 'tvshka' in refstr:
-			return "SCHURA"
-		elif 'udp/239.0.1' in refstr:
-			return "Lanet"
-		elif 'kirito.la.net.ua' in refstr:
-			return "Lanet"
-		elif '3a7777' in refstr:
-			return "IPTVNTV"
-		elif 'KartinaTV' in refstr:
-			return "KartinaTV"
-		elif 'Megaimpuls' in refstr:
-			return "MEGAIMPULSTV"
-		elif 'Newrus' in refstr:
-			return "NEWRUSTV"
-		elif 'Sovok' in refstr:
-			return "SOVOKTV"
-		elif 'Rodnoe' in refstr:
-			return "RODNOETV"
-		elif '238.1.1.' in refstr:
-			return "Matrix"
-		elif 'cdnet' in refstr:
-			return "NonameTV"
-		elif 'unicast' in refstr:
-			return "StarLink"
-		elif 'udp/239.255.2.' in refstr:
-			return "Planeta"
-		elif 'udp/233.7.70.' in refstr:
-			return "Rostelecom"
-		elif 'udp/239.1.1.' in refstr:
-			return "Real"
-		elif 'udp/238.0.' in refstr or 'udp/233.191.' in refstr:
-			return "Triolan"
-		elif '%3a8208' in refstr:
-			return "MovieStar"
-		elif 'udp/239.0.0.' in refstr:
-			return "Trinity"
-		elif 'udp/239.100.' in refstr or 'udp/233.252.8.' in refstr or 'udp/225.225.225.' in refstr or 'udp/225.1.' in refstr:
-			return "Volia TV"
-		elif '.cn.ru' in refstr or 'novotelecom' in refstr:
-			return "Novotelecom"
-		elif 'www.youtube.com' in refstr:
-			return "www.youtube.com"
-		elif '.torrent-tv.ru' in refstr:
-			return "torrent-tv.ru"
-		elif 'tv.lifelink.ru' in refstr:
-			return "tv.lifelink.ru"
-		elif 'sat-elit.net' in refstr:
-			return "iptv.sat-elit.net"
-		elif '//91.201.' in refstr:
-			return "www.livehd.tv"
-		elif 'web.tvbox.md' in refstr:
-			return "web.tvbox.md"
-		elif 'live-p12' in refstr:
-			return "PAC12"
-		elif '4097' in refstr:
+		iptv_prov = '/etc/enigma2/iptvprov.list'
+		if os.path.isfile(iptv_prov):
+			with open(iptv_prov, "r") as f:
+				for d in f.readlines():
+					if d.split(',')[0] in refstr:
+						return d.split(',')[1].strip()
+		elif '4097' in refstr or '5001' in refstr or '5002' in refstr:
 			return "StreamTV"
-		elif '%3a1234' in refstr:
-			return "IPTV1"
 		return ""
 
 	def getPlayingref(self, ref):
@@ -429,7 +408,7 @@ class ServiceName2(Converter, object):
 				if playref:
 					refstr = playref.toString() or ''
 					prefix = ''
-					if refstr.startswith("4097:"):
+					if refstr.startswith('4097:'):
 						prefix += "GStreamer "
 					if '%3a//' in refstr:
 						sref = ' '.join(refstr.split(':')[10:])
@@ -449,11 +428,11 @@ class ServiceName2(Converter, object):
 						prefix += "Satellit "
 					elif '(channelID == ' in refstr:
 						prefix += "Current tr "
-				elif refstr.startswith("1:134:"):
+				elif refstr.startswith('1:134:'):
 					prefix += "Alter "
-				elif refstr.startswith("1:64:"):
+				elif refstr.startswith('1:64:'):
 					prefix += "Marker "
-				elif refstr.startswith("4097:"):
+				elif refstr.startswith('4097:'):
 					prefix += "GStreamer "
 				if self.isStream:
 					if self.refstr:
@@ -482,6 +461,8 @@ class ServiceName2(Converter, object):
 			info = service and self.source.info
 			ref = service
 		if not info: return ""
+		refname = 'ServiceName2.ref'
+		searchpath = ['/etc/enigma2/', '/usr/lib/enigma2/python/Components/Converter/']
 		if ref:
 			refstr = ref.toString()
 		else:
@@ -489,7 +470,7 @@ class ServiceName2(Converter, object):
 		if refstr is None:
 			refstr = ''
 		if self.AlternativeControl: 
-			if ref and refstr.startswith("1:134:") and self.ref is None:
+			if ref and refstr.startswith('1:134:') and self.ref is None:
 				nref = self.resolveAlternate(ref)
 				if nref:
 					self.ref = nref
@@ -497,7 +478,7 @@ class ServiceName2(Converter, object):
 					self.refstr = self.ref.toString()
 					if not self.info: return ""
 		if self.IPTVcontrol:
-			if '%3a//' in refstr or (self.refstr and '%3a//' in self.refstr) or refstr.startswith("4097:"):
+			if '%3a//' in refstr or (self.refstr and '%3a//' in self.refstr) or refstr.startswith('4097:'):
 				self.isStream = True
 		if self.type == self.NAME:
 			name = ref and (info.getName(ref) or 'N/A') or (info.getName() or 'N/A')
@@ -521,26 +502,36 @@ class ServiceName2(Converter, object):
 			num, bouq = self.getServiceNumber(ref or eServiceReference(info.getInfoString(iServiceInformation.sServiceref)))
 			return bouq
 		elif self.type == self.PROVIDER:
-			tmpprov = tmpsat = ''
+			tmpprov = tmpref = refpath = ''
 			if self.isStream:
-				if self.refstr and ('%3a//' in self.refstr or '%3a//' in self.refstr):
-					return self.getIPTVProvider(self.refstr)
-				return self.getIPTVProvider(refstr)
+				if self.refstr:
+					tmpprov = self.getIPTVProvider(self.refstr)
+				tmpprov = self.getIPTVProvider(refstr)
 			else:
 				if self.ref:
-					tmpprov += self.getProviderName(self.ref)
+					tmpprov = self.getProviderName(self.ref)
 				if ref:
-					tmpprov += self.getProviderName(ref)
+					tmpprov = self.getProviderName(ref)
 				else: 
-					tmpprov += info.getInfoString(iServiceInformation.sProvider) or ''
-			if self.ref and self.info:
-				tmpsat +=  self.getTransponderInfo(self.info, self.ref, 'O')
-			else:
-				tmpsat += self.getTransponderInfo(info, ref, 'O')
-			if 'tricolor' in tmpprov.lower() and tmpsat.startswith('56'):
-				return '%s %s' % (tmpprov, 'Sibir')
-			else:
+					tmpprov = info.getInfoString(iServiceInformation.sProvider) or ''
+			if '' is tmpprov or 'Unknown' in tmpprov:
+				if self.refstr:
+					tmpref = self.refstr
+				else:
+					tmpref = refstr
+				for i in range(len(searchpath)):
+					if os.path.isfile('%s%s' % (searchpath[i], refname)):
+						refpath = '%s%s' % (searchpath[i], refname)
+				if not '' is refpath:
+					tmpref = ':'.join(tmpref.split(':')[:10])
+					reffile = open(refpath, 'r').read()
+					if not reffile.endswith('\r\n\r\n'):
+						reffile = '%s\r\n' % reffile
+					for line in reffile.splitlines(True):
+						if line.startswith(tmpref):
+							tmpprov = line.strip('\r').strip('\n').split(':')[-1].strip()
 				return tmpprov
+			return tmpprov
 		elif self.type == self.REFERENCE:
 			if self.refstr:
 				return self.refstr
@@ -554,14 +545,14 @@ class ServiceName2(Converter, object):
 				return self.getTransponderInfo(info, ref, 'O')
 		elif self.type == self.TPRDATA:
 			if self.isStream:
-				return _("Streaming")
+				return "Streaming"
 			else:
 				if self.ref and self.info:
 					return self.getTransponderInfo(self.info, self.ref, 'T')
 				return self.getTransponderInfo(info, ref, 'T')
 		elif self.type == self.SATELLITE:
 			if self.isStream:
-				return _("Internet")
+				return "Internet"
 			else:
 				if self.ref:
 					return self.getSatelliteName(self.ref)
@@ -606,19 +597,35 @@ class ServiceName2(Converter, object):
 					num, bouq = self.getServiceNumber(ref or eServiceReference(info.getInfoString(iServiceInformation.sServiceref)))
 					ret += bouq
 				elif f == 'P':	# %P - Provider
+					tmpprov = tmpref = refpath = ''
 					if self.isStream:
-						if self.refstr and '%3a//' in self.refstr:
-							ret += self.getIPTVProvider(self.refstr)
-						else:
-							ret += self.getIPTVProvider(refstr)
+						if self.refstr:
+							tmpprov = self.getIPTVProvider(self.refstr)
+						tmpprov = self.getIPTVProvider(refstr)
 					else:
 						if self.ref:
-							ret += self.getProviderName(self.ref)
+							tmpprov = self.getProviderName(self.ref)
+						if ref:
+							tmpprov = self.getProviderName(ref)
+						else: 
+							tmpprov = info.getInfoString(iServiceInformation.sProvider) or ''
+					if '' is tmpprov or 'Unknown' in tmpprov:
+						if self.refstr:
+							tmpref = self.refstr
 						else:
-							if ref:
-								ret += self.getProviderName(ref)
-							else: 
-								ret += info.getInfoString(iServiceInformation.sProvider) or ''
+							tmpref = refstr
+						for i in range(len(searchpath)):
+							if os.path.isfile('%s%s' % (searchpath[i], refname)):
+								refpath = '%s%s' % (searchpath[i], refname)
+						if not '' is refpath:
+							tmpref = ':'.join(tmpref.split(':')[:10])
+							reffile = open(refpath, 'r').read()
+							if not reffile.endswith('\r\n\r\n'):
+								reffile = '%s\r\n' % reffile
+							for line in reffile.splitlines(True):
+								if line.startswith(tmpref):
+									tmpprov = line.strip('\r').strip('\n').split(':')[-1].strip()
+					ret += tmpprov
 				elif f == 'R':	# %R - Reference
 					if self.refstr:
 						ret += self.refstr
@@ -626,7 +633,7 @@ class ServiceName2(Converter, object):
 						ret += refstr
 				elif f == 'S':	# %S - Satellite
 					if self.isStream:
-						ret += _("Internet")
+						ret += "Internet"
 					else:
 						if self.ref:
 							ret += self.getSatelliteName(self.ref)

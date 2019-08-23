@@ -69,12 +69,12 @@ class RWeather(Poll, Converter, object):
 		self.iConsole = iConsole()
 		self.poll_interval = time_update_ms
 		self.poll_enabled = True
-	
+
 	def write_none(self):
 		with open('/tmp/rweather.xml', 'w') as noneweather:
 			noneweather.write('None')
 		noneweather.close()
-	
+
 	def get_xmlfile(self):
 		self.iConsole.ePopen("wget -P /tmp -T2 'http://informers.rambler.ru/weather/geoid//?version=4' -O /tmp/rweather.xml", self.control_xml)
 	
@@ -106,7 +106,7 @@ class RWeather(Poll, Converter, object):
 				for i in range(3, len(weather_data[0].split())):
 					rweather['city'] += weather_data[0].split()[i] + ' '
 				rweather['city'] = rweather['city'].strip()
-				rweather['temp'] = weather_data[-3].split()[0]
+				rweather['temp'] = '%s%sC' % (weather_data[-3].split()[0][:-3],unichr(176).encode("latin-1"))
 				for i in range(1, len(weather_data[-3].split())):
 					rweather['condition'] += weather_data[-3].split()[i].strip(',') + ' '
 				rweather['condition'] = rweather['condition'].strip()
