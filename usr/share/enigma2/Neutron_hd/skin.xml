@@ -2307,6 +2307,7 @@
     <widget name="AboutScrollLabel" font="Regular;22" position="45,70" size="670,530" halign="center" backgroundColor="background" transparent="1" />
     <widget name="key_red" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="key_green" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_yellow" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="key_blue" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
     <panel name="TemplatesButtons" />
@@ -2342,6 +2343,19 @@
     <widget name="AboutScrollLabel" position="45,70" size="670,530" font="Console;20" backgroundColor="black" transparent="1" />
     <panel name="TemplatesClock" />
   </screen>
+  <!-- Troubleshoot -->
+  <screen name="Troubleshoot" position="fill" title="Latest Commits" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/info.png" alphatest="blend" />
+    <eLabel text="Latest Commits" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <widget name="AboutScrollLabel" position="45,70" size="670,530" font="Console;16" backgroundColor="black" transparent="1" />
+    <widget name="key_red" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <widget name="key_green" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+    <ePixmap pixmap="Neutron_hd/buttons/key_arrow.png" position="1210,616" size="40,20" alphatest="on" />
+    <panel name="TemplatesClock" />
+    <panel name="TemplatesButtonsRedGreen" />
+  </screen>
   <!-- Translation Info -->
   <screen name="TranslationInfo" position="fill" title="Memory Info" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
@@ -2365,6 +2379,10 @@
     <widget name="blue" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
     <panel name="TemplatesButtons" />
+  </screen>
+  <!-- Service Info Simple -->
+	<screen name="ServiceInfoSimple">
+    <panel name="ServiceInfo" />
   </screen>
   <!-- Setup -->
   <screen name="Setup" position="fill" title="Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -4529,38 +4547,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="list" position="45,70" size="340,525" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <widget name="choosen" position="375,70" size="340,525" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <widget source="key_red" render="Label" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
-    <widget source="key_green" render="Label" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    <panel name="TemplatesButtonsRedGreen" />
+    <panel name="TemplatesButtons" />
   </screen>
-  <!-- ########## ButtonSetup ########## -->
-     <!-- ButtonSetup -->
-  <screen name="ButtonSetup" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Input">
-    <panel name="TemplatesMenu700" />
-    <panel name="TemplatesMenu" />
-    <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
-    <panel name="TemplatesTitle3" />
-    <widget name="list" position="45,70" size="340,525" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
-    <widget name="choosen" position="375,70" size="340,525" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
-    <widget name="description" position="120,640" size="800,75" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget source="key_red" render="Label" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
+     <!-- HotkeySetupSelect -->
+  <screen name="HotkeySetupSelect" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Input">
+    <panel name="HotkeySetup" />
     <widget source="key_green" render="Label" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
-    <panel name="TemplatesClock" />
-    <panel name="TemplatesButtonsRedGreen" />
-  </screen>
-     <!-- ButtonSetupSelect -->
-  <screen name="ButtonSetupSelect" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Input">
-    <panel name="TemplatesMenu700" />
-    <panel name="TemplatesMenu" />
-    <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
-    <panel name="TemplatesTitle3" />
-    <widget name="list" position="45,70" size="340,525" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
-    <widget name="choosen" position="375,70" size="340,525" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
-    <widget name="description" position="120,640" size="800,75" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget source="key_red" render="Label" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
-    <widget source="key_green" render="Label" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
-    <panel name="TemplatesClock" />
-    <panel name="TemplatesButtonsRedGreen" />
+    <widget source="key_yellow" render="Label" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
   </screen>
   <!-- ########## Remote Control Code ########## -->
   <!-- Remote Control Code -->
