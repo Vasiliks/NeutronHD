@@ -1676,7 +1676,6 @@
     <!-- Templates Title-->
     <widget source="title" render="Label" position="30,25" size="1220,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
   </screen>
-
   <!-- Button Graphic Templates -->
   <screen name="ButtonPngRed">
     <widget objectTypes="key_red,StaticText" source="key_red" render="Pixmap" pixmap="Neutron_hd/buttons/key_red.png" position="1160,616" size="40,20" alphatest="on" >
@@ -1702,7 +1701,6 @@
         </widget>
     <ePixmap objectTypes="key_blue,Button,Label" pixmap="Neutron_hd/buttons/key_blue.png" position="1160,694" size="40,20" alphatest="on" />
   </screen>
-
   <!-- Button Text Templates -->
   <screen name="ButtonTextRed">
     <widget objectTypes="key_red,Label,Button" name="key_red" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
@@ -1720,7 +1718,6 @@
     <widget objectTypes="key_blue,Label,Button" name="key_blue" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
   </screen>
-
   <screen name="TemplatesButtons">
     <!-- Templates Buttons-->
     <panel name="ButtonRed" />
@@ -1728,7 +1725,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
   </screen>
-
   <!-- Individual Button Templates -->
   <screen name="ButtonRed">
     <panel name="ButtonPngRed"/>
@@ -1746,7 +1742,6 @@
     <panel name="ButtonPngBlue"/>
     <panel name="ButtonTextBlue"/>
   </screen>
-
   <screen name="TemplatesButtonsRedGreen">
     <!-- Templates Buttons-->
     <panel name="ButtonRed"/>
@@ -1980,7 +1975,6 @@
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ChannelContextMenu -->
   <screen name="ChannelContextMenu" position="fill" title="Channellist menu" flags="wfNoBorder" backgroundColor="transparent">
@@ -2030,7 +2024,6 @@
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Movie Context Menu -->
   <screen name="MovieContextMenu" position="fill" title="Movielist menu" flags="wfNoBorder" backgroundColor="transparent">
@@ -2115,7 +2108,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Job View -->
   <screen name="JobView" position="fill" title="Job View" flags="wfNoBorder" backgroundColor="transparent">
@@ -2137,7 +2129,6 @@
     <widget source="backgroundable" render="FixedLabel" text="Continue in background" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" zPosition="3">
       <convert type="ConditionalShowHide" />
     </widget>
-    
   </screen>
   <!-- Bitrate Viewer -->
   <screen name="BitrateViewer" position="fill" title="Bitrate viewer" flags="wfNoBorder" backgroundColor="transparent">
@@ -2165,7 +2156,7 @@
   </screen>
   <!-- #################### Main menu #################### -->
   <!-- Menu -->
-  <screen name="Menu" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="Menu" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu500" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
@@ -2374,7 +2365,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Memory Info -->
   <screen name="MemoryInfo" position="fill" title="Memory Info" flags="wfNoBorder" backgroundColor="transparent">
@@ -2396,7 +2386,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Latest Commits -->
   <screen name="CommitInfo" position="fill" title="Latest Commits" flags="wfNoBorder" backgroundColor="transparent">
@@ -2408,11 +2397,11 @@
     <panel name="TemplatesClock" />
   </screen>
   <!-- Troubleshoot -->
-  <screen name="Troubleshoot" position="fill" title="Latest Commits" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="Troubleshoot" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/info.png" alphatest="blend" />
-    <eLabel text="Latest Commits" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <panel name="TemplatesTitle3" />
     <widget name="AboutScrollLabel" position="45,70" size="670,530" font="Console;16" backgroundColor="black" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
@@ -2442,7 +2431,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Service Info Simple -->
 	<screen name="ServiceInfoSimple" position="fill" title="Serviceinfo" flags="wfNoBorder" backgroundColor="transparent">
@@ -2459,7 +2447,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- VideoSetup (VideoMode Plugin A/V Settings) -->
   <screen name="VideoSetup" position="fill" title="VideoSetup" flags="wfNoBorder" backgroundColor="transparent">
@@ -2472,7 +2459,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!--  Skin Selector  -->
   <screen name="SkinSelector" position="fill" title="Choose your Skin" flags="wfNoBorder" backgroundColor="transparent">
@@ -2485,7 +2471,6 @@
     <widget source="introduction" render="Label" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- InputDeviceSelection -->
   <screen name="InputDeviceSelection" position="fill" title="Select input device" flags="wfNoBorder" backgroundColor="transparent">
@@ -2511,7 +2496,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- InputDeviceSetup -->
   <screen name="InputDeviceSetup" position="fill" title="Input device setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -2526,7 +2510,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## EPG ########## -->
   <!--  EPG Selection -->
@@ -2554,7 +2537,6 @@
       <convert type="EventName">Rating</convert>
     </widget>
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- EPG Selection Multi -->
   <screen name="EPGSelectionMulti" position="fill" title="EPG Selection Multi" flags="wfNoBorder" backgroundColor="transparent">
@@ -2575,7 +2557,6 @@
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
-    
   </screen>
   <!--  Event View -->
   <screen name="EventView" position="fill" title="Eventview" flags="wfNoBorder" backgroundColor="transparent">
@@ -2591,7 +2572,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Graph MultiEPG -->
   <screen name="GraphMultiEPG" position="fill" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
@@ -2628,7 +2608,6 @@
       <convert type="EventName">Rating</convert>
     </widget>
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Graph MultiEPGList -->
   <screen name="GraphMultiEPGList" position="fill" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
@@ -2651,7 +2630,6 @@
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
-    
   </screen>
   <!-- GraphMultiEPGSetup -->
   <screen name="GraphMultiEpgSetup" position="fill" title="Electronic Program Guide Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -2663,7 +2641,6 @@
     <widget name="canceltext" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="oktext" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- GraphMultiEPGSetup -->
   <screen name="SelectBouquet" position="fill" title="Choose bouquet" flags="wfNoBorder" backgroundColor="transparent">
@@ -2693,7 +2670,6 @@
     <widget name="canceltext" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="oktext" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Network Adapter ########## -->
   <!-- Adapter Setup -->
@@ -2720,7 +2696,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Adapter Setup Configuration -->
   <screen name="AdapterSetupConfiguration" position="fill" title="Network Configuration..." flags="wfNoBorder" backgroundColor="transparent">
@@ -2747,7 +2722,6 @@
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- NetworkMountsMenu -->
   <screen name="NetworkMountsMenu" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
@@ -2774,7 +2748,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- WlanStatus -->
   <screen name="WlanStatus" position="fill" title="Wireless Network State" flags="wfNoBorder" backgroundColor="transparent">
@@ -2813,7 +2786,6 @@
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- WlanScan -->
   <screen name="WlanScan" position="fill" title="Choose a Wireless Network" flags="wfNoBorder" backgroundColor="transparent">
@@ -2841,7 +2813,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Network Adapter Selection -->
   <screen name="NetworkAdapterSelection" position="fill" title="Select Network Adapter" flags="wfNoBorder" backgroundColor="transparent">
@@ -2868,7 +2839,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Network Adapter Test -->
   <screen name="NetworkAdapterTest" position="fill" title="Network test..." flags="wfNoBorder" backgroundColor="transparent">
@@ -2914,7 +2884,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Network Browser -->
   <screen name="NetworkBrowser" position="fill" title="Network Browser" flags="wfNoBorder" backgroundColor="transparent">
@@ -2943,7 +2912,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- AutoMountEdit -->
   <screen name="AutoMountEdit" position="fill" title="MountEdit" flags="wfNoBorder" backgroundColor="transparent">
@@ -2957,7 +2925,6 @@
     <widget name="HelpWindow" position="40,453" zPosition="1" size="1,1" transparent="1" alphatest="on" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- AutoMount Manager -->
   <screen name="AutoMountManager" position="fill" title="MountManager" flags="wfNoBorder" backgroundColor="transparent">
@@ -2980,7 +2947,6 @@
     <widget source="introduction" render="Label" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- AutoMountView -->
   <screen name="AutoMountView" position="fill" title="MountView" flags="wfNoBorder" backgroundColor="transparent">
@@ -3010,7 +2976,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ScanIP -->
   <screen name="ScanIP" position="fill" title="Scan IP" flags="wfNoBorder" backgroundColor="transparent">
@@ -3023,7 +2988,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- User Dialog -->
   <screen name="UserDialog" position="fill" title="UserDialog" flags="wfNoBorder" backgroundColor="transparent">
@@ -3037,7 +3001,6 @@
     <widget name="HelpWindow" position="40,453" zPosition="1" size="1,1" transparent="1" alphatest="on" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- UserManager -->
   <screen name="UserManager" position="fill" title="UserManager" flags="wfNoBorder" backgroundColor="transparent">
@@ -3060,7 +3023,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Wlan Selection -->
   <screen name="WlanSelection" position="fill" title="Wireless Network Adapter Selection..." flags="wfNoBorder" backgroundColor="transparent">
@@ -3073,7 +3035,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Wlan Setup -->
   <screen name="WlanSetup" position="fill" title="Wireless Network Setup Menu..." flags="wfNoBorder" backgroundColor="transparent">
@@ -3086,7 +3047,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Wlan Config -->
   <screen name="WlanConfig" position="fill" title="Wireless Network Configuration..." flags="wfNoBorder" backgroundColor="transparent">
@@ -3120,7 +3080,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Wlan Status -->
   <screen name="Wlanstatus" position="fill" title="Wireless Network Status..." flags="wfNoBorder" backgroundColor="transparent">
@@ -3131,7 +3090,6 @@
     <widget source="status" render="Label" position="45,70" size="670,500" font="Regular;18" halign="left" backgroundColor="background" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Softwaremanager ########## -->
   <!--Software Manager Setup -->
@@ -3147,7 +3105,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!--Update Plugin Menu -->
   <screen name="UpdatePluginMenu" position="fill" title="Softwaremanager" flags="wfNoBorder" backgroundColor="transparent">
@@ -3178,7 +3135,6 @@
     <panel name="ButtonRed" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Plugin Browser -->
   <screen name="PluginBrowser" position="fill" title="Plugin browser" flags="wfNoBorder" backgroundColor="transparent">
@@ -3190,7 +3146,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Plugin Download Browser -->
   <screen name="PluginDownloadBrowser" position="fill" title="Downloadable plugins" flags="wfNoBorder" backgroundColor="transparent">
@@ -3234,7 +3189,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- PluginManagerInfo (Plugin manager activity information) -->
   <screen name="PluginManagerInfo" position="fill" title="Plugin manager activity" flags="wfNoBorder" backgroundColor="transparent">
@@ -3259,7 +3213,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- PluginDetails -->
   <screen name="PluginDetails" position="fill" title="Plugin Details" flags="wfNoBorder" backgroundColor="transparent">
@@ -3275,7 +3228,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- UpdatePlugin -->
   <screen name="UpdatePlugin" position="0,640" size="1280,80" title="Software update" zPosition="1" flags="wfNoBorder" backgroundColor="transparent">
@@ -3305,7 +3257,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- IPKGSource -->
   <screen name="IPKGSource" position="fill" title="IPKG source" flags="wfNoBorder" backgroundColor="transparent">
@@ -3317,7 +3268,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- PacketManager -->
   <screen name="PacketManager" position="fill" title="IPKG upgrade" flags="wfNoBorder" backgroundColor="transparent">
@@ -3341,7 +3291,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- IpkgInstaller -->
   <screen name="IpkgInstaller" position="fill" title="Install extensions" flags="wfNoBorder" backgroundColor="transparent">
@@ -3354,7 +3303,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- BackupSelection -->
   <screen name="BackupSelection" position="fill" title="Select files/folders to backup" flags="wfNoBorder" backgroundColor="transparent">
@@ -3367,7 +3315,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- BackupScreen -->
   <screen name="BackupScreen" position="fill" title="Backup is running" flags="wfNoBorder" backgroundColor="transparent">
@@ -3389,7 +3336,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- RestoreScreen -->
   <screen name="RestoreScreen" position="fill" title="Restore is running" flags="wfNoBorder" backgroundColor="transparent">
@@ -3427,7 +3373,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Timer Entry -->
   <screen name="TimerEntry" position="fill" title="Timer entry" flags="wfNoBorder" backgroundColor="transparent">
@@ -3439,7 +3384,6 @@
     <widget name="canceltext" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="oktext" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Timer Log -->
   <screen name="TimerLog" position="fill" title="Timer log" flags="wfNoBorder" backgroundColor="transparent">
@@ -3454,7 +3398,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Timer Sanity Conflict -->
   <screen name="TimerSanityConflict" position="fill" title="Timer sanity error" flags="wfNoBorder" backgroundColor="transparent">
@@ -3470,7 +3413,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Timer Selection -->
   <screen name="TimerSelection" position="fill" title="Timer selection" flags="wfNoBorder" backgroundColor="transparent">
@@ -3495,7 +3437,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- DVD Burn - FileBrowser -->
   <screen name="FileBrowser_DVDPlayer" position="fill" title="DVD File Browser" flags="wfNoBorder" backgroundColor="transparent">
@@ -3509,7 +3450,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- DVD Burn- DVD Toolbox -->
   <screen name="DVDToolbox" position="fill" title="DVD media toolbox" flags="wfNoBorder" backgroundColor="transparent">
@@ -3525,7 +3465,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- DVD Burn-Title List -->
   <screen name="TitleList" position="fill" title="DVD Tool" flags="wfNoBorder" backgroundColor="transparent">
@@ -3561,7 +3500,6 @@
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- DVD Burn-TitleProperties -->
   <screen name="TitleProperties" position="fill" title="Properties of current title" flags="wfNoBorder" backgroundColor="transparent">
@@ -3576,7 +3514,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- DVD Burn-DVDMovieSelection -->
   <screen name="DVDMovieSelection" position="fill" title="Select a movie" flags="wfNoBorder" backgroundColor="transparent">
@@ -3604,7 +3541,6 @@
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- DVD  File Browser -->
   <screen name="FileBrowser" position="fill" title="DVD File Browser" flags="wfNoBorder" backgroundColor="transparent">
@@ -3631,7 +3567,6 @@
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Pic_Exif (Picture) -->
   <screen name="Pic_Exif" position="fill" title="Info" flags="wfNoBorder" backgroundColor="transparent">
@@ -3650,7 +3585,6 @@
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Pic_Setup (Picture) -->
   <screen name="Pic_Setup" position="fill" title="Settings" flags="wfNoBorder" backgroundColor="transparent">
@@ -3664,7 +3598,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## MediaInfo ########## -->
   <!-- MediaInfo -->
@@ -3682,7 +3615,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- MediaInfo Setup -->
   <screen name="mediaInfoSetup" position="fill" title="MediaInfo Setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -3694,7 +3626,6 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Tuner ########## -->
   <!-- NimSetup -->
@@ -3758,7 +3689,6 @@
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Positioner setup 2-->
   <screen name="PositionerSetupMod" position="fill" title="Positioner setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -3793,7 +3723,6 @@
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!--  Tuner Screen -->
   <screen name="TunerScreen" position="fill" title="Tune" flags="wfNoBorder" backgroundColor="transparent">
@@ -3814,7 +3743,6 @@
     <widget name="key_red" render="Label" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="key_green" render="Label" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="key_blue" render="Label" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
-    
   </screen>
   <!--  Satfinder -->
   <screen name="Satfinder" position="fill" title="Satfinder" flags="wfNoBorder" backgroundColor="transparent">
@@ -4012,7 +3940,6 @@
     <eLabel text="Cancel" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <eLabel text="Save" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## State Bar ########## -->
   <!--  NumberZap -->
@@ -4156,7 +4083,6 @@
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- CIconfigMenu -->
   <screen name="easyCIconfigMenu" position="fill" title="CI Assignment" flags="wfNoBorder" backgroundColor="transparent">
@@ -4170,7 +4096,6 @@
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- CAidSelect -->
   <screen name="CAidSelect" position="fill" title="select CAId's" flags="wfNoBorder" backgroundColor="transparent">
@@ -4197,7 +4122,6 @@
     <widget name="config" position="45,425" zPosition="1" size="670,180" transparent="1" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" />
     <widget name="languagetext" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="rc" pixmaps="Neutron_hd/rc.png,Neutron_hd/rcold.png" position="1045,70" zPosition="10" size="154,500" alphatest="on" />
-    
   </screen>
   <!-- Hard disk Selection -->
   <screen name="HarddiskSelection" position="fill" title="Select HDD" flags="wfNoBorder" backgroundColor="transparent">
@@ -4226,7 +4150,6 @@
       <convert type="EventTime">Progress</convert>
     </widget>
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Hard disk Wait -->
   <screen name="HarddiskWait" position="fill" title="Harddisk" flags="wfNoBorder" backgroundColor="transparent">
@@ -4337,7 +4260,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Input Box -->
   <screen name="InputBox" position="fill" title="Input" flags="wfNoBorder" backgroundColor="transparent">
@@ -4424,7 +4346,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Standby -->
   <screen name="Standby" position="fill" title="Standby" flags="wfNoBorder" backgroundColor="transparent" />
@@ -4526,7 +4447,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!--  VideoEnhancementPreview -->
   <screen name="VideoEnhancementPreview" position="fill" title="VideoEnhancementPreview" flags="wfNoBorder" backgroundColor="transparent">
@@ -4554,7 +4474,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="kRed" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="kGreen" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Genuine Vuplus ########## -->
   <!-- Genuine Vuplus -->
@@ -4584,7 +4503,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## LED Brightness ########## -->
   <!-- LEDBrightnessSetup -->
@@ -4599,7 +4517,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Hotkey ########## -->
      <!-- Hotkey -->
@@ -4612,7 +4529,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="choosen" position="375,70" size="340,525" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
      <!-- HotkeySetupSelect -->
   <screen name="HotkeySetupSelect" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Input">
@@ -4661,7 +4577,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Top PPanel -->
   <screen name="ToplevelPPanel" position="fill" title="Toplevel PPanel" flags="wfNoBorder" backgroundColor="transparent">
@@ -4693,7 +4608,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- #################### E Panel #################### -->
   <!-- E-Panel for OpenPli -->
@@ -4720,7 +4634,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- E-Panel config -->
   <screen name="ConfigExtentions2" position="fill" title="E-Panel Menu/Extensionmenu config" flags="wfNoBorder" backgroundColor="transparent">
@@ -4774,7 +4687,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="softcamLabel" render="Label" position="60,545" size="200,25" font="Regular; 22" halign="right" valign="center" foregroundColor="color2" backgroundColor="background" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Softcam Panel -->
   <screen name="SoftcamPanel2" position="fill" title="Softcam/Cardserver Panel" flags="wfNoBorder" backgroundColor="transparent">
@@ -4796,7 +4708,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Select SoftCam or CardServer -->
   <screen name="emuSel5" position="fill" title="Select SoftCam or CardServer" flags="wfNoBorder" backgroundColor="transparent">
@@ -4824,7 +4735,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- SoftCam.Key Updater -->
   <screen name="SoftcamUpd2" position="fill" title="SoftCam.Key Updater" flags="wfNoBorder" backgroundColor="transparent">
@@ -4837,7 +4747,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Changelog -->
   <screen name="ChangelogScreen" position="fill" title="Changelog" flags="wfNoBorder" backgroundColor="transparent">
@@ -4848,7 +4757,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="text" position="45,70" size="670,300" font="Console;20" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- IPKTools Screen -->
   <screen name="IPKToolsScreen2" position="fill" title="IPK Tools" flags="wfNoBorder" backgroundColor="transparent">
@@ -4896,7 +4804,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Remove IPK -->
   <screen name="RemoveIPK" position="fill" title="Ipk remove" flags="wfNoBorder" backgroundColor="transparent">
@@ -4920,7 +4827,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Insatall Feed -->
   <screen name="downfeed" position="fill" title="Insatall extensions from feed" flags="wfNoBorder" backgroundColor="transparent">
@@ -4967,7 +4873,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Service Tools -->
   <screen name="ToolsScreen2" position="fill" title="Service Tools" flags="wfNoBorder" backgroundColor="transparent">
@@ -4989,7 +4894,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- System Screen -->
   <screen name="SystemScreen" position="fill" title="System Tools" flags="wfNoBorder" backgroundColor="transparent">
@@ -5011,7 +4915,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- System Screen 2-->
   <screen name="System2Screen" position="fill" title="System Tools" flags="wfNoBorder" backgroundColor="transparent">
@@ -5033,7 +4936,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Service Manager -->
   <screen name="ServiceMan" position="fill" title="Service Manager" flags="wfNoBorder" backgroundColor="transparent">
@@ -5055,7 +4957,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- CtronTab Manager -->
   <screen name="CrontabMan" position="fill" title="CtronTab Manager" flags="wfNoBorder" backgroundColor="transparent">
@@ -5077,7 +4978,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- CtronTab Add -->
   <screen name="CrontabManAdd" position="fill" title="add tabs" flags="wfNoBorder" backgroundColor="transparent">
@@ -5111,7 +5011,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Swap Screen2 -->
   <screen name="SwapScreen2" position="fill" title="Swap on USB/HDD" flags="wfNoBorder" backgroundColor="transparent">
@@ -5133,7 +5032,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Usb Screen -->
   <screen name="UsbScreen" position="fill" title="Unmount USB devices" flags="wfNoBorder" backgroundColor="transparent">
@@ -5157,7 +5055,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- NTP Screen -->
   <screen name="NTPScreen" position="fill" title="NtpTime Updater" flags="wfNoBorder" backgroundColor="transparent">
@@ -5171,7 +5068,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Manual Time -->
   <screen name="ManualSetTime" position="fill" title="NtpTime Updater" flags="wfNoBorder" backgroundColor="transparent">
@@ -5208,7 +5104,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- lsmod Screen -->
   <screen name="lsmodScreen" position="fill" title="Kernel Drivers in Memory" flags="wfNoBorder" backgroundColor="transparent">
@@ -5230,7 +5125,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- EPG Down -->
   <screen name="epgdn" position="fill" title="EPG from linux-sat.tv (exUSSR)" flags="wfNoBorder" backgroundColor="transparent">
@@ -5244,7 +5138,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Hosts Screen -->
   <screen name="HostsScreen" position="fill" title="/etc/hosts editor" flags="wfNoBorder" backgroundColor="transparent">
@@ -5266,7 +5159,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Drop Screen -->
   <screen name="DropScreen" position="fill" title="Cache Flush" flags="wfNoBorder" backgroundColor="transparent">
@@ -5282,7 +5174,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="memTotal" render="Label" position="215,668" size="450,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <widget source="bufCache" render="Label" position="215,690" size="450,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- DDNS Screen -->
   <screen name="DDNSScreen" position="fill" title="Dynamic DNS" flags="wfNoBorder" backgroundColor="transparent">
@@ -5295,7 +5186,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Add Record -->
   <screen name="Add Record" position="fill" title="add record" flags="wfNoBorder" backgroundColor="transparent">
@@ -5332,7 +5222,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Log Screen -->
   <screen name="LogScreen" position="fill" title="View Crashlog file" flags="wfNoBorder" backgroundColor="transparent">
@@ -5344,7 +5233,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
-    
   </screen>
   <!-- Info2 Screen -->
   <screen name="Info2Screen" position="fill" title="System Info" flags="wfNoBorder" backgroundColor="transparent">
@@ -5354,7 +5242,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesTitle5" />
     <widget name="text" position="45,70" size="1190,535" font="Console;20" backgroundColor="black" transparent="1" />
     <panel name="ButtonRed" />
-    
   </screen>
   <!-- Script Screen -->
   <screen name="ScriptScreen3" position="fill" title="Script Executer" flags="wfNoBorder" backgroundColor="transparent">
@@ -5367,7 +5254,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- View System Settings -->
   <screen name="ViewSet" position="fill" title="View System Settings (/etc/enigma2/settings)" flags="wfNoBorder" backgroundColor="transparent">
@@ -5377,7 +5263,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesTitle5" />
     <widget name="text" position="45,70" size="1190,535" font="Console;20" backgroundColor="black" transparent="1" />
     <panel name="ButtonRed" />
-    
   </screen>
   <!-- Config script -->
   <screen name="ConfigScript" position="fill" title="Config script Executer" flags="wfNoBorder" backgroundColor="transparent">
@@ -5406,7 +5291,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Hdmi CEC Setup PLI-->
   <screen name="HdmiCECSetupScreen" position="fill" title="HDMI CEC setup" flags="wfNoBorder" backgroundColor="transparent">
@@ -5422,7 +5306,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Update Preview ########## -->
   <!-- Update Preview -->
@@ -5437,7 +5320,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="yellow_key" render="Label" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget source="blue_key" render="Label" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
-    
   </screen>
   <!-- Files Selection -->
   <screen name="FilesSelection" position="fill" title="Select files" flags="wfNoBorder" backgroundColor="transparent">
@@ -5450,7 +5332,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Latest Commits -->
   <screen name="commitinfo" position="fill" title="Latest Commits" flags="wfNoBorder" backgroundColor="transparent">
@@ -5489,7 +5370,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <widget source="red_key" render="Label" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Cam Config Screen -->
   <screen name="SelectConfScreen" position="fill" title="Please select and press OK" flags="wfNoBorder" backgroundColor="transparent">
@@ -5564,7 +5444,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## newcamd.list Editor ########## -->
   <!-- NCLEditMain -->
@@ -5598,7 +5477,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- NCLEditAdd -->
   <screen name="NCLAdd" position="fill" title="add/edit server" flags="wfNoBorder" backgroundColor="transparent">
@@ -5611,7 +5489,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- NCLEditAddGlobal -->
   <screen name="NCLEditGlobal" position="fill" title="edit Global parameters" flags="wfNoBorder" backgroundColor="transparent">
@@ -5623,7 +5500,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Alt Cam Manager ########## -->
   <!-- AltCamManager -->
@@ -5651,7 +5527,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ConfigEdit -->
   <screen name="ConfigEdit" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="SoftCam path configuration">
@@ -5668,7 +5543,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!-- ########## Backup Suite ########## -->
   <!-- BackupSuite -->
-  <screen name="BackupStart" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="BackupStart" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/backup.png" alphatest="blend" />
     <widget source="Title" render="Label" position="25,573" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="left" transparent="1" borderWidth="2" />
@@ -5680,10 +5555,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_help.png" position="1210,694" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- WhatisNewInfo -->
-  <screen name="WhatisNewInfo" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="WhatisNewInfo" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/info.png" alphatest="blend" />
@@ -5691,10 +5565,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="AboutScrollLabel" font="Regular;22" position="45,70" size="670,530" halign="center" backgroundColor="background" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- FlashImageConfig -->
-  <screen name="FlashImageConfig" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="FlashImageConfig" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/backup.png" alphatest="blend" />
@@ -5707,7 +5580,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_help.png" position="1210,694" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Device Manager ########## -->
   <!-- Hard Drive Setup -->
@@ -5733,7 +5605,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Hard Drive Info -->
   <screen name="HddInfo" position="fill" title="Hard Drive Info" flags="wfNoBorder" backgroundColor="transparent">
@@ -5756,7 +5627,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Hard Drive Mount -->
   <screen name="HddMount" position="fill" title="Hard Drive Mount" flags="wfNoBorder" backgroundColor="transparent">
@@ -5770,7 +5640,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Hard Drive Fast Umount -->
   <screen name="HddFastRemove" position="fill" title="Hard Drive Fast Umount" flags="wfNoBorder" backgroundColor="transparent">
@@ -5819,7 +5688,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ExtraMessageBox -->
   <screen name="ExtraMessageBox" position="fill" title="Message" flags="wfNoBorder" backgroundColor="transparent">
@@ -5880,7 +5748,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- MyTubeSuggestionsListScreen -->
   <screen name="MyTubeSuggestionsListScreen" position="fill" title="MyTubeSuggestionsListScreen..." flags="wfNoBorder" backgroundColor="transparent">
@@ -5926,7 +5793,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="detailtext" position="45,70" size="670,500" zPosition="10" font="Regular;22" transparent="1" halign="left" valign="top" backgroundColor="background" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- MyTubeVideoInfoScreen -->
   <screen name="MyTubeVideoInfoScreen" position="fill" title="MyTubePlayerMainScreen..." flags="wfNoBorder" backgroundColor="transparent">
@@ -5964,7 +5830,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="thumbnail" position="50,360" size="100,135" alphatest="on" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- MyTubeSettingsScreen -->
   <screen name="MyTubeSettingsScreen" position="fill" title="MyTubeSettingsScreen" flags="wfNoBorder" backgroundColor="transparent">
@@ -5976,7 +5841,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- MyTubeTasksScreen -->
   <screen name="MyTubeTasksScreen" position="fill" title="MyTubeTasksScreen" flags="wfNoBorder" backgroundColor="transparent">
@@ -5999,7 +5863,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     </widget>
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## YAMP Music Player ########## -->
   <!-- Yamp -->
@@ -6044,7 +5907,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
-    
   </screen>
   <!-- YampLyrics -->
   <screen name="YampLyricsScreen" position="fill" title="YAMP Music Player Lyrics" flags="wfNoBorder" backgroundColor="transparent">
@@ -6077,7 +5939,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="Cancel" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <eLabel text="Save" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- YampSelect -->
   <screen name="YampSelectPath" position="fill" title="Yamp Music Player - Select path" flags="wfNoBorder" backgroundColor="transparent">
@@ -6090,7 +5951,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="Cancel" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <eLabel text="OK" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Merlin Music Player ########## -->
   <!-- Merlin Music Player Screen -->
@@ -6205,7 +6065,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- TMBD Posterviem -->
   <screen name="PosterviemTMBD" position="fill" title="TMBD Posterviem" flags="wfNoBorder" backgroundColor="transparent">
@@ -6224,7 +6083,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- KinoRu -->
   <screen name="KinoRu" position="fill" title="TMBD Details Plugin" flags="wfNoBorder" backgroundColor="transparent">
@@ -6251,7 +6109,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Kinopoisk Posterviem -->
   <screen name="Posterviem" position="fill" title="Kinopoisk Posterviem" flags="wfNoBorder" backgroundColor="transparent">
@@ -6268,7 +6125,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Settings Configuration -->
   <screen name="TMBDSettings" position="fill" title="TMBDSettings" flags="wfNoBorder" backgroundColor="transparent">
@@ -6318,7 +6174,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="config" position="45,70" size="470,500" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Instal Tmbd components -->
   <screen name="Instalcomponents" position="fill" title="Instal Tmbd components Settings" flags="wfNoBorder" backgroundColor="transparent">
@@ -6361,7 +6216,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Dream Explorer ########## -->
   <!-- DreamExplorerII -->
@@ -6378,7 +6232,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- DreamExplorerII -->
   <screen name="CPmaniger" position="fill" title="Select Copy/Move location..." flags="wfNoBorder" backgroundColor="transparent">
@@ -6391,7 +6244,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="MOVE" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <eLabel text="COPY" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- DreamExplorerII -->
   <screen name="SoftLinkScreen" position="fill" title="Make a softlink..." flags="wfNoBorder" backgroundColor="transparent">
@@ -6404,7 +6256,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <eLabel text="Set name" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <eLabel text="Make a softlink" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- DreamExplorerII -->
   <screen name="vEditor" position="fill" title="File Explorer" flags="wfNoBorder" backgroundColor="transparent">
@@ -6425,7 +6276,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="buttonred" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="buttongreen" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Filebrowser -->
   <screen name="FilebrowserScreen" position="fill" title="System Info" flags="wfNoBorder" backgroundColor="transparent">
@@ -6440,7 +6290,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="yellow" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget name="blue" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
-    
   </screen>
   <!-- ########## Foreca ########## -->
   <!-- Foreca Preview -->
@@ -6467,7 +6316,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- City Panel -->
   <screen name="CityPanel" position="fill" title="Select a city" flags="wfNoBorder" backgroundColor="transparent">
@@ -6484,7 +6332,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Neutron_hd/buttons/key_ok.png" position="1210,616" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_help.png" position="1210,642" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Sat Panel -->
   <screen name="SatPanel" position="fill" title="Satellite photos" flags="wfNoBorder" backgroundColor="transparent">
@@ -6498,7 +6345,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Pic Setup -->
   <screen name="PicSetup" position="fill" title="Satellite photos" flags="wfNoBorder" backgroundColor="transparent">
@@ -6529,7 +6375,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
-    
   </screen>
   <!-- ########## Time Off ########## -->
   <!-- Timeoff -->
@@ -6542,7 +6387,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="red_key" render="Label" position="750,615" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget source="green_key" render="Label" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## Transmission ########## -->
   <!-- Transmission -->
@@ -6568,7 +6412,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!-- ########## WeatherMSN ########## -->
   <!-- WeatherMSN -->
-  <screen name="WeatherMSN" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="WeatherMSN" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="750,60" size="500,550" pixmap="Neutron_hd/style/greymenu_4.png" alphatest="on" zPosition="-1" />
@@ -6654,7 +6498,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesClock" />
   </screen>
   <!-- Config WeatherMSN -->
-  <screen name="ConfigWeatherMSN" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="ConfigWeatherMSN" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
@@ -6668,7 +6512,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!-- ########## Calendar ########## -->
   <!-- Calendar -->
-  <screen name="Calendar" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="Calendar" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="750,60" size="500,550" pixmap="Neutron_hd/style/greymenu_4.png" alphatest="on" zPosition="-1" />
@@ -6745,10 +6589,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonBlue" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- Config Calendar -->
-  <screen name="ConfigCalendar" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="ConfigCalendar" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
@@ -6761,7 +6604,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!-- ########## NeutronHD ########## -->
   <!-- Setup NeutronHD -->
-  <screen name="SetupNeutronHD" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="SetupNeutronHD" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
@@ -6778,7 +6621,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Neutron_hd/buttons/key_info.png" position="1210,642" size="40,20" alphatest="blend" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- IPKTools Screen -->
   <screen name="IPKTools2" position="fill" title="IPK Tools" flags="wfNoBorder" backgroundColor="transparent">
@@ -6805,7 +6647,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!-- ########## vZapHistory ########## -->
   <!-- vZapHistory -->
-  <screen name="vZapHistory" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="vZapHistory" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/tv.png" alphatest="blend" />
@@ -6816,10 +6658,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- vZapHistoryConf -->
-  <screen name="vZapHistoryConf" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="vZapHistoryConf" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
@@ -6845,7 +6686,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesClock" />
   </screen>
   <!-- Install_IM -->
-  <screen name="Install_IM" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="Install_IM" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu500" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/files.png" alphatest="blend" />
@@ -6855,7 +6696,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!-- ########## ShootYourScreen  ##########-->
   <!-- ShootYourScreen -->
-  <screen name="ShootYourScreenConfig" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="ShootYourScreenConfig" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/download.png" alphatest="blend" />
@@ -6865,11 +6706,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="buttongreen" render="Label" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget source="buttonyellow" render="Label" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## YouTube Player ########## -->
   <!-- YouTube Main -->
-  <screen name="YouTubeMain" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="YouTubeMain" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/youtube.png" alphatest="blend" />
@@ -6896,7 +6736,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesButtonsRedGreen" />
   </screen>
   <!-- YouTube Info -->
-  <screen name="YouTubeInfo" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="YouTubeInfo" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/info.png" alphatest="blend" />
@@ -6910,10 +6750,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="dislikes" position="55,360" size="300,20" font="Regular;16" foregroundColor="white" backgroundColor="background" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- YouTube Search -->
-  <screen name="YouTubeSearch" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="YouTubeSearch" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/scan.png" alphatest="blend" />
@@ -6932,7 +6771,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <widget name="menu" pixmap="Neutron_hd/buttons/key_menu.png" position="1210,618" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- YouTubeDownloadList -->
   <screen name="YouTubeDownloadList" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
@@ -6954,10 +6792,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </widget>
   <panel name="ButtonRed" />
   <panel name="TemplatesClock" />
-  
   </screen>
   <!-- Auto EPG downloader -->
-  <screen name="epgdd" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="epgdd" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
@@ -6969,11 +6806,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
   <!-- ########## EPG Import ########## -->
   <!-- EPG Import Configuration -->
-  <screen name="EPGImportConfig" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="EPGImportConfig" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
@@ -6988,10 +6824,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap pixmap="Neutron_hd/buttons/key_info.png" position="1210,668" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
     <panel name="TemplatesClock" />
-    
   </screen>
     <!-- EPG Import Sources -->
-  <screen name="EPGImportSources" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="EPGImportSources" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
@@ -7002,10 +6837,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
     <!-- EPG Import Log -->
-  <screen name="EPGImportLog" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="EPGImportLog" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
@@ -7014,10 +6848,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonRed" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
     <!-- EPG Import Profile -->
-  <screen name="EPGImportProfile" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="EPGImportProfile" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
@@ -7026,10 +6859,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
-    
   </screen>
     <!-- Filters Services Selection -->
-    <screen name="filtersServicesSelection" position="fill" title=" " flags="wfNoBorder" backgroundColor="transparent">
+    <screen name="filtersServicesSelection" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
@@ -7040,10 +6872,9 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonYellow" />
     <panel name="ButtonBlue" />
     <panel name="TemplatesClock" />
-    
   </screen>
     <!-- Filters Services Setup -->
-  <screen name="filtersServicesSetup" position="fill" title="Plugin manager activity" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="filtersServicesSetup" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
@@ -7063,6 +6894,17 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="ButtonGreen" />
     <panel name="ButtonYellow" />
     <panel name="TemplatesClock" />
-    
+  </screen>
+  <!-- SystemTime -->
+  <screen name="SystemTimeSetupScreen" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/timer.png" alphatest="blend" />
+    <panel name="TemplatesTitle3" />
+    <widget name="config" position="45,70" size="670,528" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget name="description" position="110,630" size="750,85" font="Display; 18" halign="left" valign="bottom" foregroundColor="color3" backgroundColor="background" transparent="1" />
+    <panel name="ButtonRed" />
+    <panel name="ButtonGreen" />
+    <panel name="TemplatesClock" />
   </screen>
 </skin>
