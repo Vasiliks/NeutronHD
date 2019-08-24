@@ -2444,6 +2444,7 @@
     <eLabel text="Setup" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
     <widget name="config" position="45,70" size="670,528" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <widget name="description" position="110,630" size="750,85" font="Display; 18" halign="left" valign="bottom" foregroundColor="color3" backgroundColor="background" transparent="1" />
+    <widget name="HelpWindow" position="40,453"  size="1,1" transparent="1" alphatest="on" />
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
@@ -4424,11 +4425,21 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesButtonsRedGreen" />
   </screen>
   <!--  VirtualKeyBoard  -->
-  <screen name="VirtualKeyBoard" position="80,150" size="560,350" zPosition="99" title="Virtual KeyBoard">
-    <ePixmap pixmap="Neutron_hd/vkey_text.png" position="9,35" zPosition="-4" size="542,52" alphatest="on" />
-    <widget name="header" position="10,10" size="500,20" font="Regular;20" transparent="1" noWrap="1" />
-    <widget name="text" position="12,35" size="536,44" font="Regular;30" transparent="1" noWrap="1" halign="right" />
-    <widget name="list" position="10,100" size="540,225" selectionDisabled="1" transparent="1" />
+  <screen name="VirtualKeyBoard" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <panel name="TemplatesTitle3" />
+    <widget name="prompt" position="45,80" size="670,50" font="Regular;22" transparent="1" noWrap="1" />
+    <ePixmap pixmap="Neutron_hd/style/greysel.png" position="45,155" size="670,50" alphatest="on" />
+    <widget name="text" position="55,163" size="650,50" font="Regular;28" transparent="1" noWrap="1" zPosition="4" halign="right" valign="center" />
+    <widget name="list" position="65,260" size="670,225"  selectionDisabled="1" transparent="1" />
+    <widget name="locale" position="55,530" size="660,225" font="Regular; 22" halign="left" transparent="1" />
+    <widget name="mode" position="660,530" size="45,225" font="Regular; 22" halign="right" transparent="1" />
+    <panel name="ButtonRed" />
+    <panel name="ButtonGreen" />
+    <panel name="ButtonYellow" />
+    <panel name="ButtonBlue" />
+    <panel name="TemplatesClock" />
   </screen>
   <!-- Video Finetune -->
   <screen name="VideoFinetune" position="fill" backgroundColor="background">
@@ -6757,7 +6768,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/scan.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
-    <widget name="config" position="45,70" size="370,45" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
+    <widget name="config" position="45,70" size="670,45" font="Regular; 22" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
     <widget source="list" render="Listbox" position="45,100" size="670,360" scrollbarMode="showOnDemand" >
         <convert type="TemplatedMultiContent" >
             {"template": [MultiContentEntryText(pos=(15,1), size=(640,45), font=0, flags=RT_HALIGN_LEFT, text=0)],
