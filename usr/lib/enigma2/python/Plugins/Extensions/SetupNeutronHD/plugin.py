@@ -32,6 +32,17 @@ def _(txt):
         t = gettext.gettext(txt)
     return t
 
+def SearchReplaceWrite(skinPartSearchAndReplace, source, target):
+    inFile = open(source, "r")
+    file_lines = inFile.readlines()
+    inFile.close()
+    outFile =  open(target, "w")
+    for skinLine in file_lines:
+        for item in skinPartSearchAndReplace:
+            skinLine = skinLine.replace(item[0], item[1])
+        outFile.writelines(skinLine)
+    outFile.close()
+
 textcolor = [
     ("#00f4f4f4", _("white")),
     ("#00c0c0c0", _("lightgrey")),
@@ -310,7 +321,7 @@ class SetupNeutronHD(ConfigListScreen, Screen):
         self["key_green"] = StaticText(_("Save"))
         self["key_yellow"] = StaticText(_("Default settings"))
         self["key_blue"] = StaticText(_("Install components"))
-        self["Title"] = StaticText(_("Setup NeutronHD"))
+        self.setTitle(_("Setup NeutronHD"))
         self["version_sk"] = StaticText(_("Version skin:"))
         self["info_sk"] = StaticText()
         self["info_com"] = StaticText()
@@ -320,7 +331,7 @@ class SetupNeutronHD(ConfigListScreen, Screen):
 
     def infosk(self):
         package = 0
-        global status 
+        global status
         if fileExists("/usr/lib/opkg/status"):
             status = "/usr/lib/opkg/status"
         elif fileExists("/var/lib/opkg/status"):
@@ -379,64 +390,63 @@ class SetupNeutronHD(ConfigListScreen, Screen):
                 self.setDefault(x[1])
                 x[1].save()
         self.createSkin()
- 
+
     def setDefault(self, configItem):
         configItem.setValue(configItem.default)
 
     def createSkin(self):
         SKIN = "/usr/share/enigma2/Neutron_hd/skin.xml"
         DEFSKIN = "/usr/share/enigma2/Neutron_hd/defskin.xml"
-        skinpath = "/usr/share/enigma2/Neutron_hd/"
         try:
     # default skin
-            if fileExists(DEFSKIN):
-                copy(DEFSKIN,SKIN)
-            else:
-                copy(SKIN,DEFSKIN) 
+            skin_default = []
     # color`s text
-            os.system("sed -i 's/#10ffcc33/%s/w' %sskin.xml" % (config.skin.neutron.titlecolor.value, skinpath))
-            os.system("sed -i 's/#10f4f4f4/%s/w' %sskin.xml" % (config.skin.neutron.textcolor.value, skinpath))
-            os.system("sed -i 's/#108f8f8f/%s/w' %sskin.xml" % (config.skin.neutron.avtextcolor.value, skinpath))
-            os.system("sed -i 's/#100099ff/%s/w' %sskin.xml" % (config.skin.neutron.textcurcolor.value, skinpath))
-    # fonts 
-            os.system("sed -i 's/Roboto-Regular/%s/w' %sskin.xml" % (config.skin.neutron.fonts.value, skinpath))
+            skin_default.append(["#10ffcc33", config.skin.neutron.titlecolor.value])
+            skin_default.append(["#10f4f4f4", config.skin.neutron.textcolor.value])
+            skin_default.append(["#108f8f8f", config.skin.neutron.avtextcolor.value])
+            skin_default.append(["#100099ff", config.skin.neutron.textcurcolor.value])
+    # fonts
+            skin_default.append(["Roboto-Regular", config.skin.neutron.fonts.value])
     # number channel
-            os.system("sed -i 's/%s/TemplatesInfoBarNumber/w' %sskin.xml" % (config.skin.neutron.numberchannel.value, skinpath))
+            skin_default.append([config.skin.neutron.numberchannel.value, "TemplatesInfoBarNumber"])
     # widgets infobar
-            os.system("sed -i 's/TemplatesInfoBarTvBar/%s/w' %sskin.xml" % (config.skin.neutron.styleinfobar.value, skinpath))
+            skin_default.append(["TemplatesInfoBarTvBar", config.skin.neutron.styleinfobar.value])
     # additional infobar
-            os.system("sed -i 's/TemplatesInfoBarTvTechnical/%s/w' %sskin.xml" % (config.skin.neutron.technicalinfobar.value, skinpath))
+            skin_default.append(["TemplatesInfoBarTvTechnical", config.skin.neutron.technicalinfobar.value])
     # widgets secondinfobar
-            os.system("sed -i 's/TemplatesInfoBarTvSecondBar/%s/w' %sskin.xml" % (config.skin.neutron.stylesecondinfobar.value, skinpath))
+            skin_default.append(["TemplatesInfoBarTvSecondBar", config.skin.neutron.stylesecondinfobar.value])
     # additional secondinfobar
-            os.system("sed -i 's/TemplatesInfoBarTvSecondTechnical/%s/w' %sskin.xml" % (config.skin.neutron.technicalsecondinfobar.value, skinpath))
+            skin_default.append(["TemplatesInfoBarTvSecondTechnical", config.skin.neutron.technicalsecondinfobar.value])
     # ecm-epg panel
-            os.system("sed -i 's/%s/TemplatesInfoBarECM-EPG/w' %sskin.xml" % (config.skin.neutron.ecmepgpanel.value, skinpath))
+            skin_default.append([config.skin.neutron.ecmepgpanel.value, "TemplatesInfoBarECM-EPG"])
     # epg channel selection
-            os.system("sed -i 's/%s/TemplatesChannelSelectionInfoEPG/w' %sskin.xml" % (config.skin.neutron.epgchannelselection.value, skinpath))
+            skin_default.append([config.skin.neutron.epgchannelselection.value, "TemplatesChannelSelectionInfoEPG"])
     # info channel selection
-            os.system("sed -i 's/%s/TemplatesChannelSelectionInfoChannel/w' %sskin.xml" % (config.skin.neutron.infochannelselection.value, skinpath))
+            skin_default.append([config.skin.neutron.infochannelselection.value, "TemplatesChannelSelectionInfoChannel"])
     # cover info panel
-            os.system("sed -i 's/%s/TemplatesInfoBarInfoMovie-Cover/w' %sskin.xml" % (config.skin.neutron.coverinfopanel.value, skinpath))
+            skin_default.append([config.skin.neutron.coverinfopanel.value, "TemplatesInfoBarInfoMovie-Cover"])
     # info movie selection
-            os.system("sed -i 's/%s/TemplatesMovieSelectionInfoMovie/w' %sskin.xml" % (config.skin.neutron.infomovieselection.value, skinpath))
+            skin_default.append([config.skin.neutron.infomovieselection.value, "TemplatesMovieSelectionInfoMovie"])
     # clock panel
-            os.system("sed -i 's/%s/TemplatesClock/w' %sskin.xml" % (config.skin.neutron.clockpanel.value, skinpath))
+            skin_default.append([config.skin.neutron.clockpanel.value, "TemplatesClock"])
     # other widgets infobar
-            os.system("sed -i 's/TemplatesInfoBarTvOther/%s/w' %sskin.xml" % (config.skin.neutron.otherinfobar.value, skinpath))
+            skin_default.append(["TemplatesInfoBarTvOther", config.skin.neutron.otherinfobar.value])
     # dish
-            os.system("sed -i 's/%s/Dish/w' %sskin.xml" % (config.skin.neutron.dish.value, skinpath))
+            skin_default.append([config.skin.neutron.dish.value, "Dish"])
     # scrollbar
-            os.system("sed -i 's/showNever/%s/w' %sskin.xml" % (config.skin.neutron.scrollbarmode.value, skinpath))
+            skin_default.append(["showNever", config.skin.neutron.scrollbarmode.value])
     # style progress
-            os.system("sed -i 's/goldprogress/%sprogress/w' %sskin.xml" % (config.skin.neutron.progresscolor.value, skinpath))
+            skin_default.append(["goldprogress", config.skin.neutron.progresscolor.value + "progress"])
     # style skin`s
-            os.system("sed -i 's/greymenu/%smenu/w' %sskin.xml" % (config.skin.neutron.style.value, skinpath))
-            os.system("sed -i 's/greysel/%ssel/w' %sskin.xml" % (config.skin.neutron.style.value, skinpath))
-            os.system("sed -i 's/greybg/%sbg/w' %sskin.xml" % (config.skin.neutron.style.value, skinpath))
+            skin_default.append(["greymenu", config.skin.neutron.style.value + "menu"])
+            skin_default.append(["greysel", config.skin.neutron.style.value + "sel"])
+            skin_default.append(["greybg", config.skin.neutron.style.value + "bg" ])
     # end
+            SearchReplaceWrite(skin_default, DEFSKIN, SKIN)
         except:
             self.session.open(MessageBox, _("Error by processing !!!"), MessageBox.TYPE_ERROR)
+            skin_default = []
+            SearchReplaceWrite(skin_default, DEFSKIN, SKIN)
         self.session.openWithCallback(self.restart, MessageBox,_("Do you want to restart the GUI now ?"), MessageBox.TYPE_YESNO)
 
     def install(self):
