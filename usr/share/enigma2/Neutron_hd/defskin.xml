@@ -205,6 +205,10 @@
       <convert type="ValueRange">0,720</convert>
       <convert type="ConditionalShowHide" />
     </widget>
+    <widget source="session.CurrentService" render="Pixmap" position="1155,573" size="50,30" pixmap="Neutron_hd/icons/4K_on.png" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">Is4K</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
     <widget source="session.CurrentService" render="Pixmap" position="1155,573" size="50,30" pixmap="Neutron_hd/icons/hd_on.png" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
       <convert type="ValueRange">721,1980</convert>
@@ -1294,6 +1298,10 @@
     <widget source="session.CurrentService" render="Pixmap" position="1155,620" size="50,30" pixmap="Neutron_hd/icons/sd_on.png" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
       <convert type="ValueRange">0,720</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" position="1155,620" size="50,30" pixmap="Neutron_hd/icons/4K_on.png" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">Is4K</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="Pixmap" position="1155,620" size="50,30" pixmap="Neutron_hd/icons/hd_on.png" zPosition="2" alphatest="blend">
