@@ -2,6 +2,7 @@
 ## SetupNeutronHD
 ## Coded by Sirius
 ##
+## Edition openPLI 7.x by Vasiliks
 from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
@@ -10,15 +11,11 @@ from Components.ActionMap import ActionMap
 from Components.Sources.StaticText import StaticText
 from Components.Language import language
 from Components.ConfigList import ConfigListScreen
-from Components.config import config, ConfigYesNo, ConfigSubsection, getConfigListEntry, ConfigSelection
+from Components.config import config, ConfigSubsection, getConfigListEntry, ConfigSelection
 from Tools.Directories import fileExists
-from Tools.LoadPixmap import LoadPixmap
-from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_SKIN_IMAGE, SCOPE_LANGUAGE
-from os import environ
-from os import system
+from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_LANGUAGE
+from os import environ, system
 import gettext
-import os
-from shutil import move, copy, rmtree, copytree
 
 lang = language.getLanguage()
 environ["LANGUAGE"] = lang[:2]
