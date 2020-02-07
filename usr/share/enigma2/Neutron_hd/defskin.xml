@@ -26,8 +26,8 @@
   </colors>
   <!-- ########## Fonts ########## -->
   <fonts>
-    <font filename="Neutron_hd/fonts/Roboto-Regular.ttf" name="Regular" scale="105" />
-    <font filename="Neutron_hd/fonts/LucidaConsole.ttf" name="Console" scale="100" />
+    <font filename="/usr/share/enigma2/Neutron_hd/fonts/Roboto-Regular.ttf" name="Regular" scale="105" />
+    <font filename="/usr/share/enigma2/Neutron_hd/fonts/LucidaConsole.ttf" name="Console" scale="100" />
     <font filename="nmsbd.ttf" name="Display" scale="100" />
   </fonts>
   <!-- ########## Main screen colors (id=0 Framebuffer) ########## -->
