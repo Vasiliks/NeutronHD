@@ -205,6 +205,10 @@
       <convert type="ValueRange">0,720</convert>
       <convert type="ConditionalShowHide" />
     </widget>
+    <widget source="session.CurrentService" render="Pixmap" position="1155,573" size="50,30" pixmap="Neutron_hd/icons/4K_on.png" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">Is4K</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
     <widget source="session.CurrentService" render="Pixmap" position="1155,573" size="50,30" pixmap="Neutron_hd/icons/hd_on.png" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
       <convert type="ValueRange">721,1980</convert>
@@ -1296,6 +1300,10 @@
       <convert type="ValueRange">0,720</convert>
       <convert type="ConditionalShowHide" />
     </widget>
+    <widget source="session.CurrentService" render="Pixmap" position="1155,620" size="50,30" pixmap="Neutron_hd/icons/4K_on.png" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">Is4K</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
     <widget source="session.CurrentService" render="Pixmap" position="1155,620" size="50,30" pixmap="Neutron_hd/icons/hd_on.png" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
       <convert type="ValueRange">721,1980</convert>
@@ -1338,7 +1346,7 @@
       <convert type="MovieInfo">Description</convert>
     </widget>
   </screen>
-  <screen name="TemplatesInfoBarInfoMovieCover1">
+  <screen name="TemplatesInfoBarInfoMovie-Cover">
     <!-- Templates InfoMovie-Cover-->
     <panel name="TemplatesInfoBarCoverNo" />
   </screen>
@@ -2433,7 +2441,7 @@
     <panel name="TemplatesClock" />
   </screen>
   <!-- Service Info Simple -->
-	<screen name="ServiceInfoSimple" position="fill" title="Serviceinfo" flags="wfNoBorder" backgroundColor="transparent">
+    <screen name="ServiceInfoSimple" position="fill" title="Serviceinfo" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="ServiceInfo" />
   </screen>
   <!-- Setup -->
@@ -2465,13 +2473,35 @@
   <screen name="SkinSelector" position="fill" title="Choose your Skin" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
+    <panel name="TemplatesTitle3" />
+    <panel name="SkinSelectorOLd" />
+    <panel name="SkinSelectorNew" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/skin.png" alphatest="blend" />
-    <eLabel text="Choose your Skin" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <panel name="ButtonRed" />
+    <panel name="ButtonGreen" />
+    <panel name="TemplatesClock" />
+  </screen>
+  <!--  Skin Selector OLd -->
+  <screen name="SkinSelectorOLd">
     <widget name="SkinList" position="45,70" size="670,500" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <widget name="Preview" position="870,380" size="280,210" alphatest="on" />
     <widget source="introduction" render="Label" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <panel name="ButtonRed" />
-    <panel name="TemplatesClock" />
+  </screen>
+  <!--  Skin Selector New  -->
+  <screen name="SkinSelectorNew">
+    <widget name="preview" position="240,70" size="280,210" alphatest="on" />
+    <widget source="skins" render="Listbox" position="45,290" zPosition="3" size="670,540" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1">
+      <convert type="TemplatedMultiContent">
+            {"template": [
+                    MultiContentEntryText(pos = (10,0), size = (300,35), font = 0, flags = RT_HALIGN_LEFT, text = 1),
+                    MultiContentEntryText(pos = (360,0), size = (300,35), font = 1, flags = RT_HALIGN_RIGHT, text = 2)
+                ],
+             "fonts": [gFont("Regular", 20),gFont("Regular", 20)],
+             "itemHeight": 28
+            }
+      </convert>
+    </widget>
+    <widget source="description" render="Label" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
   </screen>
   <!-- InputDeviceSelection -->
   <screen name="InputDeviceSelection" position="fill" title="Select input device" flags="wfNoBorder" backgroundColor="transparent">
@@ -2519,7 +2549,7 @@
     <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
-    <eLabel text="EPG Selection" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <panel name="TemplatesTitle3" />
     <widget name="list" position="45,70" size="670,525" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
@@ -2544,7 +2574,7 @@
     <panel name="TemplatesMenu1200" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
-    <eLabel text="EPG Selection Multi" position="30,25" size="1220,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <panel name="TemplatesTitle3" />
     <widget name="now_button_sel" pixmap="Neutron_hd/epg_now.png" position="center,75" zPosition="3" size="750,40" alphatest="on" />
     <widget name="next_button_sel" pixmap="Neutron_hd/epg_next.png" position="center,75" zPosition="3" size="750,40" alphatest="on" />
     <widget name="more_button_sel" pixmap="Neutron_hd/epg_more.png" position="center,75" zPosition="3" size="750,40" alphatest="on" />
@@ -2564,7 +2594,7 @@
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
-    <eLabel text="Eventview" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <panel name="TemplatesTitle3" />
     <widget name="channel" position="45,70" size="500,28" font="Regular;24" backgroundColor="background" transparent="1" />
     <widget name="duration" position="center,70" size="150,28" font="Regular;24" halign="right" backgroundColor="background" transparent="1" />
     <widget name="epg_description" position="45,105" size="670,500" font="Regular;24" backgroundColor="black" transparent="1" />
@@ -2580,7 +2610,7 @@
     <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
-    <eLabel text="Electronic Program Guide" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <panel name="TemplatesTitle3" />
     <widget name="timeline_text" position="45,70" size="670,28" foregroundColor="color1" backgroundColor="black" transparent="1" />
     <widget name="list" position="45,105" size="670,500" itemHeight="50" transparent="1" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" EntryBackgroundColor="background" EventFontPadding="4" />
     <widget name="timeline0" pixmap="Neutron_hd/timeline.png" position="0,105" size="1,500" zPosition="1" />
@@ -3139,11 +3169,11 @@
   </screen>
   <!-- Plugin Browser -->
   <screen name="PluginBrowser" position="fill" title="Plugin browser" flags="wfNoBorder" backgroundColor="transparent">
-    <panel name="TemplatesMenu500" />
+    <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/plugin.png" alphatest="blend" />
-    <eLabel text="Plugin browser" position="30,25" size="500,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
-    <widget name="list" position="45,65" size="470,550" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
+    <panel name="TemplatesTitle3" />
+    <widget name="list" position="45,65" size="670,550" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
@@ -3248,6 +3278,10 @@
     <widget name="package" position="20,2" size="1240,30" font="Regular; 26" foregroundColor="color1" backgroundColor="background" halign="right" transparent="1" borderWidth="2" />
     <widget name="status" position="20,2" size="1240,30" font="Regular; 26" foregroundColor="color1" backgroundColor="background" halign="left" transparent="1" borderWidth="2" />
   </screen>
+  <!-- OPKG -->
+  <screen name="Opkg" position="0,640" size="1280,80" title="Installing Software..." zPosition="1" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="Ipkg" />
+  </screen>
   <!-- IPKGMenu -->
   <screen name="IPKGMenu" position="fill" title="Select IPKG source" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
@@ -3259,6 +3293,10 @@
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
   </screen>
+  <!-- OPKGMenu -->
+  <screen name="OPKGMenu" position="fill" title="Select IPKG source" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="IPKGMenu" />
+  </screen>
   <!-- IPKGSource -->
   <screen name="IPKGSource" position="fill" title="IPKG source" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
@@ -3269,6 +3307,10 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
+  </screen>
+  <!-- OPKGSource -->
+  <screen name="OPKGSource" position="fill" title="IPKG source" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="IPKGSource" />
   </screen>
   <!-- PacketManager -->
   <screen name="PacketManager" position="fill" title="IPKG upgrade" flags="wfNoBorder" backgroundColor="transparent">
@@ -3304,6 +3346,10 @@
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
     <panel name="TemplatesClock" />
+  </screen>
+  <!-- OpkgInstaller -->
+  <screen name="OpkgInstaller" position="fill" title="Install extensions" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="IpkgInstaller" />
   </screen>
   <!-- BackupSelection -->
   <screen name="BackupSelection" position="fill" title="Select files/folders to backup" flags="wfNoBorder" backgroundColor="transparent">
@@ -4532,12 +4578,13 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   <!-- ########## Hotkey ########## -->
      <!-- Hotkey -->
   <screen name="HotkeySetup" position="fill" flags="wfNoBorder" backgroundColor="transparent" title="Input">
-    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu500" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
-    <panel name="TemplatesTitle3" />
-    <widget name="list" position="45,70" size="340,525" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
-    <widget name="choosen" position="375,70" size="340,525" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
+    <panel name="TemplatesTitle1" />
+    <eLabel position="50,425" size="460,2" backgroundColor="grey" />
+    <widget name="list" position="45,70" size="470,350" itemHeight="25" font="Regular; 20" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget name="choosen" position="45,430" size="470,200" itemHeight="25" font="Regular; 20" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="TemplatesClock" />
   </screen>
@@ -4553,7 +4600,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
-    <eLabel text="Remote Control System Code Setting" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <panel name="TemplatesTitle3" />
     <widget name="config" position="45,70" size="670,500" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="ButtonRed" />
     <panel name="ButtonGreen" />
@@ -4566,7 +4613,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/internet.png" alphatest="blend" />
-    <eLabel text="OpenWebif Configuration" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <panel name="TemplatesTitle3" />
     <widget name="lab1" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <widget name="config" position="45,70" size="670,500" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="ButtonRed" />
