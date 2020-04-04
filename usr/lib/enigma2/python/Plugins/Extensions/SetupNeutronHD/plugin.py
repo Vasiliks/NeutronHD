@@ -61,6 +61,25 @@ textcolor = [
     ("#00000080", _("darkblue")),
     ("#008080ff", _("glaucous")),
     ("#00400080", _("purple"))]
+
+menubackcolor = [
+    ("#00000000", _("0")),
+    ("#11111111", _("1")),
+    ("#22222222", _("2")),
+    ("#33333333", _("3")),
+    ("#44444444", _("4")),
+    ("#55555555", _("5")),
+    ("#66666666", _("6")),
+    ("#77777777", _("7")),
+    ("#88888888", _("8")),
+    ("#99999999", _("9")),
+    ("#aaaaaaaa", _("10")),
+    ("#bbbbbbbb", _("11")),
+    ("#cccccccc", _("12")),
+    ("#dddddddd", _("13")),
+    ("#eeeeeeee", _("14")),
+    ("#ffffffff", _("15"))]
+
 style = [
     ("white", _("white")),
     ("grey", _("grey")),
@@ -258,6 +277,7 @@ config.skin.neutron.textcolor = ConfigSelection(default="#00f4f4f4", choices = t
 config.skin.neutron.avtextcolor = ConfigSelection(default="#008f8f8f", choices = textcolor)
 config.skin.neutron.textcurcolor = ConfigSelection(default="#00ffcc33", choices = textcolor)
 config.skin.neutron.progresscolor = ConfigSelection(default="gold", choices = progresscolor)
+config.skin.neutron.menubackcolor = ConfigSelection(default="#66666666", choices = menubackcolor)
 
 class SetupNeutronHD(ConfigListScreen, Screen):
     skin = """
@@ -268,7 +288,7 @@ class SetupNeutronHD(ConfigListScreen, Screen):
         <ePixmap position="0,575" size="1280,35" pixmap="Neutron_hd/style/greymenubar.png" alphatest="off" zPosition="-2" />
         <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
         <widget source="Title" render="Label" position="30,25" size="700,36" font="Regular; 30" foregroundColor="#00ffcc33" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
-        <widget name="config" position="45,70" size="670,540" scrollbarMode="showOnDemand" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
+        <widget name="config" position="45,70" size="670,540" scrollbarMode="showOnDemand" selectionPixmap="Neutron_hd/style/greysel.png" itemHeight="30" transparent="1" />
         <widget source="info_com" render="Label" position="110,640" size="750,44" font="Regular; 18" foregroundColor="#008f8f8f" backgroundColor="background" halign="left" valign="center" transparent="1" />
         <widget source="version_sk" render="Label" position="110,690" size="150,22" font="Regular; 18" foregroundColor="#008f8f8f" backgroundColor="background" halign="left" valign="center" transparent="1" />
         <widget source="info_sk" render="Label" position="260,690" size="80,22" font="Regular; 18" foregroundColor="#008f8f8f" backgroundColor="background" halign="left" valign="center" transparent="1" />
@@ -311,6 +331,7 @@ class SetupNeutronHD(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("Additional text color:"), config.skin.neutron.avtextcolor))
         list.append(getConfigListEntry(_("Cursor text color:"), config.skin.neutron.textcurcolor))
         list.append(getConfigListEntry(_("Progress bar color:"), config.skin.neutron.progresscolor))
+        list.append(getConfigListEntry(_("Menu background transparency:"), config.skin.neutron.menubackcolor))
         ConfigListScreen.__init__(self, list)
 
         self["actions"] = ActionMap(["OkCancelActions", "ColorActions", "EPGSelectActions"],{"ok": self.save, "cancel": self.exit, "red": self.exit, "green": self.save, "yellow": self.default, "blue": self.install, "info": self.about}, -1)
@@ -402,6 +423,7 @@ class SetupNeutronHD(ConfigListScreen, Screen):
             skin_default.append(["#10f4f4f4", config.skin.neutron.textcolor.value])
             skin_default.append(["#108f8f8f", config.skin.neutron.avtextcolor.value])
             skin_default.append(["#100099ff", config.skin.neutron.textcurcolor.value])
+            skin_default.append(["#66666666", config.skin.neutron.menubackcolor.value])
     # fonts
             skin_default.append(["Roboto-Regular", config.skin.neutron.fonts.value])
     # number channel

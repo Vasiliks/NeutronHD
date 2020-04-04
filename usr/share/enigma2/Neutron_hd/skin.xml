@@ -9,6 +9,7 @@
   <colors>
     <color name="aqua" value="#0000ffff" />
     <color name="background" value="#50000000" />
+    <color name="menubackground" value="#66666666" />
     <color name="black" value="#00000000" />
     <color name="blue" value="#000035ff" />
     <color name="bluish" value="#00015f9f" />
@@ -1419,6 +1420,7 @@
   <screen name="TemplatesChannelSelectionInfoEPG">
     <!-- Templates ChannelSelectionInfoEPG-->
     <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
+    <eLabel position="760,400" size="480,195" backgroundColor="menubackground"  zPosition="-3" />
     <eLabel text="&gt;" position="765,403" size="20,20" font="Display; 18" foregroundColor="green" backgroundColor="background" halign="center" transparent="1" />
     <widget source="ServiceEvent" render="Label" position="785,403" size="450,20" font="Regular; 18" foregroundColor="color4" backgroundColor="background" halign="left" transparent="1">
       <convert type="EventName">Name</convert>
@@ -1442,6 +1444,7 @@
   <screen name="TemplatesChannelSelectionInfoEPG3">
     <!-- Templates ChannelSelectionInfoEPG-->
     <ePixmap position="750,260" size="500,350" pixmap="Neutron_hd/style/greymenu_5.png" alphatest="on" zPosition="-1" />
+    <eLabel position="760,300" size="480,295" backgroundColor="menubackground"  zPosition="-3" />
     <eLabel text="&gt;" position="765,303" size="20,20" font="Display; 18" foregroundColor="green" backgroundColor="background" halign="center" transparent="1" />
     <eLabel text="&gt;" position="765,451" size="20,20" font="Display; 18" foregroundColor="red" backgroundColor="background" halign="center" transparent="1" />
     <widget source="ServiceEvent" render="Label" position="785,303" size="450,20" font="Regular; 18" foregroundColor="color4" backgroundColor="background" halign="left" transparent="1">
@@ -1472,6 +1475,7 @@
   <screen name="TemplatesChannelSelectionInfoEPG4">
     <!-- Templates ChannelSelectionInfoEPG-->
     <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
+    <eLabel position="760,400" size="480,195" backgroundColor="menubackground"  zPosition="-3" />
     <eLabel text="&gt;" position="765,403" size="20,20" font="Display; 18" foregroundColor="green" backgroundColor="background" halign="center" transparent="1" />
     <widget source="ServiceEvent" render="Label" position="785,403" size="60,20" font="Regular; 18" foregroundColor="white" backgroundColor="background" halign="left" transparent="1">
       <convert type="EventTime">StartTime</convert>
@@ -1651,6 +1655,7 @@
   <screen name="TemplatesMenu500">
     <!-- Templates Menu-->
     <ePixmap position="30,25" size="500,600" pixmap="Neutron_hd/style/greymenu_2.png" alphatest="on" zPosition="-1" />
+    <eLabel position="40,65" size="480,545" backgroundColor="menubackground"  zPosition="-3" />
   </screen>
   <screen name="TemplatesTitle1">
     <!-- Templates Title-->
@@ -1663,6 +1668,7 @@
   <screen name="TemplatesMenu700">
     <!-- Templates Menu-->
     <ePixmap position="30,25" size="700,600" pixmap="Neutron_hd/style/greymenu_1.png" alphatest="on" zPosition="-1" />
+    <eLabel position="40,65" size="680,545" backgroundColor="menubackground"  zPosition="-3" />
   </screen>
   <screen name="TemplatesTitle3">
     <!-- Templates Title-->
@@ -1675,6 +1681,7 @@
   <screen name="TemplatesMenu1200">
     <!-- Templates Menu-->
     <ePixmap position="30,25" size="1220,600" pixmap="Neutron_hd/style/greymenu_3.png" alphatest="on" zPosition="-1" />
+    <eLabel position="40,65" size="1200,545" backgroundColor="menubackground"  zPosition="-3" />
   </screen>
   <screen name="TemplatesTitle5">
     <!-- Templates Title-->
@@ -6376,7 +6383,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
     <ePixmap position="750,480" size="500,120" pixmap="Neutron_hd/logo.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
-    <widget name="config" position="45,70" size="670,540" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
+    <widget name="config" position="45,70" size="670,540" scrollbarMode="showNever" itemHeight="30" selectionPixmap="Neutron_hd/style/greysel.png" transparent="1" />
     <widget source="info_com" render="Label" position="110,640" size="750,44" font="Display; 18" halign="left" valign="bottom" foregroundColor="color3" backgroundColor="background" transparent="1" />
     <widget source="version_sk" render="Label" position="110,690" size="150,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <widget source="info_sk" render="Label" position="260,690" size="80,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
