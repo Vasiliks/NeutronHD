@@ -1608,6 +1608,7 @@
   <screen name="TemplatesMovieSelectionInfoMovie">
     <!-- Templates MovieSelectionInfoMovie-->
     <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
+    <eLabel position="760,400" size="480,195" backgroundColor="menubackground"  zPosition="-3" />
     <widget source="Service" render="Label" position="765,405" size="470,190" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="top" transparent="1" zPosition="2">
       <convert type="MovieInfo">ShortDescription</convert>
     </widget>
@@ -1615,6 +1616,7 @@
   <screen name="TemplatesMovieSelectionInfoMovie3">
     <!-- Templates MovieSelectionInfoMovie-->
     <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
+    <eLabel position="760,400" size="480,195" backgroundColor="menubackground"  zPosition="-3" />
     <widget source="Service" render="Label" position="765,405" size="470,190" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="top" transparent="1" zPosition="2">
       <convert type="MovieInfo">FullDescription</convert>
     </widget>
@@ -2528,6 +2530,8 @@
   <screen name="EPGSelection" position="fill" title="EPG Selection" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
+    <eLabel position="760,400" size="480,195" backgroundColor="menubackground"  zPosition="-3" />
+    <eLabel position="760,400" size="480,195" backgroundColor="menubackground"  zPosition="-3" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
@@ -2580,6 +2584,7 @@
   <screen name="GraphMultiEPG" position="fill" title="Electronic Program Guide" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
+    <eLabel position="760,400" size="480,195" backgroundColor="menubackground"  zPosition="-3" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
