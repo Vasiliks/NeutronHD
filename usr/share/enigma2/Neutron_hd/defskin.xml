@@ -2531,7 +2531,6 @@
     <panel name="TemplatesMenu700" />
     <ePixmap position="750,360" size="500,250" pixmap="Neutron_hd/style/greymenu_6.png" alphatest="on" zPosition="-1" />
     <eLabel position="760,400" size="480,195" backgroundColor="menubackground"  zPosition="-3" />
-    <eLabel position="760,400" size="480,195" backgroundColor="menubackground"  zPosition="-3" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/epg.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
@@ -6365,7 +6364,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="holiday" position="45,185" size="670,70" font="Regular; 20" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
     <widget name="description" position="45,255" size="670,355" font="Regular; 20" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1" />
     <ePixmap pixmap="Neutron_hd/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
-    <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
