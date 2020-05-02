@@ -3351,7 +3351,7 @@
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/soft.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
-    <widget name="list" position="45,70" size="670,498" transparent="1" />
+    <widget name="list" position="45,70" size="670,510" transparent="1" />
     <widget source="introduction" render="Label" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
