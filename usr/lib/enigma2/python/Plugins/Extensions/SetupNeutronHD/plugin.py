@@ -283,12 +283,12 @@ class SetupNeutronHD(ConfigListScreen, Screen):
     skin = """
     <!-- Setup NeutronHD -->
     <screen name="SetupNeutronHD" position="0,0" size="1280,720" title=" " flags="wfNoBorder" backgroundColor="transparent">
-        <ePixmap position="30,25" size="700,600" pixmap="Neutron_hd/style/greymenu_1.png" alphatest="on" zPosition="-1" />
+        <ePixmap position="30,25" size="700,600" pixmap="NeutronHD/style/greymenu_1.png" alphatest="on" zPosition="-1" />
         <eLabel position="0,610" size="1280,110" backgroundColor="#50000000" zPosition="-2" />
-        <ePixmap position="0,575" size="1280,35" pixmap="Neutron_hd/style/greymenubar.png" alphatest="off" zPosition="-2" />
-        <ePixmap position="20,635" size="80,80" pixmap="Neutron_hd/menu/setting.png" alphatest="blend" />
+        <ePixmap position="0,575" size="1280,35" pixmap="NeutronHD/style/greymenubar.png" alphatest="off" zPosition="-2" />
+        <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/setting.png" alphatest="blend" />
         <widget source="Title" render="Label" position="30,25" size="700,36" font="Regular; 30" foregroundColor="#00ffcc33" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
-        <widget name="config" position="45,70" size="670,540" scrollbarMode="showNever" selectionPixmap="Neutron_hd/style/greysel.png" itemHeight="30" transparent="1" />
+        <widget name="config" position="45,70" size="670,540" scrollbarMode="showNever" selectionPixmap="NeutronHD/style/greysel.png" itemHeight="30" transparent="1" />
         <widget source="info_com" render="Label" position="110,640" size="750,44" font="Regular; 18" foregroundColor="#008f8f8f" backgroundColor="background" halign="left" valign="center" transparent="1" />
         <widget source="version_sk" render="Label" position="110,690" size="150,22" font="Regular; 18" foregroundColor="#008f8f8f" backgroundColor="background" halign="left" valign="center" transparent="1" />
         <widget source="info_sk" render="Label" position="260,690" size="80,22" font="Regular; 18" foregroundColor="#008f8f8f" backgroundColor="background" halign="left" valign="center" transparent="1" />
@@ -296,12 +296,12 @@ class SetupNeutronHD(ConfigListScreen, Screen):
         <widget source="key_green" render="Label" position="750,640" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="#00f4f4f4" backgroundColor="background" transparent="1" />
         <widget source="key_yellow" render="Label" position="750,665" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="#00f4f4f4" backgroundColor="background" transparent="1" />
         <widget source="key_blue" render="Label" position="750,690" size="400,25" font="Regular; 22" halign="right" valign="center" foregroundColor="#00f4f4f4" backgroundColor="background" transparent="1" />
-        <ePixmap pixmap="Neutron_hd/buttons/key_info.png" position="1210,642" size="40,20" alphatest="blend" />
-        <ePixmap pixmap="Neutron_hd/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="blend" />
-        <ePixmap pixmap="Neutron_hd/buttons/key_red.png" position="1160,616" size="40,20" alphatest="on" />
-        <ePixmap pixmap="Neutron_hd/buttons/key_green.png" position="1160,642" size="40,20" alphatest="on" />
-        <ePixmap pixmap="Neutron_hd/buttons/key_yellow.png" position="1160,668" size="40,20" alphatest="on" />
-        <ePixmap pixmap="Neutron_hd/buttons/key_blue.png" position="1160,694" size="40,20" alphatest="on" />
+        <ePixmap pixmap="NeutronHD/buttons/key_info.png" position="1210,642" size="40,20" alphatest="blend" />
+        <ePixmap pixmap="NeutronHD/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="blend" />
+        <ePixmap pixmap="NeutronHD/buttons/key_red.png" position="1160,616" size="40,20" alphatest="on" />
+        <ePixmap pixmap="NeutronHD/buttons/key_green.png" position="1160,642" size="40,20" alphatest="on" />
+        <ePixmap pixmap="NeutronHD/buttons/key_yellow.png" position="1160,668" size="40,20" alphatest="on" />
+        <ePixmap pixmap="NeutronHD/buttons/key_blue.png" position="1160,694" size="40,20" alphatest="on" />
     </screen>"""
 
     def __init__(self, session):
@@ -413,8 +413,8 @@ class SetupNeutronHD(ConfigListScreen, Screen):
         configItem.setValue(configItem.default)
 
     def createSkin(self):
-        SKIN = "/usr/share/enigma2/Neutron_hd/skin.xml"
-        DEFSKIN = "/usr/share/enigma2/Neutron_hd/defskin.xml"
+        SKIN = "/usr/share/enigma2/NeutronHD/skin.xml"
+        DEFSKIN = "/usr/share/enigma2/NeutronHD/defskin.xml"
         try:
     # default skin
             skin_default = []
@@ -502,7 +502,7 @@ class SetupNeutronHD(ConfigListScreen, Screen):
 
     def restart(self, answer):
         if answer is True:
-            config.skin.primary_skin.value = 'Neutron_hd/skin.xml'
+            config.skin.primary_skin.value = 'NeutronHD/skin.xml'
             config.skin.primary_skin.save()
             self.session.open(TryQuitMainloop, 3)
 
