@@ -2819,6 +2819,19 @@
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
+  <!-- Network Info -->
+  <screen name="SystemNetworkInfo" position="fill" title="SystemNetworkInfo" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/info.png" alphatest="blend" />
+    <ePixmap position="750,480" size="500,120" pixmap="NeutronHD/logo.png" alphatest="blend" />
+    <panel name="TemplatesTitle3" />
+    <widget name="AboutScrollLabel" font="Regular;22" position="45,70" size="670,530" halign="center" scrollbarMode="showNever" scrollbarWidth="10" backgroundColor="background" transparent="1" />
+    <widget source="IFtext" render="Label" position="110,690" size="120,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="IF" render="Label" position="240,690" size="400,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <panel name="TemplatesButtons" />
+    <panel name="TemplatesClock" />
+  </screen>
   <!-- WlanStatus -->
   <screen name="WlanStatus" position="fill" title="Wireless Network State" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
