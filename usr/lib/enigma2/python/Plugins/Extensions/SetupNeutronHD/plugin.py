@@ -276,6 +276,7 @@ config.skin.neutron.titlecolor = ConfigSelection(default="#00ffcc33", choices = 
 config.skin.neutron.textcolor = ConfigSelection(default="#00f4f4f4", choices = textcolor)
 config.skin.neutron.avtextcolor = ConfigSelection(default="#008f8f8f", choices = textcolor)
 config.skin.neutron.textcurcolor = ConfigSelection(default="#00ffcc33", choices = textcolor)
+config.skin.neutron.textcurcolorsel = ConfigSelection(default="#00ffff55", choices = textcolor)
 config.skin.neutron.progresscolor = ConfigSelection(default="gold", choices = progresscolor)
 config.skin.neutron.menubackcolor = ConfigSelection(default="#66666666", choices = menubackcolor)
 
@@ -330,6 +331,7 @@ class SetupNeutronHD(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("Menu text color:"), config.skin.neutron.textcolor))
         list.append(getConfigListEntry(_("Additional text color:"), config.skin.neutron.avtextcolor))
         list.append(getConfigListEntry(_("Cursor text color:"), config.skin.neutron.textcurcolor))
+        list.append(getConfigListEntry(_("Description text color cursor:"), config.skin.neutron.textcurcolorsel))
         list.append(getConfigListEntry(_("Progress bar color:"), config.skin.neutron.progresscolor))
         list.append(getConfigListEntry(_("Menu background transparency:"), config.skin.neutron.menubackcolor))
         ConfigListScreen.__init__(self, list)
@@ -423,6 +425,7 @@ class SetupNeutronHD(ConfigListScreen, Screen):
             skin_default.append(["#10f4f4f4", config.skin.neutron.textcolor.value])
             skin_default.append(["#108f8f8f", config.skin.neutron.avtextcolor.value])
             skin_default.append(["#100099ff", config.skin.neutron.textcurcolor.value])
+            skin_default.append(["#00ffff55", config.skin.neutron.textcurcolorsel.value])
             skin_default.append(["#66666666", config.skin.neutron.menubackcolor.value])
     # fonts
             skin_default.append(["Roboto-Regular", config.skin.neutron.fonts.value])

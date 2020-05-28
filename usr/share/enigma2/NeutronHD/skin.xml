@@ -18,6 +18,7 @@
     <color name="color3" value="#008f8f8f" />
     <color name="color4" value="#00ffcc33" />
     <color name="color5" value="#30000000" />
+    <color name="color6" value="#00ffff55" />
     <color name="green" value="#00009a00" />
     <color name="grey" value="#00808080" />
     <color name="red" value="#00ff0d0d" />
@@ -1980,7 +1981,19 @@
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/tv.png" alphatest="blend" />
     <eLabel text="Channel Selection" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
-    <widget name="list" position="45,70" size="670,535" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" foregroundColorServiceNotAvail="#666666" serviceNumberFont="Regular;20" serviceNameFont="Regular;22" serviceInfoFont="Regular;20" colorServiceDescription="color3" picServiceEventProgressbar="NeutronHD/pl.png" transparent="1" />
+    <widget name="list" position="45,70" size="670,535"
+         scrollbarMode="showNever"
+         scrollbarWidth="10" 
+         selectionPixmap="NeutronHD/style/greysel.png" 
+         backgroundColor="black" 
+         foregroundColorServiceNotAvail="#666666" 
+         serviceNumberFont="Regular;20" 
+         serviceNameFont="Regular;22" 
+         serviceInfoFont="Regular;20" 
+         colorServiceDescription="color3"
+		 colorServiceDescriptionSelected="color6" 
+         picServiceEventProgressbar="NeutronHD/pl.png" 
+         transparent="1" />
     <panel name="TemplatesChannelSelectionInfoEPG" />
     <panel name="TemplatesChannelSelectionInfoChannel" />
     <panel name="TemplatesButtons" />
@@ -6826,6 +6839,33 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesTitle3" />
     <widget name="about" position="45,70" size="670,528" font="Regular; 20" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
     <widget name="oealogo" position="520,470" size="200,135" zPosition="4" transparent="1" alphatest="blend"/><panel name="TemplatesButtons" />
+    <panel name="TemplatesClock" />
+  </screen>
+  <!-- DLNA Server -->
+  <screen name="DLNAServer" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <eLabel text="DLNA Server" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/setting.png" alphatest="blend" />
+    <ePixmap position="750,480" size="500,120" pixmap="NeutronHD/logo.png" alphatest="blend" />
+    <widget name="config" position="45,70" size="670,540" scrollbarMode="showNever" scrollbarWidth="10" itemHeight="30" selectionPixmap="NeutronHD/style/greysel.png" transparent="1" />
+    <widget name="information" position="110,690" size="450,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" zPosition="4" transparent="1" />
+    <ePixmap pixmap="NeutronHD/buttons/key_info.png" position="1210,642" size="40,20" alphatest="blend" />
+    <ePixmap pixmap="NeutronHD/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
+    <panel name="TemplatesButtons" />
+    <panel name="TemplatesClock" />
+  </screen>
+  <screen name="SelectDirectoryWindow" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <eLabel text="Select Directory" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/setting.png" alphatest="blend" />
+    <ePixmap position="750,480" size="500,120" pixmap="NeutronHD/logo.png" alphatest="blend" />
+    <widget name="filelist" position="45,70" size="670,540" scrollbarMode="showNever" scrollbarWidth="10" itemHeight="30" selectionPixmap="NeutronHD/style/greysel.png" transparent="1" />
+    <widget name="currentDir" position="110,690" size="450,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" zPosition="4" transparent="1" />
+    <ePixmap pixmap="NeutronHD/buttons/key_info.png" position="1210,642" size="40,20" alphatest="blend" />
+    <ePixmap pixmap="NeutronHD/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
+    <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
 </skin>

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Setup skin Skin NeutronHD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-07-29 01:13+0100\n"
-"PO-Revision-Date: 2020-05-16 15:10+0200\n"
+"PO-Revision-Date: 2020-05-26 14:04+0200\n"
 "Last-Translator: \n"
 "Language-Team: <sirius.al@rambler.ru>\n"
 "MIME-Version: 1.0\n"
@@ -81,6 +81,9 @@ msgstr "Цвет доп. текста:"
 
 msgid "Cursor text color:"
 msgstr "Цвет текста курсора:"
+
+msgid "Description text color cursor:"
+msgstr "Цвет текста описания под курсором:"
 
 msgid "Cursor backdrop color:"
 msgstr "Цвет фона курсора:"
