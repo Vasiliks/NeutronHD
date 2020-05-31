@@ -6850,8 +6850,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="750,480" size="500,120" pixmap="NeutronHD/logo.png" alphatest="blend" />
     <widget name="config" position="45,70" size="670,540" scrollbarMode="showNever" scrollbarWidth="10" itemHeight="30" selectionPixmap="NeutronHD/style/greysel.png" transparent="1" />
     <widget name="information" position="110,690" size="450,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" zPosition="4" transparent="1" />
-    <ePixmap pixmap="NeutronHD/buttons/key_info.png" position="1210,642" size="40,20" alphatest="blend" />
-    <ePixmap pixmap="NeutronHD/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
@@ -6863,8 +6861,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <ePixmap position="750,480" size="500,120" pixmap="NeutronHD/logo.png" alphatest="blend" />
     <widget name="filelist" position="45,70" size="670,540" scrollbarMode="showNever" scrollbarWidth="10" itemHeight="30" selectionPixmap="NeutronHD/style/greysel.png" transparent="1" />
     <widget name="currentDir" position="110,690" size="450,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" zPosition="4" transparent="1" />
-    <ePixmap pixmap="NeutronHD/buttons/key_info.png" position="1210,642" size="40,20" alphatest="blend" />
-    <ePixmap pixmap="NeutronHD/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
