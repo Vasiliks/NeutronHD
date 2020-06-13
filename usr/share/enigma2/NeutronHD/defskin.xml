@@ -1981,17 +1981,18 @@
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/tv.png" alphatest="blend" />
     <eLabel text="Channel Selection" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
-    <widget name="list" position="45,70" size="670,535"
+    <widget name="list" position="45,68" size="670,540"
          scrollbarMode="showNever"
-         scrollbarWidth="10" 
-         selectionPixmap="NeutronHD/style/greysel.png" 
+         scrollbarWidth="10"
+         serviceItemHeight="30" 
+         selectionPixmap="NeutronHD/style/aquasel.png" 
          backgroundColor="black" 
          foregroundColorServiceNotAvail="#666666" 
          serviceNumberFont="Regular;20" 
          serviceNameFont="Regular;22" 
          serviceInfoFont="Regular;20" 
          colorServiceDescription="color3"
-		 colorServiceDescriptionSelected="color6" 
+         colorServiceDescriptionSelected="color6" 
          picServiceEventProgressbar="NeutronHD/pl.png" 
          transparent="1" />
     <panel name="TemplatesChannelSelectionInfoEPG" />
