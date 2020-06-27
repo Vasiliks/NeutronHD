@@ -6912,9 +6912,10 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
       <convert type="EventTime">Duration</convert>
       <convert type="ClockToText">InMinutes</convert>
     </widget>
+    <panel name="TemplatesClock" />
   </screen>
   <screen name="iptvArchiveSecondInfoBar" position="fill" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="iptvArchiveInfoBar" />
-    <panel name="TemplatesInfoBarECM-EPG" />
+    <panel name="TemplatesInfoBarEPGCentre" />
   </screen>
 </skin>
