@@ -1,6 +1,7 @@
 <skin>
   <!--
     ############################# Sirius_Neutron_HD #############################
+    ################# Edition by Vasiliks for OpenPLi7.* images #################
     -->
   <output id="0">
     <resolution xres="1280" yres="720" bpp="32" />
@@ -31,6 +32,8 @@
     <font filename="/usr/share/enigma2/NeutronHD/fonts/Roboto-Regular.ttf" name="Regular" scale="105" />
     <font filename="/usr/share/enigma2/NeutronHD/fonts/LucidaConsole.ttf" name="Console" scale="100" />
     <font filename="nmsbd.ttf" name="Display" scale="100" />
+      <alias name="PluginBrowser0" font="Regular" size="20" height="54" />
+      <alias name="PluginBrowser1" font="Console" size="16" />
   </fonts>
   <!-- ########## Main screen colors (id=0 Framebuffer) ########## -->
   <windowstyle type="skinned" id="0">
@@ -73,6 +76,14 @@
     <color name="WindowTitleForeground" color="white" />
     <color name="WindowTitleBackground" color="black" />
   </windowstyle>
+  <parameters>
+    <parameter name="PluginBrowserName" value="120,2,32"/>
+    <parameter name="PluginBrowserDescr" value="120,30,22"/>
+    <parameter name="PluginBrowserIcon" value="10,5,100,40" scale="on" />
+    <parameter name="PluginBrowserDownloadName" value="80,2,32"/>
+    <parameter name="PluginBrowserDownloadDescr" value="80,30,22"/>
+    <parameter name="PluginBrowserDownloadIcon" value="10,0,60,50"/>
+  </parameters>
   <!--  ########## Templates ########## -->
   <screen name="TemplatesInfoBarTv">
     <eLabel position="0,606" size="1280,114" backgroundColor="background" zPosition="-1" />
@@ -3219,7 +3230,7 @@
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/plugin.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
-    <widget name="list" position="45,65" size="670,550" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget name="list" position="45,70" size="670,540" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
@@ -3230,7 +3241,7 @@
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/plugin.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
     <widget name="text" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget name="list" position="45,70" size="670,500" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget name="list" position="45,70" size="670,540" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="TemplatesClock" />
   </screen>
   <!-- PluginManager (Extensions management) -->
@@ -6864,5 +6875,46 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="currentDir" position="110,690" size="450,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" zPosition="4" transparent="1" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
+  </screen>
+  <!-- iptv Archive -->
+  <screen name="iptvArchiveInfoBar" position="fill" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesInfoBarTv" />
+    <panel name="TemplatesInfoBarPicon" />
+    <panel name="TemplatesInfoBarName" />
+    <panel name="TemplatesInfoBarIndication" />
+    <ePixmap position="1140,610" size="120,80" pixmap="NeutronHD/picon_bg.png" zPosition="1" alphatest="blend" />
+    <widget source="session.CurrentService" render="PiconUni" path="piconProv" position="1150,619" size="100,60" zPosition="2" alphatest="blend">
+      <convert type="ServiceName2">Provider</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="145,613" size="80,30" font="Regular; 22" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="225,613" size="800,30" font="Regular; 22" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="session.Event_Now" render="Label" position="1025,613" size="110,30" font="Regular; 22" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1">
+      <convert type="EventTime">Remaining</convert>
+      <convert type="RemainingToText">InMinutes</convert>
+    </widget>
+    <ePixmap position="145,645" size="990,12" pixmap="NeutronHD/progress_bg.png" zPosition="1" alphatest="blend" />
+    <widget source="session.Event_Now" render="Progress" pixmap="NeutronHD/style/goldprogress.png" position="145,645" size="990,12" zPosition="2" transparent="1">
+      <convert type="EventTime">Progress</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="145,660" size="80,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
+      <convert type="EventTime">StartTime</convert>
+      <convert type="ClockToText">Default</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="225,660" size="800,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1">
+      <convert type="EventName">Name</convert>
+    </widget>
+    <widget source="session.Event_Next" render="Label" position="1025,660" size="110,30" font="Regular; 22" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1">
+      <convert type="EventTime">Duration</convert>
+      <convert type="ClockToText">InMinutes</convert>
+    </widget>
+  </screen>
+  <screen name="iptvArchiveSecondInfoBar" position="fill" title="InfoBar" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="iptvArchiveInfoBar" />
+    <panel name="TemplatesInfoBarECM-EPG" />
   </screen>
 </skin>
