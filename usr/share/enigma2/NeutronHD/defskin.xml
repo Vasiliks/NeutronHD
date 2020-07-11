@@ -2673,8 +2673,9 @@
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/epg.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
     <widget name="channel" position="45,70" size="500,28" font="Regular;24" backgroundColor="background" transparent="1" />
-    <widget name="duration" position="center,70" size="150,28" font="Regular;24" halign="right" backgroundColor="background" transparent="1" />
-    <widget name="epg_description" position="45,105" size="670,500" font="Regular;24" backgroundColor="black" transparent="1" />
+    <widget name="datetime" position="445,70" size="150,28" font="Regular;24" halign="right" backgroundColor="background" transparent="1" />
+    <widget name="duration" position="615,70" size="100,28" font="Regular;24" halign="right" backgroundColor="background" transparent="1" />
+    <widget name="epg_description" position="45,105" size="670,500" font="Regular;22" backgroundColor="black" transparent="1" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
@@ -6207,11 +6208,31 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/weather.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
-    <widget name="MainList" position="45,70" size="670,530" enableWrapAround="1" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget name="MainList" position="45,70" size="670,540"
+      enableWrapAround="1"
+      scrollbarMode="showNever"
+      scrollbarWidth="10"
+      scrollbarSliderForegroundColor="background4"
+      scrollbarSliderBorderColor="background3"
+      itemHeight="90"
+      setTime="5,32,60,30"
+      setPict="70,10,70,70"
+      setPictScale="1"
+      setTemp="155,10,150,30"
+      setTempUnits="155,50,70,30"
+      setWindPict="265,50,40,40"
+      setWindPictScale="1"
+      setWind="315,10,100,30"
+      setWindUnits="305,50,100,30"
+      text1Pos="400,2,500,30"
+      text2Pos="400,30,500,20"
+      text3Pos="400,50,500,20"
+      text4Pos="400,70,500,20"
+      backgroundColor="black" transparent="1" />
     <widget source="Titel" render="Label" position="110,668" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <widget source="Titel2" render="Label" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <eLabel text="OK = " position="750,580" size="100,25" font="Regular; 20" backgroundColor="background" transparent="1" />
-    <eLabel text="EPG = " position="1085,580" size="100,25" font="Regular; 20" backgroundColor="background" transparent="1" />
+    <eLabel text="INFO = " position="1085,580" size="100,25" font="Regular; 20" backgroundColor="background" transparent="1" />
     <eLabel text="MENU = " position="895,580" size="100,25" font="Regular; 20" backgroundColor="background" transparent="1" />
     <widget source="key_ok" render="Label" position="805,580" size="100,25" font="Regular; 20" halign="left" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
     <widget source="key_menu" render="Label" position="985,580" size="100,25" font="Regular; 20" halign="left" valign="center" foregroundColor="white" backgroundColor="background" transparent="1" />
