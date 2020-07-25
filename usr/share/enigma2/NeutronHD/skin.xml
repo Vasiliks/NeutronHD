@@ -1995,16 +1995,16 @@
     <widget name="list" position="45,68" size="670,540"
          scrollbarMode="showNever"
          scrollbarWidth="10"
-         serviceItemHeight="30" 
-         selectionPixmap="NeutronHD/style/aquasel.png" 
-         backgroundColor="black" 
-         foregroundColorServiceNotAvail="#666666" 
-         serviceNumberFont="Regular;20" 
-         serviceNameFont="Regular;22" 
-         serviceInfoFont="Regular;20" 
+         serviceItemHeight="30"
+         selectionPixmap="NeutronHD/style/aquasel.png"
+         backgroundColor="black"
+         foregroundColorServiceNotAvail="#666666"
+         serviceNumberFont="Regular;20"
+         serviceNameFont="Regular;22"
+         serviceInfoFont="Regular;20"
          colorServiceDescription="color3"
-         colorServiceDescriptionSelected="color6" 
-         picServiceEventProgressbar="NeutronHD/pl.png" 
+         colorServiceDescriptionSelected="color6"
+         picServiceEventProgressbar="NeutronHD/pl.png"
          transparent="1" />
     <panel name="TemplatesChannelSelectionInfoEPG" />
     <panel name="TemplatesChannelSelectionInfoChannel" />
@@ -2415,23 +2415,23 @@
   </screen>
   <!-- Default Wizard -->
   <screen name="DefaultWizard" position="fill" title="Welcome..." backgroundColor="transparent" flags="wfNoBorder">
-  	<panel name="TemplatesWizard" />
+    <panel name="TemplatesWizard" />
   </screen>
   <!-- Image Wizard -->
   <screen name="ImageWizard" position="fill" title="Welcome..." backgroundColor="transparent" flags="wfNoBorder">
-  	<panel name="TemplatesWizard" />
+    <panel name="TemplatesWizard" />
   </screen>
   <!-- Network Wizard -->
   <screen name="NetworkWizard" position="fill" title="Welcome..." backgroundColor="transparent" flags="wfNoBorder">
-  	<panel name="TemplatesWizard" />
+    <panel name="TemplatesWizard" />
   </screen>
   <!-- Timer Wizard -->
   <screen name="AutoTimerWizard" position="fill" title="Welcome..." backgroundColor="transparent" flags="wfNoBorder">
-  	<panel name="TemplatesWizard" />
+    <panel name="TemplatesWizard" />
   </screen>
   <!-- Video Wizard -->
   <screen name="VideoWizard" position="fill" title="Welcome..." backgroundColor="transparent" flags="wfNoBorder">
-  	<panel name="TemplatesWizard" />
+    <panel name="TemplatesWizard" />
   </screen>
   <!-- Wizard Screens -->
   <screen name="TemplatesWizard" position="fill" flags="wfNoBorder" backgroundColor="transparent">
@@ -2452,10 +2452,10 @@
     </screen>
   <screen name="Wizard_rc_template">
     <widget name="rc" position="955,40" size="154,500" pixmaps="skin_default/rc.png,skin_default/rcold.png" zPosition="10" alphatest="blend" />
-	<widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
-	<widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
-	<widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
-	<widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowdown" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowdown2" position="-100,-100" size="37,70" pixmap="skin_default/arrowdown.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowup" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
+    <widget name="arrowup2" position="-100,-100" size="37,70" pixmap="skin_default/arrowup.png" zPosition="11" alphatest="blend" />
   </screen>
   <!--  About -->
   <screen name="About" position="fill" title="About" flags="wfNoBorder" backgroundColor="transparent">
@@ -6329,31 +6329,38 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!-- ########## WeatherMSN ########## -->
   <!-- WeatherMSN -->
-  <screen name="WeatherMSN" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="WeatherMSNtemplate" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
-    <ePixmap position="750,60" size="500,550" pixmap="NeutronHD/style/greymenu_4.png" alphatest="on" zPosition="-1" />
-    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/weather.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
+    <panel name="TemplatesClock" />
+    <ePixmap position="750,60" size="500,550" pixmap="NeutronHD/style/greymenu_4.png" alphatest="on" zPosition="-1" />
+    <eLabel position="760,98" size="480,500" backgroundColor="menubackground" zPosition="-3" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/weather.png" alphatest="blend" />
+    <ePixmap pixmap="NeutronHD/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
+    <ePixmap pixmap="NeutronHD/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
+  </screen>
+  <screen name="WeatherMSN" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="WeatherMSNtemplate" />
     <eLabel position="45,200" size="670,3" backgroundColor="grey" zPosition="1" />
     <eLabel position="45,335" size="670,3" backgroundColor="grey" zPosition="1" />
     <eLabel position="45,470" size="670,3" backgroundColor="grey" zPosition="1" />
     <eLabel position="765,160" size="470,3" backgroundColor="grey" zPosition="1" />
     <eLabel position="765,430" size="470,3" backgroundColor="grey" zPosition="1" />
-    <widget source="locationtxt" render="Label" position="110,627" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget source="latitudetxt" render="Label" position="110,669" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget source="longitudetxt" render="Label" position="110,648" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="locationtxt" render="Label" position="110,630" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="location" render="Label" position="310,630" size="500,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="longitudetxt" render="Label" position="110,651" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="longitude" render="Label" position="310,651" size="150,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="latitudetxt" render="Label" position="110,672" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="latitude" render="Label" position="310,672" size="150,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="pointtxt" render="Label" position="110,693" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="observationtime" render="Label" position="1100,693" size="100,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="right" valign="center" transparent="1" />
+    <widget source="observationpoint" render="Label" position="310,693" size="500,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="attribution" render="Label" position="700,668" size="500,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="right" valign="center" transparent="1" />
     <widget source="temperaturetxt" render="Label" position="765,170" size="150,25" font="Regular; 20" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
     <widget source="feelsliketxt" render="Label" position="1085,170" size="150,25" font="Regular; 20" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
     <widget source="humiditytxt" render="Label" position="900,495" size="150,25" font="Regular; 20" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
     <widget source="windtxt" render="Label" position="900,520" size="150,25" font="Regular; 20" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
-    <widget source="pointtxt" render="Label" position="110,690" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget source="location" render="Label" position="310,627" size="500,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget source="latitude" render="Label" position="310,669" size="150,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget source="longitude" render="Label" position="310,648" size="150,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget source="observationtime" render="Label" position="1100,668" size="100,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="right" valign="center" transparent="1" />
-    <widget source="observationpoint" render="Label" position="310,690" size="500,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget source="attribution" render="Label" position="700,690" size="500,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="right" valign="center" transparent="1" />
     <widget source="temperature" render="Label" position="765,200" size="150,50" font="Regular; 40" foregroundColor="color1" backgroundColor="background" halign="left" transparent="1" />
     <widget source="feelslike" render="Label" position="1085,200" size="150,50" font="Regular; 40" foregroundColor="color1" backgroundColor="background" halign="right" transparent="1" />
     <widget source="skytext" render="Label" position="765,400" size="470,25" font="Regular; 20" foregroundColor="color3" backgroundColor="background" halign="center" transparent="1" />
@@ -6410,9 +6417,132 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="date4" render="Label" position="510,475" size="200,25" font="Regular; 20" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
     <widget source="day4" render="Label" position="510,500" size="200,25" font="Regular; 20" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
     <widget name="pic4" position="50,475" size="128,128" zPosition="2" alphatest="blend" />
-    <ePixmap pixmap="NeutronHD/buttons/key_menu.png" position="1210,694" size="40,20" alphatest="on" />
-    <ePixmap pixmap="NeutronHD/buttons/key_epg.png" position="1210,668" size="40,20" alphatest="on" />
-    <panel name="TemplatesClock" />
+  </screen>
+  <screen name="WeatherMSNextended" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="WeatherMSNtemplate" />
+    <widget source="yulianday" render="Label" position="750,60" size="500,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/weather.png" alphatest="blend" />
+    <eLabel position="45,173" size="670,1" backgroundColor="grey" zPosition="1" />
+    <eLabel position="45,281" size="670,1" backgroundColor="grey" zPosition="1" />
+    <eLabel position="45,389" size="670,1" backgroundColor="grey" zPosition="1" />
+    <eLabel position="45,497" size="670,1" backgroundColor="grey" zPosition="1" />
+    <eLabel position="765,480" size="470,1" backgroundColor="grey" zPosition="1" />
+    <ePixmap pixmap="/usr/share/enigma2/NeutronHD/earth.png" position="765,100" size="120,120" alphatest="blend" />
+    <ePixmap pixmap="/usr/share/enigma2/NeutronHD/logo_msn.png" position="925,120" size="350,80" alphatest="blend" />
+    <widget source="locationtxt" render="Label" position="110,630" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="location" render="Label" position="310,630" size="500,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="longitudetxt" render="Label" position="110,651" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="longitude" render="Label" position="310,651" size="150,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="latitudetxt" render="Label" position="110,672" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="latitude" render="Label" position="310,672" size="150,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="pointtxt" render="Label" position="110,693" size="200,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="observationtime" render="Label" position="1100,693" size="100,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="right" valign="center" transparent="1" />
+    <widget source="observationpoint" render="Label" position="310,693" size="500,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget source="attribution" render="Label" position="700,668" size="500,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="right" valign="center" transparent="1" />
+    <widget source="temperaturetxt" render="Label" position="190,70" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="temperature" render="Label" position="510,70" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="feelsliketxt" render="Label" position="190,90" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="feelslike" render="Label" position="510,90" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="humiditytxt" render="Label" position="190,110" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="humidity" render="Label" position="510,110" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="windtxt" render="Label" position="190,130" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="wind" render="Label" position="510,130" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="skytext" render="Label" position="190,150" size="520,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget name="pic" position="50,65" size="90,90" zPosition="2" alphatest="blend" />
+    <widget source="datetxt" render="Label" position="190,178" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="date1" render="Label" position="510,178" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="daytxt" render="Label" position="190,198" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="day1" render="Label" position="510,198" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="temperaturetxt" render="Label" position="190,218" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="temperature1" render="Label" position="510,218" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="preciptxt" render="Label" position="190,238" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="precip1" render="Label" position="510,238" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="skytext1" render="Label" position="190,258" size="520,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget name="pic1" position="50,173" size="90,90" zPosition="2" alphatest="blend" />
+    <widget source="datetxt" render="Label" position="190,286" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="date2" render="Label" position="510,286" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="daytxt" render="Label" position="190,306" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="day2" render="Label" position="510,306" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="temperaturetxt" render="Label" position="190,326" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="temperature2" render="Label" position="510,326" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="preciptxt" render="Label" position="190,346" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="precip2" render="Label" position="510,346" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="skytext2" render="Label" position="190,366" size="520,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget name="pic2" position="50,281" size="90,90" zPosition="2" alphatest="blend" />
+    <widget source="datetxt" render="Label" position="190,392" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="date3" render="Label" position="510,392" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="daytxt" render="Label" position="190,412" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="day3" render="Label" position="510,412" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="temperaturetxt" render="Label" position="190,432" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="temperature3" render="Label" position="510,432" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="preciptxt" render="Label" position="190,452" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="precip3" render="Label" position="510,452" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="skytext3" render="Label" position="190,472" size="520,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget name="pic3" position="50,387" size="90,90" zPosition="2" alphatest="blend" />
+    <widget source="datetxt" render="Label" position="190,500" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="date4" render="Label" position="510,500" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="day4" render="Label" position="510,520" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="daytxt" render="Label" position="190,520" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="temperaturetxt" render="Label" position="190,540" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="temperature4" render="Label" position="510,540" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="preciptxt" render="Label" position="190,560" size="300,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="precip4" render="Label" position="510,560" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="skytext4" render="Label" position="190,580" size="520,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget name="pic4" position="50,495" size="90,90" zPosition="2" alphatest="blend" />
+    <widget source="moonlighttxt" render="Label" position="890,505" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="moonlight" render="Label" position="1030,505" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="moondisttxt" render="Label" position="890,530" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="moondist" render="Label" position="1030,530" size="200,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="moonphase" render="Label" position="830,555" size="400,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="right" transparent="1" />
+    <widget name="picmoon" position="780,495" size="90,90" zPosition="2" alphatest="blend" />
+    <widget source="risetxt" render="Label" position="815,220" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="settxt" render="Label" position="880,220" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="culminationtxt" render="Label" position="1010,220" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="azimuthtxt" render="Label" position="1085,220" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="suntxt" render="Label" position="770,250" size="150,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="mercurytxt" render="Label" position="770,275" size="150,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="venustxt" render="Label" position="770,300" size="150,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="marstxt" render="Label" position="770,325" size="150,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="jupitertxt" render="Label" position="770,350" size="150,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="saturntxt" render="Label" position="770,375" size="150,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="uranustxt" render="Label" position="770,400" size="150,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="neptunetxt" render="Label" position="770,425" size="150,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="moontxt" render="Label" position="770,450" size="150,20" font="Regular; 18" foregroundColor="color3" backgroundColor="background" halign="left" transparent="1" />
+    <widget source="sunrise" render="Label" position="805,250" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="sunset" render="Label" position="870,250" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="sunculmination" render="Label" position="970,250" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="mercuryrise" render="Label" position="805,275" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="mercuryset" render="Label" position="870,275" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="mercuryculmination" render="Label" position="970,275" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="mercuryazimuth" render="Label" position="1085,275" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="venusrise" render="Label" position="805,300" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="venusset" render="Label" position="870,300" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="venusculmination" render="Label" position="970,300" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="venusazimuth" render="Label" position="1085,300" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="marsrise" render="Label" position="805,325" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="marsset" render="Label" position="870,325" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="marsculmination" render="Label" position="970,325" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="marsazimuth" render="Label" position="1085,325" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="jupiterrise" render="Label" position="805,350" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="jupiterset" render="Label" position="870,350" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="jupiterculmination" render="Label" position="970,350" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="jupiterazimuth" render="Label" position="1085,350" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="saturnrise" render="Label" position="805,375" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="saturnset" render="Label" position="870,375" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="saturnculmination" render="Label" position="970,375" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="saturnazimuth" render="Label" position="1085,375" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="uranusrise" render="Label" position="805,400" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="uranusset" render="Label" position="870,400" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="uranusculmination" render="Label" position="970,400" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="uranusazimuth" render="Label" position="1085,400" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="neptunerise" render="Label" position="805,425" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="neptuneset" render="Label" position="870,425" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="neptuneculmination" render="Label" position="970,425" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="neptuneazimuth" render="Label" position="1085,425" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="moonrise" render="Label" position="805,450" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="moonset" render="Label" position="870,450" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="moonculmination" render="Label" position="970,450" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
+    <widget source="moonazimuth" render="Label" position="1085,450" size="150,20" font="Regular; 18" foregroundColor="color2" backgroundColor="background" halign="right" transparent="1" />
   </screen>
   <!-- Config WeatherMSN -->
   <screen name="ConfigWeatherMSN" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
@@ -6822,7 +6952,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget name="pleasewait" position="110,630" size="750,85" font="Display; 18" halign="left" valign="bottom" foregroundColor="color3" backgroundColor="background" transparent="1"  zPosition="5"/>
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
-  </screen>    
+  </screen>
   <screen name="AutoBouquetsMaker_HideSections" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />

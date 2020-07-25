@@ -254,6 +254,10 @@ else:
     otherinfobar = [
     ("TemplatesInfoBarOther1", _("no")),
     ("TemplatesInfoBarOther2", _("rambler weather"))]
+    
+stylemsn = [
+    ("WeatherMSNsimple", _("simple")),
+    ("WeatherMSNextended", _("extended"))]
 
 config.skin.neutron = ConfigSubsection()
 config.skin.neutron.style = ConfigSelection(default="grey", choices = style)
@@ -269,6 +273,7 @@ config.skin.neutron.coverinfopanel = ConfigSelection(default="TemplatesInfoBarIn
 config.skin.neutron.infomovieselection = ConfigSelection(default="TemplatesMovieSelectionInfoMovie2", choices = infomovieselection)
 config.skin.neutron.clockpanel = ConfigSelection(default="TemplatesClock1", choices = clockpanel)
 config.skin.neutron.otherinfobar = ConfigSelection(default="TemplatesInfoBarOther1", choices = otherinfobar)
+config.skin.neutron.stylemsnplugin = ConfigSelection(default="WeatherMSNsimple", choices = stylemsn)
 config.skin.neutron.dish = ConfigSelection(default="Dish-2", choices = dish)
 config.skin.neutron.scrollbarmode = ConfigSelection(default="showNever", choices = scrollbarmode)
 config.skin.neutron.fonts = ConfigSelection(default="Roboto-Regular", choices = fonts)
@@ -324,6 +329,7 @@ class SetupNeutronHD(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("Panel description in movie selection:"), config.skin.neutron.infomovieselection))
         list.append(getConfigListEntry(_("Clock in menu, infobars:"), config.skin.neutron.clockpanel))
         list.append(getConfigListEntry(_("Other widget in infobars:"), config.skin.neutron.otherinfobar))
+        list.append(getConfigListEntry(_("Style WeatherMSN plugin:"), config.skin.neutron.stylemsnplugin))
         list.append(getConfigListEntry(_("Position dish:"), config.skin.neutron.dish))
         list.append(getConfigListEntry(_("Scrollbar in menu:"), config.skin.neutron.scrollbarmode))
         list.append(getConfigListEntry(_("Fonts:"), config.skin.neutron.fonts))
@@ -453,6 +459,8 @@ class SetupNeutronHD(ConfigListScreen, Screen):
             skin_default.append([config.skin.neutron.clockpanel.value, "TemplatesClock"])
     # other widgets infobar
             skin_default.append(["TemplatesInfoBarTvOther", config.skin.neutron.otherinfobar.value])
+    # msn widgets infobar
+            skin_default.append([config.skin.neutron.stylemsnplugin.value, "WeatherMSN"])
     # dish
             skin_default.append([config.skin.neutron.dish.value, "Dish"])
     # scrollbar
