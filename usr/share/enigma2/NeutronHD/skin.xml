@@ -6918,7 +6918,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
   </screen>
   <!-- Quit Main loop -->
   <screen name="QuitMainloopScreen" position="fill" backgroundColor="background" flags="wfNoBorder">
-    <ePixmap position="370,270" size="500,120" pixmap="NeutronHD/logo.png" alphatest="blend" />
+    <ePixmap position="390,270" size="500,120" pixmap="NeutronHD/logo.png" alphatest="blend" />
     <ePixmap position="613,400" size="54,54" pixmap="NeutronHD/icons/input_info.png" alphatest="blend" />
     <widget name="text" position="0,460" size="1280,50" font="Regular;30" halign="center" valign="center" />
   </screen>
