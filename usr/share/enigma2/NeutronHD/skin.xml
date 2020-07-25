@@ -7069,4 +7069,28 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <panel name="iptvArchiveInfoBar" />
     <panel name="TemplatesInfoBarEPGCentre" />
   </screen>
+  <!-- "HddSleep" -->
+  <screen name="HddSleep" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/timer.png" alphatest="blend" />
+    <panel name="TemplatesTitle3" />
+    <widget name="config" position="75,70" size="640,240" itemHeight="30" font="Regular; 20" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget name="0" pixmaps="/usr/share/enigma2/skin_default/buttons/button_green_off.png,/usr/share/enigma2/skin_default/buttons/button_green.png" position="50,77" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
+    <widget name="1" pixmaps="/usr/share/enigma2/skin_default/buttons/button_blue_off.png,/usr/share/enigma2/skin_default/buttons/button_blue.png" position="50,107" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
+    <widget name="2" pixmaps="/usr/share/enigma2/skin_default/buttons/button_blue_off.png,/usr/share/enigma2/skin_default/buttons/button_blue.png" position="50,137" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
+    <widget name="3" pixmaps="/usr/share/enigma2/skin_default/buttons/button_blue_off.png,/usr/share/enigma2/skin_default/buttons/button_blue.png" position="50,167" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
+    <widget name="4" pixmaps="/usr/share/enigma2/skin_default/buttons/button_blue_off.png,/usr/share/enigma2/skin_default/buttons/button_blue.png" position="50,197" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
+    <widget name="5" pixmaps="/usr/share/enigma2/skin_default/buttons/button_blue_off.png,/usr/share/enigma2/skin_default/buttons/button_blue.png" position="50,227" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
+    <widget name="6" pixmaps="/usr/share/enigma2/skin_default/buttons/button_green_off.png,/usr/share/enigma2/skin_default/buttons/button_green.png" position="50,257" zPosition="10" size="15,16" transparent="1" alphatest="on"/>
+    <ePixmap pixmap="~/author.png" position="140,662" size="25,25" />
+    <widget name="version" position="180,665" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget name="process" position="75,580" size="100,25" font="Regular; 20" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget name="daemon0" alphatest="on" pixmap="/usr/share/enigma2/skin_default/buttons/button_green_off.png" position="175,587" size="15,16" transparent="1"/>
+    <widget name="daemon1" alphatest="on" pixmap="/usr/share/enigma2/skin_default/buttons/button_green.png" position="175,587" size="15,16" transparent="1"/>
+    <widget name="devices" position="80,350" size="185,25" font="Regular; 20" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <widget name="mounted" position="300,350" size="365,175" font="Regular; 20" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
+    <panel name="TemplatesButtons" />
+    <panel name="TemplatesClock" />
+  </screen>
 </skin>
