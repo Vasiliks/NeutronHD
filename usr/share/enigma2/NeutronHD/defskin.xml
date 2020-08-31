@@ -1313,13 +1313,14 @@
       <convert type="ValueRange">0,720</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Pixmap" position="1155,620" size="50,30" pixmap="NeutronHD/icons/4K_on.png" zPosition="2" alphatest="blend">
-      <convert type="ServiceInfo">Is4K</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
     <widget source="session.CurrentService" render="Pixmap" position="1155,620" size="50,30" pixmap="NeutronHD/icons/hd_on.png" zPosition="2" alphatest="blend">
       <convert type="ServiceInfo">VideoWidth</convert>
-      <convert type="ValueRange">721,1980</convert>
+      <convert type="ValueRange">721,2560</convert>
+      <convert type="ConditionalShowHide" />
+    </widget>
+    <widget source="session.CurrentService" render="Pixmap" position="1155,620" size="50,30" pixmap="NeutronHD/icons/4K_on.png" zPosition="2" alphatest="blend">
+      <convert type="ServiceInfo">VideoWidth</convert>
+      <convert type="ValueRange">2561,4096</convert>
       <convert type="ConditionalShowHide" />
     </widget>
     <widget source="session.CurrentService" render="Label" position="250,595" size="115,20" font="Display; 16" backgroundColor="background" foregroundColor="grey" halign="left" transparent="1" borderWidth="1" text="1920x1080">
