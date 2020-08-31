@@ -6715,16 +6715,16 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/youtube.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
-    <widget source="list" render="Listbox" position="45,70" size="670,540" scrollbarMode="showNever" scrollbarWidth="10"  selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1">
+    <widget source="list" render="Listbox" position="45,70" size="670,539" scrollbarMode="showNever" scrollbarWidth="10"  selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1">
       <convert type="TemplatedMultiContent">
             {"template": [
-                MultiContentEntryPixmapAlphaTest(pos=(0,0), size=(100,72), png=2), # Thumbnail
-                MultiContentEntryText(pos=(110,1), size=(575,50), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=3), # Title
-                MultiContentEntryText(pos=(120, 50), size=(240,22), font=1, flags=RT_HALIGN_LEFT, text=4), # Views
-                MultiContentEntryText(pos=(360,50), size=(260,22), font=1, flags=RT_HALIGN_LEFT, text=5), # Duration
+                MultiContentEntryPixmapAlphaTest(pos=(0,3), size=(100,72), png=2), # Thumbnail
+                MultiContentEntryText(pos=(110,1), size=(575,54), font=0, flags=RT_HALIGN_LEFT|RT_VALIGN_CENTER|RT_WRAP, text=3), # Title
+                MultiContentEntryText(pos=(120, 54), size=(240,22), font=1, flags=RT_HALIGN_LEFT, text=4), # Views
+                MultiContentEntryText(pos=(420,54), size=(260,22), font=1, flags=RT_HALIGN_LEFT, text=5), # Duration
                 ],
             "fonts": [gFont("Regular", 20),gFont("Console", 16)],
-            "itemHeight": 72}
+            "itemHeight": 77}
       </convert>
     </widget>
     <widget name="thumbnail" position="0,0" size="100,72" />
