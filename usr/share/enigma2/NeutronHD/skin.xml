@@ -6230,19 +6230,29 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
     <ePixmap pixmap="NeutronHD/buttons/key_help.png" position="1210,642" size="40,20" alphatest="on" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
-  </screen>
+  </screen>  
   <!-- Sat Panel -->
   <screen name="SatPanel" position="fill" title="Satellite photos" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/weather.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
-    <widget name="Mlist" position="45,70" size="670,530" enableWrapAround="1" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget name="Mlist" position="45,80" size="670,480"
+      enableWrapAround="1"
+      itemHeight="120"
+      setPictScale="1"
+      textPos = "230,0,440,120"
+      scrollbarMode="showNever"
+      scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
+  <!-- Sat Panelb -->
+  <screen name="SatPanelb" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="SatPanel" />
+  </screen>
   <!-- Pic Setup -->
-  <screen name="PicSetup" position="fill" title="Satellite photos" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="PicSetup" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/setting.png" alphatest="blend" />
