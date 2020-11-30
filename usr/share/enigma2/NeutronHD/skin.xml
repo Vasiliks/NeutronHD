@@ -5949,8 +5949,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/kinopoisk.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
     <widget name="title" position="320,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget name="starsbg" position="110,643" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TMBD/starsbar_empty.png" alphatest="blend" zPosition="2" />
-    <widget name="stars" position="110,643" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TMBD/starsbar_filled.png" transparent="1" zPosition="3" />
+    <widget name="starsbg" position="110,643" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TMBD/img/starsbar_empty.png" alphatest="blend" zPosition="2" />
+    <widget name="stars" position="110,643" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TMBD/img/starsbar_filled.png" transparent="1" zPosition="3" />
     <widget name="ratinglabel" position="110,668" size="165,22" font="Display; 18" halign="left" foregroundColor="color3" backgroundColor="background" transparent="1" />
     <widget name="poster" position="50,70" size="185,278" alphatest="on" />
     <widget name="menu" position="245,100" size="470,255" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" zPosition="2" transparent="1" />
@@ -5986,8 +5986,8 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/kinopoisk.png" alphatest="blend" />
     <panel name="TemplatesTitle3" />
     <widget name="title" position="320,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
-    <widget name="starsbg" position="110,643" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TMBD/starsbar_empty.png" alphatest="blend" zPosition="2" />
-    <widget name="stars" position="110,643" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TMBD/starsbar_filled.png" transparent="1" zPosition="3" />
+    <widget name="starsbg" position="110,643" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TMBD/img/starsbar_empty.png" alphatest="blend" zPosition="2" />
+    <widget name="stars" position="110,643" size="210,21" pixmap="/usr/lib/enigma2/python/Plugins/Extensions/TMBD/img/starsbar_filled.png" transparent="1" zPosition="3" />
     <widget name="ratinglabel" position="110,668" size="165,22" font="Display; 18" halign="left" foregroundColor="color3" backgroundColor="background" transparent="1" />
     <widget name="poster" position="50,70" size="185,278" alphatest="on" />
     <widget name="menu" position="45,100" size="670,510" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" zPosition="2" transparent="1" />
