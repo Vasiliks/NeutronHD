@@ -4208,13 +4208,13 @@
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/help.png" alphatest="blend" />
-    <eLabel text="Help..." position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <panel name="TemplatesTitle3" />
     <widget name="list" position="45,70" size="670,535" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
-    <widget name="rc" position="1045,70" size="154,500" zPosition="10" pixmaps="NeutronHD/rc.png,NeutronHD/rcold.png" alphatest="on" />
-    <widget name="arrowdown" pixmap="NeutronHD/arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on" />
-    <widget name="arrowdown2" pixmap="NeutronHD/arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on" />
-    <widget name="arrowup" pixmap="NeutronHD/arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on" />
-    <widget name="arrowup2" pixmap="NeutronHD/arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on" />
+    <widget name="rc" position="1045,70" size="154,500" zPosition="10" pixmaps="rc.png,rcold.png" alphatest="on" />
+    <widget name="arrowdown" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on" />
+    <widget name="arrowdown2" pixmap="arrowdown.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on" />
+    <widget name="arrowup" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on" />
+    <widget name="arrowup2" pixmap="arrowup.png" position="-100,-100" size="37,70" zPosition="11" alphatest="on" />
     <widget name="long_key" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
   </screen>
     <!-- Messagebox -->
