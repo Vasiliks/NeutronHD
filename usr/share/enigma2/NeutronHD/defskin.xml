@@ -6906,11 +6906,43 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
     <widget name="text" position="0,460" size="1280,50" font="Regular;30" halign="center" valign="center" />
   </screen>
   <!-- E2m3u2bouquet by Dorik1972 -->
-  <screen name="AutoBouquetsMaker_Menu" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="E2m3u2b_About" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/info.png" alphatest="blend" />
+    <panel name="TemplatesTitle4" />
+    <widget name="about" position="45,70" size="670,528" font="Regular; 20" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget name="qrcode" position="800,135" size="400,400" zPosition="4" transparent="1" alphatest="blend"/>
+    <ePixmap position="750,60" size="500,550" pixmap="NeutronHD/style/greymenu_4.png" alphatest="on" zPosition="-1" />
+    <eLabel position="760,98" size="480,500" backgroundColor="menubackground" zPosition="-3" />
+    <panel name="TemplatesButtons" />
+    <panel name="TemplatesClock" />
+  </screen>
+  <screen name="E2m3u2b_Log" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/info.png" alphatest="blend" />
+    <panel name="TemplatesTitle4" />
+    <widget name="list" position="45,70" size="670,528" font="Display; 18" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <panel name="TemplatesButtons" />
+    <panel name="TemplatesClock" />
+  </screen>
+  <screen name="E2m3u2b_Setup" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/setup.png" alphatest="blend" />
-    <panel name="TemplatesTitle3" />
+    <panel name="TemplatesTitle4" />
+    <widget name="config" position="45,70" size="670,528" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget name="description" position="110,630" size="750,85" font="Display; 18" halign="left" valign="bottom" foregroundColor="color3" backgroundColor="background" transparent="1" />
+    <widget name="pleasewait" position="110,630" size="750,85" font="Display; 18" halign="left" valign="bottom" foregroundColor="color3" backgroundColor="background" transparent="1"  zPosition="5"/>
+    <panel name="TemplatesButtons" />
+    <panel name="TemplatesClock" />
+  </screen>
+  <screen name="E2m3u2b_Menu" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/setup.png" alphatest="blend" />
+    <panel name="TemplatesTitle4" />
     <widget source="list" render="Listbox" position="45,70" size="670,498" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1">
         <convert type="TemplatedMultiContent">
             {"template": [
@@ -6925,22 +6957,21 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
-  <screen name="AutoBouquetsMaker_Setup" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
-    <panel name="TemplatesMenu700" />
-    <panel name="TemplatesMenu" />
-    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/setup.png" alphatest="blend" />
-    <panel name="TemplatesTitle3" />
-    <widget name="config" position="45,70" size="670,528" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
-    <widget name="description" position="110,630" size="750,85" font="Display; 18" halign="left" valign="bottom" foregroundColor="color3" backgroundColor="background" transparent="1" />
-    <widget name="pleasewait" position="110,630" size="750,85" font="Display; 18" halign="left" valign="bottom" foregroundColor="color3" backgroundColor="background" transparent="1"  zPosition="5"/>
-    <panel name="TemplatesButtons" />
-    <panel name="TemplatesClock" />
-  </screen>
-  <screen name="AutoBouquetsMaker_HideSections" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="E2m3u2b_Providers_Config" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/tv.png" alphatest="blend" />
-    <panel name="TemplatesTitle3" />
+    <panel name="TemplatesTitle4" />
+    <widget name="config" position="45,70" size="670,528" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget source="description" render="Label" position="110,630" size="750,85" font="Display; 18" halign="left" valign="center" foregroundColor="color3" backgroundColor="background" transparent="1" />
+    <panel name="TemplatesButtons" />
+    <panel name="TemplatesClock" />
+  </screen>
+  <screen name="E2m3u2b_Providers" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/tv.png" alphatest="blend" />
+    <panel name="TemplatesTitle4" />
     <widget source="list" render="Listbox" position="45,70" size="670,498" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" selectionDisabled="1" transparent="1">
         <convert type="TemplatedMultiContent">
             {"template": [
@@ -6958,33 +6989,22 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
-  <screen name="AutoBouquetsMaker_ProvidersSetup" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
-    <panel name="TemplatesMenu700" />
-    <panel name="TemplatesMenu" />
-    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/tv.png" alphatest="blend" />
-    <panel name="TemplatesTitle3" />
-    <widget name="config" position="45,70" size="670,528" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
-    <widget name="description" position="110,630" size="750,85" font="Display; 18" halign="left" valign="bottom" foregroundColor="color3" backgroundColor="background" transparent="1" />
-    <widget name="pleasewait" position="110,630" size="750,85" font="Display; 18" halign="left" valign="bottom" foregroundColor="color3" backgroundColor="background" transparent="1"  zPosition="5"/>
-    <panel name="TemplatesButtons" />
-    <panel name="TemplatesClock" />
-  </screen>
-  <screen name="AutoBouquetsMaker_Log" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+  <screen name="E2m3u2b_Status" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/info.png" alphatest="blend" />
-    <panel name="TemplatesTitle3" />
-    <widget name="list" position="45,70" size="670,528" font="Display; 18" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
-    <panel name="TemplatesButtons" />
-    <panel name="TemplatesClock" />
-  </screen>
-  <screen name="AutoBouquetsMaker_About" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
-    <panel name="TemplatesMenu700" />
-    <panel name="TemplatesMenu" />
-    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/info.png" alphatest="blend" />
-    <panel name="TemplatesTitle3" />
+    <panel name="TemplatesTitle4" />
     <widget name="about" position="45,70" size="670,528" font="Regular; 20" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
-    <widget name="oealogo" position="520,470" size="200,135" zPosition="4" transparent="1" alphatest="blend"/><panel name="TemplatesButtons" />
+    <panel name="TemplatesButtons" />
+    <panel name="TemplatesClock" />
+  </screen>
+  <screen name="E2m3u2b_Update" position="fill" title="" flags="wfNoBorder" backgroundColor="transparent">
+    <panel name="TemplatesMenu700" />
+    <panel name="TemplatesMenu" />
+    <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/info.png" alphatest="blend" />
+    <panel name="TemplatesTitle4" />
+    <widget name="about" position="45,70" size="670,528" font="Regular; 20" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
   <!-- DLNA Server -->
