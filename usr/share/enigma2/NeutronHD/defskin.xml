@@ -6994,7 +6994,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/info.png" alphatest="blend" />
     <panel name="TemplatesTitle4" />
-    <widget name="about" position="45,70" size="670,528" font="Regular; 20" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget source="about" render="Label" position="45,70" size="670,528" font="Regular; 20" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
@@ -7003,7 +7003,7 @@ self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/info.png" alphatest="blend" />
     <panel name="TemplatesTitle4" />
-    <widget name="about" position="45,70" size="670,528" font="Regular; 20" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
+    <widget source="about" render="Label" position="45,70" size="670,528" font="Regular; 20" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1" />
     <panel name="TemplatesButtons" />
     <panel name="TemplatesClock" />
   </screen>
