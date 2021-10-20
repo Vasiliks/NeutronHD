@@ -1886,7 +1886,7 @@
       <convert type="ServiceInfo">SubservicesAvailable</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="250,617" size="750,32" font="Regular; 28" foregroundColor="color1" backgroundColor="background" halign="left" transparent="1" borderWidth="2">
+    <widget source="session.CurrentService" render="Label" position="250,617" size="750,32" font="Regular; 28" foregroundColor="color1" backgroundColor="background" halign="left" transparent="1" borderWidth="2" noWrap="1">
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget source="session.CurrentService" render="PositionGauge" position="250,658" size="1010,12" zPosition="3" transparent="1">
