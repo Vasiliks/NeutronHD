@@ -2562,7 +2562,7 @@
   <!--  Skin Selector New  -->
   <screen name="SkinSelectorNew">
     <widget name="preview" position="240,70" size="280,210" alphatest="on" />
-    <widget source="skins" render="Listbox" position="45,290" zPosition="3" size="670,540" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1">
+    <widget source="skins" render="Listbox" position="45,290" zPosition="3" size="670,308" scrollbarMode="showNever" scrollbarWidth="10" selectionPixmap="NeutronHD/style/greysel.png" backgroundColor="black" transparent="1">
       <convert type="TemplatedMultiContent">
             {"template": [
                     MultiContentEntryText(pos = (10,0), size = (300,35), font = 0, flags = RT_HALIGN_LEFT, text = 1),
