@@ -1886,7 +1886,7 @@
       <convert type="ServiceInfo">SubservicesAvailable</convert>
       <convert type="ConditionalShowHide" />
     </widget>
-    <widget source="session.CurrentService" render="Label" position="250,617" size="750,32" font="Regular; 28" foregroundColor="color1" backgroundColor="background" halign="left" transparent="1" borderWidth="2">
+    <widget source="session.CurrentService" render="Label" position="250,617" size="750,32" font="Regular; 28" foregroundColor="color1" backgroundColor="background" halign="left" transparent="1" borderWidth="2" noWrap="1">
       <convert type="ServiceName">Name</convert>
     </widget>
     <widget source="session.CurrentService" render="PositionGauge" position="250,658" size="1010,12" zPosition="3" transparent="1">
@@ -4231,7 +4231,7 @@ self["text"].instance.resize(eSize(*textsize))
 if self.type == self.TYPE_YESNO:
     self["list"].instance.move(ePoint(10, wsizey-listlen-10))
     self["list"].instance.resize(eSize(*(wsizex-20, listlen)))
-self.instance.move(ePoint((1280-wsizex)/2, (720-wsizey+30)/2))
+self.instance.move(ePoint((1280-wsizex)//2, (720-wsizey+30)//2))
     </applet>
   </screen>
   <screen name="MessageBox" position="center,center" size="600,10">
