@@ -3,6 +3,7 @@
 ## Coded by Sirius
 ##
 ## Edition openPLI 7.x by Vasiliks
+## python 3 edition 30.04.2022
 from Plugins.Plugin import PluginDescriptor
 from Screens.Screen import Screen
 from Screens.MessageBox import MessageBox
@@ -14,11 +15,12 @@ from Components.ConfigList import ConfigListScreen
 from Components.config import config, ConfigSubsection, getConfigListEntry, ConfigSelection
 from Tools.Directories import fileExists
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_LANGUAGE
-from os import environ, system
-import gettext
+import os, gettext
+from sys import version_info
+PY3 = (version_info[0] == 3)
 
 lang = language.getLanguage()
-environ["LANGUAGE"] = lang[:2]
+os.environ["LANGUAGE"] = lang[:2]
 gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 gettext.textdomain("enigma2")
 gettext.bindtextdomain("SetupNeutronHD", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/SetupNeutronHD/locale"))
@@ -122,20 +124,49 @@ fonts = [
     ("Roboto-MediumItalic", _("mediumitalic")),
     ("Roboto-BoldItalic", _("bolditalic"))]
 
-if fileExists("/usr/lib/enigma2/python/Components/Converter/AlwaysTrue.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/CaidInfo2.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/CamdInfo3.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/ConverterRotator.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/EventName2.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/FrontendInfo2.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/ProgressDiskSpaceInfo.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/RouteInfo.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/RWeather.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/ServiceInfoEX.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/ServiceName2.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Renderer/PiconUni.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Renderer/RendVolumeText.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Renderer/Watches.py"):
+path = "/usr/lib/enigma2/python"
+ext = [".py"]
+if PY3:
+    ext.append(".pyc")
+else:
+    ext.append(".pyo")
+
+based_files = [
+    "Components/Converter/AlwaysTrue",
+    "Components/Converter/CaidInfo2",
+    "Components/Converter/CamdInfo3",
+    "Components/Converter/ConverterRotator",
+    "Components/Converter/EventName2",
+    "Components/Converter/FrontendInfo2",
+    "Components/Converter/ProgressDiskSpaceInfo",
+    "Components/Converter/RouteInfo",
+    "Components/Converter/RWeather",
+    "Components/Converter/ServiceInfoEX",
+    "Components/Converter/ServiceName2",
+    "Components/Renderer/PiconUni",
+    "Components/Renderer/RendVolumeText",
+    "Components/Renderer/Watches"]
+
+tmbd_plug = ["Plugins/Extensions/TMBD/plugin"]
+tmbd_comp = ["Components/Renderer/RatingTmbd", "Components/Renderer/CoverTmbd"]
+
+calendar_plug = ["Plugins/Extensions/Calendar/plugin"]
+calendar_comp = ["Components/Converter/CalendarToText"]
+
+weather_plug = ["Plugins/Extensions/WeatherMSN/plugin"]
+weather_comp = ["Components/Converter/MSNWeather2"]
+
+def file_exists(file_list):
+    for n in file_list:
+        exist=False
+        for e in ext:
+            if os.path.isfile(os.path.join(path,n+e)):
+                exist=True
+        if not exist:
+            break
+    return exist
+
+if file_exists(based_files):
     numberchannel = [
         ("TemplatesInfoBarNumber1", _("no")),
         ("TemplatesInfoBarNumber2", _("yes"))]
@@ -206,9 +237,8 @@ else:
         ("TemplatesChannelSelectionInfoChannel2", _("picons"))]
     clockpanel = [
         ("TemplatesClock1", _("no"))]
-if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/TMBD/plugin.pyo")\
-    and fileExists("/usr/lib/enigma2/python/Components/Renderer/RatingTmbd.py")\
-    and fileExists("/usr/lib/enigma2/python/Components/Renderer/CoverTmbd.py"):
+
+if file_exists(tmbd_plug) and file_exists(tmbd_comp):
     coverinfopanel = [
     ("TemplatesInfoBarInfoMovieCover1", _("no")),
     ("TemplatesInfoBarInfoMovieCover2", _("poster")),
@@ -223,10 +253,8 @@ else:
     infomovieselection =[
     ("TemplatesMovieSelectionInfoMovie1", _("no")),
     ("TemplatesMovieSelectionInfoMovie2", _("standard"))]
-if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Calendar/plugin.pyo")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/CalendarToText.py")\
-    and fileExists("/usr/lib/enigma2/python/Plugins/Extensions/WeatherMSN/plugin.pyo")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather2.py"):
+
+if file_exists(calendar_plug) and file_exists(weather_plug) and file_exists(calendar_comp) and file_exists(weather_comp):
     otherinfobar = [
     ("TemplatesInfoBarOther1", _("no")),
     ("TemplatesInfoBarOther2", _("rambler weather")),
@@ -236,15 +264,13 @@ if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Calendar/plugin.pyo")\
     ("TemplatesInfoBarOther6", _("rambler weather, calendar")),
     ("TemplatesInfoBarOther7", _("msn weather, calendar")),
     ("TemplatesInfoBarOther8", _("msn weather full, calendar"))]
-elif fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Calendar/plugin.pyo")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/CalendarToText.py"):
+elif file_exists(calendar_plug) and file_exists(calendar_comp):
     otherinfobar = [
     ("TemplatesInfoBarOther1", _("no")),
     ("TemplatesInfoBarOther2", _("rambler weather")),
     ("TemplatesInfoBarOther5", _("calendar")),
     ("TemplatesInfoBarOther6", _("rambler weather, calendar"))]
-elif fileExists("/usr/lib/enigma2/python/Plugins/Extensions/WeatherMSN/plugin.pyo")\
-    and fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather2.py"):
+elif file_exists(weather_plug) and file_exists(weather_comp):
     otherinfobar = [
     ("TemplatesInfoBarOther1", _("no")),
     ("TemplatesInfoBarOther2", _("rambler weather")),
@@ -254,7 +280,7 @@ else:
     otherinfobar = [
     ("TemplatesInfoBarOther1", _("no")),
     ("TemplatesInfoBarOther2", _("rambler weather"))]
-    
+
 stylemsn = [
     ("WeatherMSNsimple", _("simple")),
     ("WeatherMSNextended", _("extended"))]
@@ -328,8 +354,9 @@ class SetupNeutronHD(ConfigListScreen, Screen):
         list.append(getConfigListEntry(_("Widget mediainfobar:"), config.skin.neutron.coverinfopanel))
         list.append(getConfigListEntry(_("Panel description in movie selection:"), config.skin.neutron.infomovieselection))
         list.append(getConfigListEntry(_("Clock in menu, infobars:"), config.skin.neutron.clockpanel))
-        list.append(getConfigListEntry(_("Other widget in infobars:"), config.skin.neutron.otherinfobar))
-        list.append(getConfigListEntry(_("Style WeatherMSN plugin:"), config.skin.neutron.stylemsnplugin))
+        if file_exists(weather_plug):
+            list.append(getConfigListEntry(_("Other widget in infobars:"), config.skin.neutron.otherinfobar))
+            list.append(getConfigListEntry(_("Style WeatherMSN plugin:"), config.skin.neutron.stylemsnplugin))
         list.append(getConfigListEntry(_("Position dish:"), config.skin.neutron.dish))
         list.append(getConfigListEntry(_("Scrollbar in menu:"), config.skin.neutron.scrollbarmode))
         list.append(getConfigListEntry(_("Fonts:"), config.skin.neutron.fonts))
@@ -376,30 +403,13 @@ class SetupNeutronHD(ConfigListScreen, Screen):
                 break
 
     def infocom(self):
-        if fileExists("/usr/lib/enigma2/python/Plugins/Extensions/TMBD/plugin.pyo")\
-            and not fileExists("/usr/lib/enigma2/python/Components/Renderer/RatingTmbd.py")\
-            and not fileExists("/usr/lib/enigma2/python/Components/Renderer/CoverTmbd.py"):
+        if file_exists(tmbd_plug) and not file_exists(tmbd_comp):
             self["info_com"] = StaticText(_("No install components TMBD !!!"))
-        elif fileExists("/usr/lib/enigma2/python/Plugins/Extensions/Calendar/plugin.pyo")\
-            and not fileExists("/usr/lib/enigma2/python/Components/Converter/CalendarToText.py"):
+        elif file_exists(calendar_plug) and not file_exists(calendar_comp):
             self["info_com"] = StaticText(_("No install components Calendar !!! \nPress blue button to install !!!"))
-        elif fileExists("/usr/lib/enigma2/python/Plugins/Extensions/WeatherMSN/plugin.pyo")\
-            and not fileExists("/usr/lib/enigma2/python/Components/Converter/MSNWeather2.py"):
+        elif file_exists(weather_plug) and not file_exists(weather_comp):
             self["info_com"] = StaticText(_("No install components WeatherMSN !!! \nPress blue button to install !!!"))
-        elif fileExists("/usr/lib/enigma2/python/Components/Converter/AlwaysTrue.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Converter/CaidInfo2.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Converter/CamdInfo3.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Converter/ConverterRotator.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Converter/EventName2.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Converter/FrontendInfo2.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Converter/ProgressDiskSpaceInfo.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Converter/RouteInfo.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Converter/RWeather.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Converter/ServiceInfoEX.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Converter/ServiceName2.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Renderer/PiconUni.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Renderer/RendVolumeText.py")\
-            and fileExists("/usr/lib/enigma2/python/Components/Renderer/Watches.py"):
+        elif file_exists(based_files):
             self["info_com"] = StaticText(_(" "))
         else:
             self["info_com"] = StaticText(_("No install components !!! \nPress blue button to install !!!"))
@@ -480,27 +490,12 @@ class SetupNeutronHD(ConfigListScreen, Screen):
         self.session.openWithCallback(self.restart, MessageBox,_("Do you want to restart the GUI now ?"), MessageBox.TYPE_YESNO)
 
     def install(self):
-        pluginpath = "/usr/lib/enigma2/python/Plugins/Extensions/"
+        pluginpath = "/usr/lib/enigma2/python/Plugins/Extensions/SetupNeutronHD/Components/"
         componentspath = "/usr/lib/enigma2/python/Components/"
         try:
-    # install converter
-            system("cp %sSetupNeutronHD/components/AlwaysTrue.py %sConverter/AlwaysTrue.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/CaidInfo2.py %sConverter/CaidInfo2.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/CamdInfo3.py %sConverter/CamdInfo3.py" % (pluginpath, componentspath))
-            system("cp %sCalendar/components/CalendarToText.py %sConverter/CalendarToText.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/ConverterRotator.py %sConverter/ConverterRotator.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/EventName2.py %sConverter/EventName2.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/FrontendInfo2.py %sConverter/FrontendInfo2.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/ProgressDiskSpaceInfo.py %sConverter/ProgressDiskSpaceInfo.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/RouteInfo.py %sConverter/RouteInfo.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/RWeather.py %sConverter/RWeather.py" % (pluginpath, componentspath))
-            system("cp %sWeatherMSN/components/MSNWeather2.py %sConverter/MSNWeather2.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/ServiceInfoEX.py %sConverter/ServiceInfoEX.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/ServiceName2.py %sConverter/ServiceName2.py" % (pluginpath, componentspath))
-    # install renderer
-            system("cp %sSetupNeutronHD/components/PiconUni.py %sRenderer/PiconUni.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/RendVolumeText.py %sRenderer/RendVolumeText.py" % (pluginpath, componentspath))
-            system("cp %sSetupNeutronHD/components/Watches.py %sRenderer/Watches.py" % (pluginpath, componentspath))
+    #       install render & converter
+            os.system("cp -a %s* %s" % (pluginpath, componentspath))
+            os.system("cp /usr/lib/enigma2/python/Plugins/Extensions/WeatherMSN/components/MSNWeather2.py %sConverter/MSNWeather2.py" % (componentspath))
     # end
         except:
             self.session.open(MessageBox, _("Error by processing !!!"), MessageBox.TYPE_ERROR)

@@ -22,7 +22,7 @@ from Components.Element import cached
 from Components.Console import Console as iConsole
 from Components.Language import language
 from os import environ
-from Poll import Poll
+from Components.Converter.Poll import Poll
 import gettext
 import time
 import os

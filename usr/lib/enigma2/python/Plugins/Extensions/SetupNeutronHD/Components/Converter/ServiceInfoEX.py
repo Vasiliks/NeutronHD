@@ -18,7 +18,7 @@
 # 01.12.2018 fix video codec mod by Sirius
 # 25.12.2018 add support for gamma values mod by Sirius
 
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from Components.Converter.Converter import Converter
 from enigma import iServiceInformation, iPlayableService
 from Components.config import config

@@ -1,10 +1,13 @@
+# ProgressDiskSpaceInfo
 # Coded by Vlamo 2012
-# v0.3
-# code optimization (by Sirius)
+# v0.4
+# 
+# 10.01.2020 code optimization mod by Sirius
+# 23.08.2020 code optimization for Python2 & Python3
 
 from Components.Converter.Converter import Converter
 from Components.Element import cached
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from os import popen, statvfs
 
 SIZE_UNITS = [_("B"), _("KB"), _("MB"), _("GB"), _("TB"), _("PB"), _("EB")]
@@ -62,7 +65,7 @@ class ProgressDiskSpaceInfo(Poll, Converter):
 
 	@cached
 	def getText(self):
-		text = "N/A"
+		text = "n/a"
 		if self.type == self.HDDTEMP:
 			text = self.getHddTemp()
 		elif self.type == self.LOADAVG:
@@ -82,14 +85,13 @@ class ProgressDiskSpaceInfo(Poll, Converter):
 			else:
 				list = self.getMemInfo(entry[0])
 			if list[0] == 0:
-				text = _("%s: Not Available")%(entry[1])
+				text = ("%s: " + _("Not defined"))%(entry[1])
 			elif self.shortFormat:
-				text = _("%s:Free:%s") % (entry[1], self.getSizeStr(list[2]))
-#				text = _("%s: %s in use: %s%%") % (entry[1], self.getSizeStr(list[0]), list[3])
+				text = ("%s: " + _("Free: ") + "%s") % (entry[1], self.getSizeStr(list[2]))
 			elif self.fullFormat:
-				text = _("%s: %s Free: %s Used: %s (%s%%)") % (entry[1], self.getSizeStr(list[0]), self.getSizeStr(list[2]), self.getSizeStr(list[1]), list[3])
+				text = ("%s: %s " + _("Free: ") + "%s " + _("Used:") + " %s (%s%%)") % (entry[1], self.getSizeStr(list[0]), self.getSizeStr(list[2]), self.getSizeStr(list[1]), list[3])
 			else:
-				text = _("%s: %s Used: %s Free: %s") % (entry[1], self.getSizeStr(list[0]), self.getSizeStr(list[1]), self.getSizeStr(list[2]))
+				text = ("%s: %s " + _("Used:") + " %s " + _("Free: ") + "%s") % (entry[1], self.getSizeStr(list[0]), self.getSizeStr(list[1]), self.getSizeStr(list[2]))
 		return text
 
 	@cached
@@ -108,7 +110,7 @@ class ProgressDiskSpaceInfo(Poll, Converter):
 	range = 100
 
 	def getHddTemp(self):
-		textvalue = "No info"
+		textvalue = _("No info")
 		info = "0"
 		try:
 			out_line = popen("hddtemp -n -q /dev/sda").readline()
@@ -119,7 +121,7 @@ class ProgressDiskSpaceInfo(Poll, Converter):
 		return textvalue
 
 	def getLoadAvg(self):
-		textvalue = "No info"
+		textvalue = _("No info")
 		info = "0"
 		try:
 			out_line = popen("cat /proc/loadavg").readline()

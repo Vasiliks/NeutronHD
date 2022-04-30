@@ -29,10 +29,12 @@
 # 02.05.2015 add path uuid device
 # 08.05.2016 add 5001, 5002 stream id
 # 16.11.2018 fix search Paths (by Sirius, thx Taapat)
+# 20.04.2022 code optimization for Python2 & Python3
 
-from Renderer import Renderer 
+from Components.Renderer.Renderer import Renderer 
 from enigma import ePixmap
-from Tools.Directories import SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, SCOPE_PLUGINS, resolveFilename 
+from Tools.Directories import SCOPE_SKIN_IMAGE, SCOPE_CURRENT_SKIN, SCOPE_PLUGINS, resolveFilename
+
 import os
 
 searchPaths = []
@@ -76,7 +78,7 @@ class PiconUni(Renderer):
 			if not what[0] is self.CHANGED_CLEAR:
 				sname = self.source.text
 				sname = sname.upper().replace('.', '').replace('\xc2\xb0', '')
-				print sname
+				print (sname)
 				#if sname.startswith('4097'):
 				if not sname.startswith('1'):
 					sname = sname.replace('4097', '1', 1).replace('5001', '1', 1).replace('5002', '1', 1)

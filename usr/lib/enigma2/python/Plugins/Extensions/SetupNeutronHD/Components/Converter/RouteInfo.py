@@ -21,6 +21,7 @@
 #    <convert type="RouteInfo">Lan  | Wifi | Modem</convert>
 #    <convert type="ConditionalShowHide" />
 #  </widget>
+# 24.08.2020 code optimization for Python2 & Python3
 
 
 from Components.Converter.Converter import Converter

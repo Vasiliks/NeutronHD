@@ -5,7 +5,7 @@
 # 
 # 25.11.2018 code optimization mod by Sirius
 
-from Poll import Poll
+from Components.Converter.Poll import Poll
 from enigma import iServiceInformation
 from Components.Converter.Converter import Converter
 from Components.ConfigList import ConfigListScreen
