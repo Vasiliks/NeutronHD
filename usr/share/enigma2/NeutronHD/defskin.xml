@@ -4259,7 +4259,7 @@ self.instance.move(ePoint((1280-wsizex)//2, (720-wsizey+30)//2))
     <panel name="TemplatesMenu700" />
     <panel name="TemplatesMenu" />
     <ePixmap position="20,635" size="80,80" pixmap="NeutronHD/menu/setting.png" alphatest="blend" />
-    <eLabel text="Location Box" position="30,25" size="700,36" font="Regular; 30" foregroundColor="color1" backgroundColor="background" halign="center" transparent="1" borderWidth="2" />
+    <panel name="TemplatesTitle3" />
     <widget name="text" position="110,690" size="650,22" font="Display; 18" foregroundColor="color3" backgroundColor="background" halign="left" valign="center" transparent="1" />
     <eLabel position="50,70" size="20,27" backgroundColor="grey" />
     <widget name="target" position="80,70" size="635,26" valign="center" font="Regular;24" foregroundColor="color2" backgroundColor="background" transparent="1" />
