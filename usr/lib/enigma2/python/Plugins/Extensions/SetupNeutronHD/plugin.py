@@ -140,7 +140,6 @@ based_files = [
     "Components/Converter/FrontendInfo2",
     "Components/Converter/ProgressDiskSpaceInfo",
     "Components/Converter/RouteInfo",
-    "Components/Converter/RWeather",
     "Components/Converter/ServiceInfoEX",
     "Components/Converter/ServiceName2",
     "Components/Renderer/PiconUni",
